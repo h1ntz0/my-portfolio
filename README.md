@@ -22,6 +22,24 @@ A modern, evidence-driven QA tester portfolio built as a **Digital QA Command Ce
 | `/resume` | Printable resume (Print / Save as PDF) |
 | `/contact` | Contact methods + validated form |
 
+## Deploy to Vercel (no database needed)
+
+This is a fully static, database-free Next.js app. No backend, no API, no
+database, no environment secrets required. To publish:
+
+1. Push this repo to GitHub (`git push`).
+2. In Vercel, **Import Project** → select the repo.
+3. Framework is auto-detected (Next.js). Build command `next build`.
+4. Click **Deploy**. That's it.
+
+Optional: set the env var `NEXT_PUBLIC_SITE_URL` to your production domain
+so canonical links and the sitemap use the real URL. Without it, the site
+still works fine.
+
+Everything the site needs is committed (content, the portrait in
+`public/images/`, design tokens). The contact form opens the visitor's email
+client; it stores nothing on a server.
+
 ## Getting started
 
 ```bash

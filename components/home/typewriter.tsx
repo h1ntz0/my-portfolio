@@ -14,11 +14,13 @@ export interface TypewriterSegment {
  */
 export function Typewriter({
   segments,
-  speed = 42,
+  speed = 95,
+  pause = 2400,
   className,
 }: {
   segments: TypewriterSegment[];
   speed?: number;
+  pause?: number;
   className?: string;
 }) {
   const totalChars = segments.reduce((a, s) => a + s.text.length, 0);
@@ -34,15 +36,26 @@ export function Typewriter({
       setCount(totalChars);
       return;
     }
-    setCount(0);
-    let i = 0;
-    const id = window.setInterval(() => {
-      i += 1;
-      setCount(i);
-      if (i >= totalChars) window.clearInterval(id);
-    }, speed);
-    return () => window.clearInterval(id);
-  }, [totalChars, speed]);
+    let interval: number | undefined;
+    let timeout: number | undefined;
+    const run = () => {
+      let i = 0;
+      setCount(0);
+      interval = window.setInterval(() => {
+        i += 1;
+        setCount(i);
+        if (i >= totalChars) {
+          window.clearInterval(interval);
+          timeout = window.setTimeout(run, pause);
+        }
+      }, speed);
+    };
+    run();
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(timeout);
+    };
+  }, [totalChars, speed, pause]);
 
   if (reduced) {
     return (

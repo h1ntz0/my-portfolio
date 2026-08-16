@@ -75,6 +75,7 @@ Redesigned per the UI/UX PRD as a **personal QA playground**, not a QA dashboard
 - Restrained palette: dark `#111315` / light `#F7F7F5`, one blue accent (`#4F8CFF` dark / `#2B56AD` light), plus semantic status colors.
 - Two font families: Inter (human-first) and JetBrains Mono (limited to IDs, endpoints, technical labels).
 - Cards only where there's real grouping; borders are subtle (1px); sentence case throughout.
+- **Bilingual EN/ID**: a language toggle in the navbar switches the presentation layer (nav, hero, home sections, footer) between English and Indonesian. Persisted in localStorage.
 - WCAG 2.2 AA: semantic HTML, keyboard nav, visible focus, skip link, `prefers-reduced-motion`, aria labels. Verified in dark and light mode with axe.
 
 ## Notes

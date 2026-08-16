@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Github, ArrowUpRight } from "lucide-react";
 import { buildMetadata } from "@/lib/site";
+import { githubProfile } from "@/content/github";
 import { testCases, bugs, apiEndpoints, testRuns } from "@/content/testing";
 import { projects } from "@/content/projects";
 import { PageHeader } from "@/components/qa/page-header";
@@ -29,8 +31,19 @@ export default function TestingLabPage() {
       <PageHeader
         eyebrow="Testing Lab"
         title="A live window into my QA work"
-        description="This is not a mockup dashboard. Every item below is real content from the case studies: test cases, defects, API checks, automation, and test runs."
-      />
+        description="How I test: test cases, defects, API checks, automation, and test runs. The evidence below uses sample projects; the real code lives on my GitHub."
+      >
+        <a
+          href={githubProfile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:underline"
+        >
+          <Github className="h-4 w-4" />
+          Source on GitHub
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </a>
+      </PageHeader>
 
       <Section>
         <SectionHeading title="Overview Metrics" />

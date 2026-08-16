@@ -18,7 +18,7 @@ test.describe("Portfolio core flows", () => {
     await nav.getByRole("link", { name: "Work" }).click();
     await expect(page).toHaveURL(/\/projects$/);
     await expect(
-      page.getByRole("heading", { name: /Projects & Case Studies/ })
+      page.getByRole("heading", { name: /Things I've built/ })
     ).toBeVisible();
   });
 

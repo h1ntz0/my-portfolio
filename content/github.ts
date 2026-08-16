@@ -1,29 +1,51 @@
-// Real GitHub repositories to surface on the site.
-// Fill in your actual repos: name, one-line description, topics, and the repo URL.
+// Real GitHub repositories surfaced on the site.
 export interface Repo {
   name: string;
   description: string;
   topics: string[];
   url: string;
+  featured?: boolean;
 }
 
-const GH = "https://github.com/benn";
+export const githubProfile = "https://github.com/h1ntz0";
 
 export const repos: Repo[] = [
   {
-    name: "AnimeList",
+    name: "Ranime",
     description:
-      "A full-stack anime catalog app I built and tested end to end (API + web).",
-    topics: ["Web testing", "API", "Regression"],
-    url: `${GH}/animelist`,
+      "Anime discovery, catalog, tracking, rating and review platform. Local-first, powered by the AniList GraphQL API and PostgreSQL.",
+    topics: ["TypeScript", "React", "PostgreSQL", "API", "Web"],
+    url: `${githubProfile}/Ranime`,
+    featured: true,
   },
   {
-    name: "qa-portfolio",
+    name: "telegram-sticker-bot",
     description:
-      "This portfolio. I treat it as a real product and test it with Playwright.",
-    topics: ["QA", "Automation", "Playwright"],
-    url: `${GH}/qa-portfolio`,
+      "Telegram bot that converts any photo into a ready-to-use sticker with automatic resizing and transparent padding. Built with python-telegram-bot, Pillow, and SQLite.",
+    topics: ["Python", "Telegram", "Bot", "SQLite"],
+    url: `${githubProfile}/telegram-sticker-bot`,
+    featured: true,
+  },
+  {
+    name: "Todo-cli",
+    description:
+      "A lightweight command-line ToDo list app built with Go. Add, view, complete, or delete tasks straight from the terminal.",
+    topics: ["Go", "CLI", "Terminal"],
+    url: `${githubProfile}/Todo-cli`,
+    featured: true,
+  },
+  {
+    name: "Temperature_Converter_SIC",
+    description:
+      "A temperature unit converter (Kelvin, Celsius, Fahrenheit), built as part of a Dibimbing.id task.",
+    topics: ["Python", "CLI", "Learning"],
+    url: `${githubProfile}/Temperature_Converter_SIC`,
+  },
+  {
+    name: "Tic-Tac-Toe-ReactJs",
+    description:
+      "A Tic-Tac-Toe game built with React to practice component state and interaction.",
+    topics: ["React", "JavaScript", "Web"],
+    url: `${githubProfile}/Tic-Tac-Toe-ReactJs`,
   },
 ];
-
-export const githubProfile = GH;

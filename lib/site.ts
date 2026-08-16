@@ -11,8 +11,8 @@ export const site = {
   email: "hello@benn.dev",
   location: "Jakarta, Indonesia",
   links: {
-    github: "https://github.com/benn",
-    linkedin: "https://linkedin.com/in/benn",
+    github: "https://github.com/h1ntz0",
+    linkedin: "https://linkedin.com/in/h1ntz0",
     email: "hello@benn.dev",
   },
   resumeUrl: "/resume",

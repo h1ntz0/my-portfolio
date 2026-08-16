@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 
 import { site } from "@/lib/site";
+import { repos } from "@/content/github";
 import { useLang } from "@/components/lang-provider";
 import { Container } from "@/components/layout/container";
 import { BrowserVisual } from "@/components/qa/browser-visual";
@@ -60,14 +61,14 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Human-led visual: a real project in a browser frame, not a dashboard */}
+        {/* Human-led visual: a real repo in a browser frame, not a dashboard */}
         <div className="mx-auto w-full max-w-md lg:mx-0">
           <BrowserVisual
             accent
-            url="e-commerce-platform.app"
+            url={`github.com/h1ntz0/${repos[0]?.name ?? "Ranime"}`}
             subtitle={t("hero_selected")}
-            title="E-Commerce testing"
-            tags={["Manual testing", "API", "Playwright"]}
+            title={repos[0]?.name ?? "Ranime"}
+            tags={(repos[0]?.topics ?? []).slice(0, 4)}
           />
           <p className="mt-3 text-center text-xs text-muted-foreground lg:text-left">
             {t("hero_one_of")}{" "}

@@ -6,7 +6,7 @@ export const translations = {
   nav_work: { en: "Work", id: "Karya" },
   nav_lab: { en: "Lab", id: "Lab" },
   nav_about: { en: "About", id: "Tentang" },
-  nav_resume: { en: "Resume", id: "CV" },
+  nav_resume: { en: "CV", id: "CV" },
   nav_talk: { en: "Let's talk", id: "Mari ngobrol" },
   nav_open: { en: "Open menu", id: "Buka menu" },
   nav_close: { en: "Close menu", id: "Tutup menu" },

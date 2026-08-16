@@ -2,19 +2,24 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { experience, skillGroups, certifications } from "@/content/profile";
 import { Container } from "@/components/layout/container";
-import { PrintResume } from "@/components/resume/print-resume";
+import { DownloadCV } from "@/components/resume/download-cv";
 
 export const metadata: Metadata = {
-  title: "Resume",
-  description: `Download ${site.name}'s QA resume as a PDF.`,
+  title: "CV",
+  description: `Download ${site.name}'s QA CV as a PDF.`,
 };
 
 export default function ResumePage() {
   return (
     <Container className="py-10 sm:py-14">
-      <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold tracking-tight">Resume</h1>
-        <PrintResume />
+      <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">CV</h1>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Preview, then download it as a PDF with one click.
+          </p>
+        </div>
+        <DownloadCV />
       </div>
 
       <div className="rounded-lg border bg-card p-6 sm:p-10 print:border-0 print:p-0 print:shadow-none">

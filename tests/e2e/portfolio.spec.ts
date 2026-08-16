@@ -38,11 +38,12 @@ test.describe("Portfolio core flows", () => {
     await expect(page.getByText("Ranime").first()).toBeVisible();
   });
 
-  test("TC-WEB-005 Resume link works", async ({ page }) => {
+  test("TC-WEB-005 CV download link works", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("link", { name: "Resume", exact: true }).click();
+    await page.getByRole("link", { name: "CV", exact: true }).click();
     await expect(page).toHaveURL(/\/resume/);
-    await expect(page.getByRole("heading", { name: "Resume" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "CV" })).toBeVisible();
+    await expect(page.getByRole("button", { name: /Download CV/ })).toBeVisible();
   });
 
   test("TC-WEB-006 Contact form validation", async ({ page }) => {

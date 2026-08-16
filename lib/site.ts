@@ -9,12 +9,12 @@ export const site = {
   tagline: "I test software with evidence, not assumptions.",
   description:
     "QA Tester focused on functional testing, API validation, automation, and finding defects before users do.",
-  email: "arrofizeinabdillah66@gmail.com",
+  email: "arrofi.zein12@gmail.com",
   location: "Jakarta, Indonesia",
   links: {
     github: "https://github.com/h1ntz0",
     linkedin: "https://www.linkedin.com/in/arrofizeinabdillah66/",
-    email: "arrofizeinabdillah66@gmail.com",
+    email: "arrofi.zein12@gmail.com",
   },
   resumeUrl: "/resume",
 } as const;

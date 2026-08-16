@@ -41,7 +41,6 @@ export function Navbar() {
           aria-label={`${site.name} home`}
         >
           {site.brand}
-          <span className="text-accent">.qa</span>
         </Link>
 
         <nav className="hidden items-center gap-5 lg:flex" aria-label="Main">

@@ -20,7 +20,6 @@ export function Footer() {
         <div>
           <p className="text-lg font-semibold tracking-tight">
             {site.brand}
-            <span className="text-accent">.qa</span>
           </p>
           <p className="mt-2 max-w-xs text-sm text-muted-foreground">
             {t("footer_tagline")}

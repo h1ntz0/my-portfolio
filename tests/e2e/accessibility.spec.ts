@@ -1,6 +1,10 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
+// Let entrance/reveal animations (typewriter ~2s, reveals ~0.7s) settle so
+// axe audits the final, fully-visible state rather than mid-transition.
+const SETTLE_MS = 2000;
+
 const pages = [
   "/",
   "/about",
@@ -17,6 +21,7 @@ test.describe("Accessibility (WCAG 2.2 AA)", () => {
   for (const path of pages) {
     test(`axe: no serious/critical violations on ${path}`, async ({ page }) => {
       await page.goto(path, { waitUntil: "networkidle" });
+      await page.waitForTimeout(SETTLE_MS);
       const results = await new AxeBuilder({ page })
         .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
         .analyze();
@@ -35,6 +40,7 @@ test.describe("Accessibility (WCAG 2.2 AA)", () => {
   test("axe: light mode has no serious/critical violations on home", async ({ page }) => {
     await page.goto("/", { waitUntil: "networkidle" });
     await page.evaluate(() => document.documentElement.classList.remove("dark"));
+    await page.waitForTimeout(SETTLE_MS);
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2aa"])
       .analyze();
@@ -53,6 +59,7 @@ test.describe("Accessibility (WCAG 2.2 AA)", () => {
         await page.evaluate(() =>
           document.documentElement.classList.remove("dark")
         );
+        await page.waitForTimeout(SETTLE_MS);
         const results = await new AxeBuilder({ page })
           .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
           .analyze();

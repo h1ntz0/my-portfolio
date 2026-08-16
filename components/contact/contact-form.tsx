@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Send } from "lucide-react";
 
+import { site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -45,7 +46,7 @@ export function ContactForm() {
     if (Object.keys(next).length > 0) return;
 
     const body = encodeURIComponent(message);
-    const mailto = `mailto:arrofi.zein12@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailto = `mailto:${site.links.email}?subject=${encodeURIComponent(subject)}&body=${body}`;
     window.location.href = mailto;
     setSent(true);
     form.reset();

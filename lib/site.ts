@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const site = {
   name: "Arrofi Zein Abdillah",
-  brand: "Arrofi",
+  brand: "Arrofi Zein Abdillah",
+  firstName: "Arrofi",
   title: "Arrofi Zein Abdillah · QA Tester & QA Automation Engineer",
   role: "QA Tester / QA Automation Engineer",
   eyebrow: "QUALITY ASSURANCE / SOFTWARE TESTING",

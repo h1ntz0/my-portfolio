@@ -22,7 +22,7 @@ export function Hero() {
             {site.name} · {t("hero_role")} · {t("hero_based")} {site.location}
           </p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            {t("hero_hi").replace("{name}", site.name)}
+            {t("hero_hi").replace("{name}", site.brand)}
             <br />
             <span className="text-foreground">{t("hero_break")}</span>
             <br />

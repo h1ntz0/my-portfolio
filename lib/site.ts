@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 
 export const site = {
-  name: "Benn",
-  title: "Benn · QA Tester & QA Automation Engineer",
+  name: "Arrofi Zein Abdillah",
+  brand: "Arrofi",
+  title: "Arrofi Zein Abdillah · QA Tester & QA Automation Engineer",
   role: "QA Tester / QA Automation Engineer",
   eyebrow: "QUALITY ASSURANCE / SOFTWARE TESTING",
   tagline: "I test software with evidence, not assumptions.",
   description:
     "QA Tester focused on functional testing, API validation, automation, and finding defects before users do.",
-  email: "hello@benn.dev",
+  email: "arrofizeinabdillah66@gmail.com",
   location: "Jakarta, Indonesia",
   links: {
     github: "https://github.com/h1ntz0",
     linkedin: "https://www.linkedin.com/in/arrofizeinabdillah66/",
-    email: "hello@benn.dev",
+    email: "arrofizeinabdillah66@gmail.com",
   },
   resumeUrl: "/resume",
 } as const;

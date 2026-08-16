@@ -19,7 +19,7 @@ export function Footer() {
       <Container className="flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-lg font-semibold tracking-tight">
-            {site.name}
+            {site.brand}
             <span className="text-accent">.qa</span>
           </p>
           <p className="mt-2 max-w-xs text-sm text-muted-foreground">

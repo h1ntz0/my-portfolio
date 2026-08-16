@@ -6,8 +6,7 @@ import { PrintResume } from "@/components/resume/print-resume";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description:
-    "Download Benn's QA resume as a PDF.",
+  description: `Download ${site.name}'s QA resume as a PDF.`,
 };
 
 export default function ResumePage() {

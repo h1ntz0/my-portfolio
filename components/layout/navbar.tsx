@@ -40,7 +40,7 @@ export function Navbar() {
           className="text-base font-semibold tracking-tight"
           aria-label={`${site.name} home`}
         >
-          {site.name}
+          {site.brand}
           <span className="text-accent">.qa</span>
         </Link>
 

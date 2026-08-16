@@ -82,7 +82,7 @@ export default function TestingLabPage() {
           <div className="border-b bg-muted/50 px-4 py-3">
             <p className="mono text-xs font-semibold uppercase tracking-wider text-accent">Sample Response</p>
           </div>
-          <pre className="overflow-x-auto p-4 text-xs leading-relaxed text-muted-foreground">{`{
+          <pre className="overflow-x-auto p-4 text-xs leading-relaxed text-muted-foreground" tabIndex={0}>{`{
   "status": 200,
   "endpoint": "GET /api/products",
   "tests": 12,

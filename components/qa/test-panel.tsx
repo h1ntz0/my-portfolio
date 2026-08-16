@@ -95,6 +95,7 @@ export function TestPanel() {
           <div
             className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-muted"
             role="progressbar"
+            aria-label="Pass rate 91 percent"
             aria-valuenow={91}
             aria-valuemin={0}
             aria-valuemax={100}

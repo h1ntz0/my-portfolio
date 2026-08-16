@@ -131,7 +131,7 @@ export default async function ProjectPage({
       {/* 07 Test Cases */}
       <CaseSection number="07" title="Test Cases">
         <div className="overflow-hidden rounded-lg border">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto" tabIndex={0}>
             <table className="w-full text-left text-sm">
               <caption className="sr-only">Test cases for {project.name}</caption>
               <thead className="border-b bg-muted/50">
@@ -164,7 +164,7 @@ export default async function ProjectPage({
       {/* 08 Defects */}
       <CaseSection number="08" title="Defects Found">
         <div className="overflow-hidden rounded-lg border">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto" tabIndex={0}>
             <table className="w-full text-left text-sm">
               <caption className="sr-only">Defects found in {project.name}</caption>
               <thead className="border-b bg-muted/50">

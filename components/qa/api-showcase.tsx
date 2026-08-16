@@ -67,6 +67,7 @@ export function ApiShowcase({ endpoints }: { endpoints: ApiEndpoint[] }) {
           <div
             className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-muted"
             role="progressbar"
+            aria-label="Assertion pass rate"
             aria-valuenow={Math.round((selected.passed / selected.assertions) * 100)}
             aria-valuemin={0}
             aria-valuemax={100}

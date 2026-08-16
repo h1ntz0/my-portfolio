@@ -53,7 +53,7 @@ export function TestCaseExplorer({ cases }: { cases: TestCase[] }) {
       </div>
 
       <div className="mt-6 overflow-hidden rounded-lg border">
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0}>
           <table className="w-full text-left text-sm">
             <caption className="sr-only">List of test cases</caption>
             <thead className="border-b bg-muted/50">

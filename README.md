@@ -56,6 +56,10 @@ E2E scenarios (mapped to the PRD test plan):
 - Contact form validation
 - Mobile hamburger menu works
 
+Automated accessibility (WCAG 2.2 AA, via `@axe-core/playwright`): every page is
+scanned for serious/critical violations in both dark and light mode, with zero
+violations required. Run with `npx playwright test tests/e2e/accessibility.spec.ts`.
+
 ## Content architecture
 
 All content is static data in `content/` and `lib/types.ts` defines the shared types.

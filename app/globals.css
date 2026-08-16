@@ -50,74 +50,76 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* Light mode (default) — PRD-UI §46 */
 :root {
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 
-  --background: #f7f8fa;
-  --foreground: #1a1c1e;
+  --background: #f7f7f5;
+  --foreground: #18191b;
 
   --card: #ffffff;
-  --card-foreground: #1a1c1e;
+  --card-foreground: #18191b;
 
   --popover: #ffffff;
-  --popover-foreground: #1a1c1e;
+  --popover-foreground: #18191b;
 
-  --primary: #1a1c1e;
-  --primary-foreground: #f7f8fa;
+  --primary: #18191b;
+  --primary-foreground: #f7f7f5;
 
-  --secondary: #e9ebee;
-  --secondary-foreground: #1a1c1e;
+  --secondary: #efefec;
+  --secondary-foreground: #18191b;
 
-  --muted: #eef0f3;
-  --muted-foreground: #5b6470;
+  --muted: #efefec;
+  --muted-foreground: #666a70;
 
-  --accent: #1a4db1;
+  --accent: #2b56ad;
   --accent-foreground: #ffffff;
 
-  --destructive: #8f241a;
+  --destructive: #b0281d;
   --destructive-foreground: #ffffff;
 
-  --border: #d8dce1;
-  --input: #d8dce1;
-  --ring: #1a4db1;
+  --border: #e5e5e2;
+  --input: #e5e5e2;
+  --ring: #2b56ad;
 
   --success: #0e5c39;
   --warning: #6f470a;
-  --info: #1a4db1;
+  --info: #2b56ad;
 }
 
+/* Dark mode — PRD-UI §45 */
 .dark {
-  --background: #0f1113;
-  --foreground: #e7eaee;
+  --background: #111315;
+  --foreground: #f2f3f5;
 
-  --card: #15181b;
-  --card-foreground: #e7eaee;
+  --card: #181a1d;
+  --card-foreground: #f2f3f5;
 
-  --popover: #15181b;
-  --popover-foreground: #e7eaee;
+  --popover: #181a1d;
+  --popover-foreground: #f2f3f5;
 
-  --primary: #e7eaee;
-  --primary-foreground: #0f1113;
+  --primary: #f2f3f5;
+  --primary-foreground: #111315;
 
-  --secondary: #23272c;
-  --secondary-foreground: #e7eaee;
+  --secondary: #1f2226;
+  --secondary-foreground: #f2f3f5;
 
-  --muted: #1b1f23;
-  --muted-foreground: #98a1ab;
+  --muted: #1b1e21;
+  --muted-foreground: #a5a9b0;
 
-  --accent: #60a5fa;
-  --accent-foreground: #0f1113;
+  --accent: #4f8cff;
+  --accent-foreground: #0b1017;
 
   --destructive: #f0665a;
-  --destructive-foreground: #0f1113;
+  --destructive-foreground: #0b1017;
 
-  --border: #2a2f35;
-  --input: #2a2f35;
-  --ring: #60a5fa;
+  --border: #292d32;
+  --input: #292d32;
+  --ring: #4f8cff;
 
   --success: #3ddc97;
   --warning: #e7a83c;
-  --info: #60a5fa;
+  --info: #4f8cff;
 }
 
 @layer base {
@@ -127,10 +129,12 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -144,12 +148,12 @@
   .font-mono {
     font-family: var(--font-mono);
   }
-  .text-balance {
-    text-wrap: balance;
-  }
   .mono {
     font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
+  }
+  .prose-muted {
+    color: var(--muted-foreground);
   }
 }
 
@@ -185,4 +189,3 @@
     color: #000000 !important;
   }
 }
-

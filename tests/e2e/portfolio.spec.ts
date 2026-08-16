@@ -6,17 +6,16 @@ test.describe("Portfolio core flows", () => {
   test("TC-WEB-001 Homepage loads with hero", async ({ page }) => {
     await page.goto("/");
     await expect(page).toHaveTitle(/QA Tester/);
-    await expect(
-      page.getByText("I test software with evidence, not assumptions.")
-    ).toBeVisible();
-    // QA test execution panel present
-    await expect(page.getByText("Test Run #QA-024")).toBeVisible();
+    await expect(page.getByText(/I break software/)).toBeVisible();
+    await expect(page.getByText(/so users don't have to/)).toBeVisible();
+    // The hero should be personal, not a dashboard
+    await expect(page.getByText("Test Run #QA-024")).toHaveCount(0);
   });
 
   test("TC-WEB-002 Navigation works", async ({ page }) => {
     await page.goto("/");
     const nav = page.getByRole("navigation", { name: "Main" });
-    await nav.getByRole("link", { name: "Projects" }).click();
+    await nav.getByRole("link", { name: "Work" }).click();
     await expect(page).toHaveURL(/\/projects$/);
     await expect(
       page.getByRole("heading", { name: /Projects & Case Studies/ })
@@ -82,7 +81,7 @@ test.describe("Mobile navigation", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
     await page.getByRole("button", { name: "Open menu" }).click();
-    await page.getByRole("link", { name: "Testing Lab" }).click();
+    await page.getByRole("link", { name: "Lab", exact: true }).click();
     await expect(page).toHaveURL(/\/testing-lab/);
   });
 });

@@ -13,7 +13,7 @@ export function Section({
   containerClassName?: string;
 }) {
   return (
-    <section id={id} className={cn("border-b py-16 sm:py-20", className)}>
+    <section id={id} className={cn("py-16 sm:py-24", className)}>
       <Container className={containerClassName}>{children}</Container>
     </section>
   );

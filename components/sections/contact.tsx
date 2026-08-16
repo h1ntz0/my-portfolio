@@ -1,51 +1,50 @@
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, ArrowRight } from "lucide-react";
 
 import { site } from "@/lib/site";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 
 export function ContactSection() {
   return (
-    <Card>
-      <CardContent className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h3 className="text-xl font-semibold tracking-tight">
-            Let&apos;s Talk About Quality
-          </h3>
-          <p className="mt-2 max-w-md text-sm text-muted-foreground">
-            Looking for a QA engineer who documents defects with evidence? I&apos;m
-            available for QA and automation opportunities.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <Button asChild variant="accent">
-              <a href={`mailto:${site.links.email}`}>
-                <Mail className="h-4 w-4" />
-                Email me
-              </a>
-            </Button>
-            <Button asChild variant="outline">
-              <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-4 w-4" />
-                LinkedIn
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
-            </Button>
-            <Button asChild variant="outline">
-              <a href={site.links.github} target="_blank" rel="noopener noreferrer">
-                <Github className="h-4 w-4" />
-                GitHub
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
-            </Button>
-          </div>
+    <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
+      <span className="mono text-sm text-accent sm:pt-2">08</span>
+      <div>
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          Got a QA opportunity?
+        </h2>
+        <p className="mt-3 max-w-md text-muted-foreground">
+          I&apos;m always open to discussing QA, testing projects, and
+          opportunities.
+        </p>
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <a
+            href={`mailto:${site.links.email}`}
+            className="inline-flex h-11 items-center gap-2 rounded-md bg-accent px-6 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
+          >
+            <Mail className="h-4 w-4" />
+            Email me
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href={site.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-11 items-center gap-1.5 rounded-md border px-5 text-sm font-medium transition-colors hover:bg-secondary"
+          >
+            <Linkedin className="h-4 w-4" />
+            LinkedIn
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+          <a
+            href={site.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-11 items-center gap-1.5 rounded-md border px-5 text-sm font-medium transition-colors hover:bg-secondary"
+          >
+            <Github className="h-4 w-4" />
+            GitHub
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
         </div>
-        <div className="shrink-0 rounded-lg border bg-muted/40 p-4">
-          <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-            Email
-          </p>
-          <p className="mono mt-1 text-sm text-accent">{site.email}</p>
-        </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }

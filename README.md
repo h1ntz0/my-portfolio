@@ -67,11 +67,15 @@ Adding a project means adding one entry to `content/projects.ts`; no component c
 
 ## Design principles
 
-- Information first; visual supports information.
-- Anti-AI-slop: no purple gradients, glassmorphism, floating blobs, or fake stats.
-- Restrained palette: charcoal / cool gray + one blue accent, plus semantic status colors.
-- Two font families: Inter (UI) and JetBrains Mono (technical: IDs, endpoints, metrics).
-- WCAG 2.2 AA: semantic HTML, keyboard nav, visible focus, skip link, `prefers-reduced-motion`, aria labels.
+Redesigned per the UI/UX PRD as a **personal QA playground**, not a QA dashboard.
+
+- Person → story → work → evidence → technical depth (QA depth lives in case studies and the Testing Lab).
+- Friendly, human, editorial typography-led layout with generous whitespace.
+- Anti-AI-slop: no purple/neon gradients, no glassmorphism, no bento-everything, no fake metrics or fake dashboards.
+- Restrained palette: dark `#111315` / light `#F7F7F5`, one blue accent (`#4F8CFF` dark / `#2B56AD` light), plus semantic status colors.
+- Two font families: Inter (human-first) and JetBrains Mono (limited to IDs, endpoints, technical labels).
+- Cards only where there's real grouping; borders are subtle (1px); sentence case throughout.
+- WCAG 2.2 AA: semantic HTML, keyboard nav, visible focus, skip link, `prefers-reduced-motion`, aria labels. Verified in dark and light mode with axe.
 
 ## Notes
 

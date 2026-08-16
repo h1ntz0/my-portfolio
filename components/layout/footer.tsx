@@ -1,8 +1,7 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 import { site } from "@/lib/site";
 import { Container } from "@/components/layout/container";
-import { Separator } from "@/components/ui/separator";
 
 const socials = [
   { label: "GitHub", href: site.links.github, icon: Github },
@@ -12,44 +11,40 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t bg-card">
-      <Container className="py-12">
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
-          <div className="max-w-sm">
-            <p className="mono text-sm font-semibold">
-              {site.name}
-              <span className="text-accent">.qa</span>
-            </p>
-            <p className="mt-3 text-sm text-muted-foreground">
-              QA Tester focused on finding defects before users do, and
-              documenting every result with evidence.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            {socials.map(({ label, href, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                aria-label={label}
-              >
-                <Icon className="h-4 w-4" />
-                <span className="hidden sm:inline">{label}</span>
-              </a>
-            ))}
-          </div>
+    <footer className="border-t border-border/70 bg-card">
+      <Container className="flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-lg font-semibold tracking-tight">
+            {site.name}
+            <span className="text-accent">.qa</span>
+          </p>
+          <p className="mt-2 max-w-xs text-sm text-muted-foreground">
+            Built with curiosity, tested with intention.
+          </p>
         </div>
 
-        <Separator className="my-8" />
-
-        <div className="flex flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 {site.name}. Built to demonstrate how I build quality into software.</p>
-          <p className="mono">manual · api · automation · database</p>
+        <div className="flex items-center gap-6">
+          {socials.map(({ label, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              aria-label={label}
+            >
+              <Icon className="h-4 w-4" />
+              {label}
+              <ArrowUpRight className="h-3 w-3" />
+            </a>
+          ))}
         </div>
       </Container>
+      <div className="border-t border-border/60">
+        <Container className="py-5 text-xs text-muted-foreground">
+          © 2026 {site.name}. QA tester who likes finding the weird stuff.
+        </Container>
+      </div>
     </footer>
   );
 }

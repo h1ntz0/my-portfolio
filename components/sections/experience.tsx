@@ -1,73 +1,33 @@
 import { experience } from "@/content/profile";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export function ExperienceTimeline() {
   return (
-    <div className="space-y-6">
-      {experience.map((item) => (
-        <Card key={item.company} className="relative">
-          <CardContent className="p-6">
-            <div className="flex flex-wrap items-start justify-between gap-2">
-              <div>
-                <p className="text-base font-semibold">{item.company}</p>
-                <p className="text-sm text-accent">{item.role}</p>
-              </div>
-              <span className="mono text-xs text-muted-foreground">
-                {item.period}
-              </span>
+    <div className="mt-10 space-y-12">
+      {experience.map((item, i) => {
+        const year = item.period.split(" ")[0];
+        return (
+          <div key={item.company} className="grid gap-3 sm:grid-cols-[auto_1fr] sm:gap-10">
+            <span className="mono pt-1 text-sm text-accent">{year}</span>
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight">{item.role}</h3>
+              <p className="text-sm text-muted-foreground">
+                {item.company} · {item.period}
+              </p>
+              <ul className="mt-4 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+                {item.testingActivities.map((a) => (
+                  <li key={a} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="h-1 w-1 rounded-full bg-accent" />
+                    {a}
+                  </li>
+                ))}
+              </ul>
+              {i < experience.length - 1 && (
+                <div className="mt-6 h-px w-10 bg-border" aria-hidden />
+              )}
             </div>
-
-            <div className="mt-4 grid gap-6 md:grid-cols-2">
-              <div>
-                <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-                  Responsibilities
-                </p>
-                <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm">
-                  {item.responsibilities.map((r) => (
-                    <li key={r}>{r}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-                    Testing Activities
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {item.testingActivities.map((a) => (
-                      <Badge key={a} variant="outline">
-                        {a}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-                    Impact
-                  </p>
-                  <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm">
-                    {item.impact.map((imp) => (
-                      <li key={imp}>{imp}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              <span className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-                Tools:
-              </span>
-              {item.tools.map((t) => (
-                <Badge key={t} variant="muted">
-                  {t}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      ))}
+          </div>
+        );
+      })}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const site = {
   name: "Benn",
-  title: "Benn — QA Tester & QA Automation Engineer",
+  title: "Benn · QA Tester & QA Automation Engineer",
   role: "QA Tester / QA Automation Engineer",
   eyebrow: "QUALITY ASSURANCE / SOFTWARE TESTING",
   tagline: "I test software with evidence, not assumptions.",
@@ -36,7 +36,7 @@ export function buildMetadata(overrides?: Partial<Metadata>): Metadata {
     metadataBase: new URL(baseUrl),
     title: {
       default: site.title,
-      template: `%s — ${site.name}`,
+      template: `%s · ${site.name}`,
     },
     description: site.description,
     openGraph: {

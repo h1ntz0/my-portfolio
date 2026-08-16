@@ -4,7 +4,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Retail Solutions Co.",
     role: "QA / Application Support",
-    period: "2024 — Present",
+    period: "2024 · Present",
     responsibilities: [
       "Design and execute functional and regression test suites for web applications.",
       "Investigate production issues and validate fixes with re-tests.",
@@ -27,7 +27,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Freelance & Personal Projects",
     role: "QA Automation Learner → Automation Engineer",
-    period: "2023 — 2024",
+    period: "2023 · 2024",
     responsibilities: [
       "Built automation suites for demo applications using Playwright.",
       "Learned API testing with Postman and Newman.",

@@ -4,6 +4,8 @@ import { SelectedWork } from "@/components/home/selected-work";
 import { WhatITest } from "@/components/home/what-i-test";
 import { QaLabPreview } from "@/components/home/qa-lab-preview";
 import { CurrentlyLearning } from "@/components/home/currently-learning";
+import { GitHubSection } from "@/components/home/github-section";
+import { LocalizedHeading } from "@/components/home/localized-heading";
 import { Section } from "@/components/layout/section";
 import { ExperienceTimeline } from "@/components/sections/experience";
 import { SkillGroups, SkillToProjectHint } from "@/components/sections/skills";
@@ -31,34 +33,20 @@ export default function HomePage() {
       </Section>
 
       <Section id="experience">
-        <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-          <span className="mono text-sm text-accent sm:pt-2">05</span>
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Experience
-            </h2>
-            <p className="mt-3 text-muted-foreground">
-              Where I&apos;ve built quality so far.
-            </p>
-            <ExperienceTimeline />
-          </div>
-        </div>
+        <LocalizedHeading numKey="exp_num" titleKey="exp_title" descKey="exp_desc">
+          <ExperienceTimeline />
+        </LocalizedHeading>
       </Section>
 
       <Section id="tools" className="bg-card">
-        <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-          <span className="mono text-sm text-accent sm:pt-2">06</span>
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Tools I use
-            </h2>
-            <p className="mt-3 text-muted-foreground">
-              No invented percentages. Just the tools and the work they were used in.
-            </p>
-            <SkillGroups />
-            <SkillToProjectHint />
-          </div>
-        </div>
+        <LocalizedHeading numKey="tools_num" titleKey="tools_title" descKey="tools_desc">
+          <SkillGroups />
+          <SkillToProjectHint />
+        </LocalizedHeading>
+      </Section>
+
+      <Section id="github" className="bg-card">
+        <GitHubSection />
       </Section>
 
       <Section id="learning">

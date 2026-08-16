@@ -1,25 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { projects } from "@/content/projects";
 import { cn } from "@/lib/utils";
+import { useLang } from "@/components/lang-provider";
 import { BrowserVisual } from "@/components/qa/browser-visual";
 
 const projectUrl = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") + ".app";
 
 export function SelectedWork() {
+  const { t } = useLang();
   return (
     <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
       <span className="mono text-sm text-accent sm:pt-2">02</span>
       <div>
         <div className="max-w-2xl">
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Selected work
+            {t("work_title")}
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            A few things I&apos;ve tested, automated, broken, and learned from.
-          </p>
+          <p className="mt-3 text-muted-foreground">{t("work_desc")}</p>
         </div>
 
         <div className="mt-10 space-y-16 sm:space-y-20">
@@ -36,11 +38,7 @@ export function SelectedWork() {
                     : "lg:grid-cols-2 lg:items-center"
                 )}
               >
-                <div
-                  className={cn(
-                    !large && reverse && "lg:order-2"
-                  )}
-                >
+                <div className={cn(!large && reverse && "lg:order-2")}>
                   <p className="mono text-sm text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </p>
@@ -64,7 +62,7 @@ export function SelectedWork() {
                     href={`/projects/${project.slug}`}
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:underline"
                   >
-                    Read case study
+                    {t("work_read")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>

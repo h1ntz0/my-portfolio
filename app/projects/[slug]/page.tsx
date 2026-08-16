@@ -148,7 +148,7 @@ export default async function ProjectPage({
                     <td className="mono px-4 py-3 text-xs text-accent">{tc.id}</td>
                     <td className="px-4 py-3">{tc.title}</td>
                     <td className="hidden px-4 py-3 text-xs text-muted-foreground md:table-cell">
-                      {tc.expected ?? "—"}
+                      {tc.expected ?? "·"}
                     </td>
                     <td className="px-4 py-3">
                       <StatusBadge status={tc.status} dot />

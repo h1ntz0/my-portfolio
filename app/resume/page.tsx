@@ -92,7 +92,7 @@ function ResumeDoc() {
             <p key={cert.name} className="text-sm">
               <span className="font-medium">{cert.name}</span>
               <span className="text-muted-foreground">
-                {" "}— {cert.issuer}, {cert.year}
+                {" "}· {cert.issuer}, {cert.year}
               </span>
             </p>
           ))}

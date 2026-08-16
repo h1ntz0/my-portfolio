@@ -1,12 +1,16 @@
+"use client";
+
 import Link from "next/link";
 
 import { skillGroups } from "@/content/profile";
+import { useLang } from "@/components/lang-provider";
 import { ToolIcon } from "@/components/qa/tool-icon";
 
 // Methodology types render as plain tags; tools/languages render as logo tiles.
 const plainTagGroups = new Set(["Testing"]);
 
 export function SkillGroups() {
+  const { t } = useLang();
   return (
     <div className="mt-10 space-y-10">
       {skillGroups.map((group) => {
@@ -40,7 +44,7 @@ export function SkillGroups() {
                       <span className="block text-sm font-medium">{skill.name}</span>
                       {skill.usedIn && skill.usedIn.length > 0 && (
                         <span className="block truncate text-[11px] text-muted-foreground">
-                          used in {skill.usedIn.join(", ")}
+                          {t("tools_used")} {skill.usedIn.join(", ")}
                         </span>
                       )}
                     </div>
@@ -56,11 +60,12 @@ export function SkillGroups() {
 }
 
 export function SkillToProjectHint() {
+  const { t } = useLang();
   return (
     <p className="mt-8 text-sm text-muted-foreground">
-      Every skill is tied to real work.{" "}
+      {t("tools_every")}{" "}
       <Link href="/projects" className="font-medium text-accent hover:underline">
-        Browse the projects →
+        {t("tools_browse")} →
       </Link>
     </p>
   );

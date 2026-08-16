@@ -7,29 +7,35 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
+import type { TranslationKey } from "@/lib/i18n";
+import { useLang } from "@/components/lang-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LangToggle } from "@/components/lang-toggle";
 import { Container } from "@/components/layout/container";
 
-const links = [
-  { href: "/projects", label: "Work" },
-  { href: "/testing-lab", label: "Lab" },
-  { href: "/about", label: "About" },
-  { href: "/resume", label: "Resume" },
+const links: { href: string; labelKey: TranslationKey; exact?: boolean }[] = [
+  { href: "/", labelKey: "nav_home", exact: true },
+  { href: "/projects", labelKey: "nav_work" },
+  { href: "/testing-lab", labelKey: "nav_lab" },
+  { href: "/about", labelKey: "nav_about" },
+  { href: "/resume", labelKey: "nav_resume" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
+  const { t } = useLang();
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  const isActive = (href: string) => pathname.startsWith(href);
+  const isActive = (href: string, exact?: boolean) =>
+    exact ? pathname === href : pathname.startsWith(href);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/70 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <Container className="flex h-16 items-center justify-between gap-4">
+      <Container className="flex h-16 items-center justify-between gap-3">
         <Link
           href="/"
           className="text-base font-semibold tracking-tight"
@@ -39,43 +45,47 @@ export function Navbar() {
           <span className="text-accent">.qa</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
-          {links.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "relative text-sm transition-colors",
-                isActive(item.href)
-                  ? "text-foreground font-medium"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-              aria-current={isActive(item.href) ? "page" : undefined}
-            >
-              {item.label}
-              <span
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Main">
+          {links.map((item) => {
+            const active = isActive(item.href, item.exact);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
                 className={cn(
-                  "absolute -bottom-1.5 left-0 h-0.5 rounded-full bg-accent transition-all",
-                  isActive(item.href) ? "w-full" : "w-0"
+                  "relative text-sm transition-colors",
+                  active
+                    ? "font-medium text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
-              />
-            </Link>
-          ))}
+                aria-current={active ? "page" : undefined}
+              >
+                {t(item.labelKey)}
+                <span
+                  className={cn(
+                    "absolute -bottom-1.5 left-0 h-0.5 rounded-full bg-accent transition-all",
+                    active ? "w-full" : "w-0"
+                  )}
+                />
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-1.5">
+          <LangToggle />
           <ThemeToggle />
           <Link
             href="/contact"
-            className="hidden items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-accent transition-colors hover:bg-secondary sm:inline-flex"
+            className="hidden items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-accent transition-colors hover:bg-secondary lg:inline-flex"
           >
-            Let&apos;s talk
+            {t("nav_talk")}
             <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>
           <button
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground hover:bg-secondary md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground hover:bg-secondary lg:hidden"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t("nav_close") : t("nav_open")}
             aria-expanded={open}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -84,26 +94,29 @@ export function Navbar() {
       </Container>
 
       {open && (
-        <div className="border-t bg-background md:hidden">
+        <div className="border-t bg-background lg:hidden">
           <Container className="flex flex-col gap-1 py-3">
-            {links.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "rounded-md px-3 py-2.5 text-base transition-colors hover:bg-secondary",
-                  isActive(item.href) ? "font-medium text-accent" : "text-muted-foreground"
-                )}
-                aria-current={isActive(item.href) ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {links.map((item) => {
+              const active = isActive(item.href, item.exact);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "rounded-md px-3 py-2.5 text-base transition-colors hover:bg-secondary",
+                    active ? "font-medium text-accent" : "text-muted-foreground"
+                  )}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {t(item.labelKey)}
+                </Link>
+              );
+            })}
             <Link
               href="/contact"
               className="mt-1 inline-flex items-center gap-1 rounded-md bg-accent px-3 py-2.5 text-base font-medium text-accent-foreground"
             >
-              Let&apos;s talk
+              {t("nav_talk")}
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </Container>

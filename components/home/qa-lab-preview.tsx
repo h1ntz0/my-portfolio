@@ -1,26 +1,28 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, FlaskConical } from "lucide-react";
 
 import { testCases, bugs, apiEndpoints } from "@/content/testing";
+import { useLang } from "@/components/lang-provider";
 
 export function QaLabPreview() {
+  const { t } = useLang();
   const rows = [
-    { label: "Test cases", value: String(testCases.length) },
-    { label: "Bug reports", value: String(bugs.length).padStart(2, "0") },
-    { label: "API tests", value: String(apiEndpoints.length * 4) },
-    { label: "Automation", value: "Playwright" },
+    { label: t("lab_testcases"), value: String(testCases.length) },
+    { label: t("lab_bugs"), value: String(bugs.length).padStart(2, "0") },
+    { label: t("lab_api"), value: String(apiEndpoints.length * 4) },
+    { label: t("lab_automation"), value: "Playwright" },
   ];
 
   return (
     <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-      <span className="mono text-sm text-accent sm:pt-2">04</span>
+      <span className="mono text-sm text-accent sm:pt-2">{t("lab_num")}</span>
       <div>
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          Want the technical details?
+          {t("lab_title")}
         </h2>
-        <p className="mt-3 text-muted-foreground">
-          I keep the deeper testing evidence here.
-        </p>
+        <p className="mt-3 text-muted-foreground">{t("lab_sub")}</p>
 
         <div className="mt-8 max-w-md">
           <Link
@@ -30,7 +32,7 @@ export function QaLabPreview() {
             <div className="flex items-center justify-between border-b bg-muted/40 px-5 py-3">
               <span className="inline-flex items-center gap-2 text-sm font-medium">
                 <FlaskConical className="h-4 w-4 text-accent" />
-                QA Lab
+                {t("lab_name")}
               </span>
             </div>
             <div className="divide-y">
@@ -45,7 +47,7 @@ export function QaLabPreview() {
               ))}
             </div>
             <div className="flex items-center justify-between bg-muted/20 px-5 py-3 text-sm font-medium text-accent">
-              Explore the lab
+              {t("lab_explore")}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </div>
           </Link>

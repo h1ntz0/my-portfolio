@@ -1,6 +1,9 @@
+"use client";
+
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 import { site } from "@/lib/site";
+import { useLang } from "@/components/lang-provider";
 import { Container } from "@/components/layout/container";
 
 const socials = [
@@ -10,6 +13,7 @@ const socials = [
 ];
 
 export function Footer() {
+  const { t } = useLang();
   return (
     <footer className="border-t border-border/70 bg-card">
       <Container className="flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
@@ -19,7 +23,7 @@ export function Footer() {
             <span className="text-accent">.qa</span>
           </p>
           <p className="mt-2 max-w-xs text-sm text-muted-foreground">
-            Built with curiosity, tested with intention.
+            {t("footer_tagline")}
           </p>
         </div>
 
@@ -42,7 +46,7 @@ export function Footer() {
       </Container>
       <div className="border-t border-border/60">
         <Container className="py-5 text-xs text-muted-foreground">
-          © 2026 {site.name}. QA tester who likes finding the weird stuff.
+          © 2026 {site.name}. {t("footer_copyright")}
         </Container>
       </div>
     </footer>

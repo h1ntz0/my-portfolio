@@ -1,3 +1,7 @@
+"use client";
+
+import { useLang } from "@/components/lang-provider";
+
 export const testInterests = [
   "Web applications",
   "API behaviour",
@@ -10,13 +14,15 @@ export const testInterests = [
 ];
 
 export function WhatITest() {
+  const { t } = useLang();
   return (
     <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-      <span className="mono text-sm text-accent sm:pt-2">03</span>
+      <span className="mono text-sm text-accent sm:pt-2">{t("what_num")}</span>
       <div>
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          What I like testing
+          {t("what_title")}
         </h2>
+        <p className="mt-3 text-muted-foreground">{t("what_desc")}</p>
         <div className="mt-6 flex flex-wrap gap-2.5">
           {testInterests.map((item) => (
             <span

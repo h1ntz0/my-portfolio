@@ -35,14 +35,14 @@ export default function ContactPage() {
             <ContactMethod
               icon={Linkedin}
               label="LinkedIn"
-              value="in/benn"
+              value="in/arrofizeinabdillah66"
               href={site.links.linkedin}
               external
             />
             <ContactMethod
               icon={Github}
               label="GitHub"
-              value="github.com/benn"
+              value="github.com/h1ntz0"
               href={site.links.github}
               external
             />

@@ -30,7 +30,7 @@ export const navItems = [
 ] as const;
 
 export const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://benn.example.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://arrofi.qa";
 
 export function buildMetadata(overrides?: Partial<Metadata>): Metadata {
   return {

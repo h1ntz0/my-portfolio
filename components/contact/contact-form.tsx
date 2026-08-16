@@ -45,7 +45,7 @@ export function ContactForm() {
     if (Object.keys(next).length > 0) return;
 
     const body = encodeURIComponent(message);
-    const mailto = `mailto:hello@benn.dev?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailto = `mailto:arrofi.zein12@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     window.location.href = mailto;
     setSent(true);
     form.reset();

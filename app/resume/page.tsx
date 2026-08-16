@@ -38,7 +38,7 @@ function ResumeDoc() {
         </h2>
         <p className="mt-1 text-sm font-medium text-accent">{site.role}</p>
         <div className="mono mt-2 text-xs text-muted-foreground">
-          {site.email} · {site.location} · github.com/benn · linkedin.com/in/benn
+          {site.email} · {site.location} · github.com/h1ntz0 · linkedin.com/in/arrofizeinabdillah66
         </div>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           QA Tester focused on functional testing, API validation, automation,

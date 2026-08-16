@@ -71,12 +71,12 @@ export const translations = {
   lab_explore: { en: "Explore the lab", id: "Jelajahi lab" },
 
   // Experience
-  exp_num: { en: "05", id: "05" },
+  exp_num: { en: "04", id: "04" },
   exp_title: { en: "Experience", id: "Pengalaman" },
   exp_desc: { en: "Where I've built quality so far.", id: "Tempat aku membangun kualitas sejauh ini." },
 
   // Tools
-  tools_num: { en: "06", id: "06" },
+  tools_num: { en: "05", id: "05" },
   tools_title: { en: "Tools I use", id: "Tools yang kupakai" },
   tools_desc: {
     en: "No invented percentages. Just the tools and the work they were used in.",
@@ -90,7 +90,7 @@ export const translations = {
   },
 
   // Currently learning
-  learn_num: { en: "08", id: "08" },
+  learn_num: { en: "07", id: "07" },
   learn_title: { en: "Currently learning", id: "Sedang belajar" },
   learn_desc: {
     en: "I'm always trying to get better at the parts of testing that are hardest to do well.",
@@ -98,7 +98,7 @@ export const translations = {
   },
 
   // GitHub
-  gh_num: { en: "07", id: "07" },
+  gh_num: { en: "06", id: "06" },
   gh_title: {
     en: "I build things and keep them on GitHub",
     id: "Aku membangun hal-hal dan menyimpannya di GitHub",
@@ -110,7 +110,7 @@ export const translations = {
   gh_view: { en: "View GitHub", id: "Lihat GitHub" },
 
   // Contact
-  contact_num: { en: "09", id: "09" },
+  contact_num: { en: "08", id: "08" },
   contact_title: { en: "Got a QA opportunity?", id: "Ada peluang QA?" },
   contact_desc: {
     en: "I'm always open to discussing QA, testing projects, and opportunities.",

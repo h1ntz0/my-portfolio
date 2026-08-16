@@ -3,15 +3,13 @@ import { Github, ArrowUpRight } from "lucide-react";
 
 import { buildMetadata } from "@/lib/site";
 import { repos } from "@/content/github";
-import { projects } from "@/content/projects";
 import { PageHeader } from "@/components/qa/page-header";
 import { Section } from "@/components/layout/section";
-import { ProjectListing } from "@/components/projects/project-listing";
 
 export const metadata: Metadata = buildMetadata({
   title: "Work",
   description:
-    "Real projects on my GitHub, plus sample QA testing case studies that show how I test.",
+    "Real projects on my GitHub.",
 });
 
 export default function ProjectsPage() {
@@ -20,13 +18,13 @@ export default function ProjectsPage() {
       <PageHeader
         eyebrow="Work"
         title="Things I've built"
-        description="Real projects live on my GitHub. Below them, some sample testing case studies that show how I approach QA."
+        description="Real projects straight from my GitHub."
       />
 
       <Section>
-        <h2 className="text-xl font-semibold tracking-tight">On GitHub</h2>
-        <p className="mt-2 text-muted-foreground">
-          The repos I actually work on, straight from my profile.
+        <p className="text-muted-foreground">
+          These are the repos I actually work on. Each links straight to the
+          source on GitHub.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {repos.map((repo) => (
@@ -59,19 +57,6 @@ export default function ProjectsPage() {
               </span>
             </a>
           ))}
-        </div>
-      </Section>
-
-      <Section className="bg-card">
-        <h2 className="text-xl font-semibold tracking-tight">
-          Sample testing case studies
-        </h2>
-        <p className="mt-2 text-muted-foreground">
-          These are example projects I built to demonstrate QA methodology.
-          The metrics are sample values, not real client work.
-        </p>
-        <div className="mt-6">
-          <ProjectListing projects={projects} />
         </div>
       </Section>
     </>

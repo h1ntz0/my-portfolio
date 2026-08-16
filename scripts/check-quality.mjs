@@ -2,9 +2,7 @@ import { chromium } from "@playwright/test";
 
 const BASE = "http://localhost:3100";
 const pages = [
-  "/", "/about", "/projects", "/projects/ecommerce-web-application",
-  "/projects/saas-billing-dashboard", "/projects/inventory-management",
-  "/testing-lab", "/skills", "/experience", "/resume", "/contact",
+  "/", "/about", "/projects", "/skills", "/experience", "/resume", "/contact",
 ];
 
 const errors = [];

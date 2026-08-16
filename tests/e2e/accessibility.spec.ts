@@ -5,8 +5,6 @@ const pages = [
   "/",
   "/about",
   "/projects",
-  "/projects/ecommerce-web-application",
-  "/testing-lab",
   "/skills",
   "/experience",
   "/resume",

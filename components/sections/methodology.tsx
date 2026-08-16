@@ -1,4 +1,4 @@
-import { methodology, riskItems } from "@/content/testing";
+import { methodology, riskItems } from "@/content/methodology";
 import {
   Accordion,
   AccordionContent,

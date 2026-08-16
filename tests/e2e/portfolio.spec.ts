@@ -22,51 +22,30 @@ test.describe("Portfolio core flows", () => {
     ).toBeVisible();
   });
 
-  test("TC-WEB-003 Project filter works", async ({ page }) => {
+  test("TC-WEB-003 Work shows real GitHub repos", async ({ page }) => {
     await page.goto("/projects");
-    await page.getByRole("button", { name: "Database" }).click();
-    await expect(
-      page.getByText("Inventory Management System")
-    ).toBeVisible();
+    await expect(page.getByRole("link", { name: /Ranime/ })).toBeVisible();
+    // All repo links point to the real GitHub account
+    const href = await page.getByRole("link", { name: /Ranime/ }).getAttribute("href");
+    expect(href).toMatch(/github\.com\/h1ntz0\/Ranime/);
   });
 
-  test("TC-WEB-004 Project detail opens", async ({ page }) => {
-    await page.goto("/projects");
-    await page.getByRole("link", { name: /E-Commerce Web Application/ }).first().click();
-    await expect(page).toHaveURL(/\/projects\/ecommerce-web-application/);
+  test("TC-WEB-004 Home shows selected work repos", async ({ page }) => {
+    await page.goto("/");
     await expect(
-      page.getByRole("heading", { name: "E-Commerce Web Application" })
+      page.getByRole("heading", { name: /Selected work|Karya pilihan/ })
     ).toBeVisible();
-    await expect(
-      page.getByRole("heading", { name: "Defects Found" })
-    ).toBeVisible();
+    await expect(page.getByText("Ranime").first()).toBeVisible();
   });
 
-  test("TC-WEB-005 Testing Lab loads", async ({ page }) => {
-    await page.goto("/testing-lab");
-    await expect(
-      page.getByRole("heading", { name: "A live window into my QA work" })
-    ).toBeVisible();
-    await expect(page.getByPlaceholder("Search test cases...")).toBeVisible();
-  });
-
-  test("TC-WEB-006 Bug report detail opens", async ({ page }) => {
-    await page.goto("/testing-lab");
-    await page.locator('[data-bug="BUG-014"]').getByRole("button", { name: "View Details" }).click();
-    await expect(page.getByRole("dialog")).toBeVisible();
-    await expect(page.getByText("Steps to Reproduce")).toBeVisible();
-  });
-
-  test("TC-WEB-007 Resume link works", async ({ page }) => {
+  test("TC-WEB-005 Resume link works", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: "Resume", exact: true }).click();
     await expect(page).toHaveURL(/\/resume/);
-    await expect(
-      page.getByRole("heading", { name: "Resume" })
-    ).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Resume" })).toBeVisible();
   });
 
-  test("TC-WEB-008 Contact form validation", async ({ page }) => {
+  test("TC-WEB-006 Contact form validation", async ({ page }) => {
     await page.goto("/contact");
     await page.getByRole("button", { name: "Send Message" }).click();
     await expect(page.getByText("Name is required.")).toBeVisible();
@@ -77,11 +56,11 @@ test.describe("Portfolio core flows", () => {
 test.describe("Mobile navigation", () => {
   test.skip(({ isMobile }) => !isMobile, "Mobile-only flow");
 
-  test("TC-WEB-009 Mobile hamburger menu works", async ({ page }) => {
+  test("TC-WEB-007 Mobile hamburger menu works", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
     await page.getByRole("button", { name: "Open menu" }).click();
-    await page.getByRole("link", { name: "Lab", exact: true }).click();
-    await expect(page).toHaveURL(/\/testing-lab/);
+    await page.getByRole("link", { name: "Work", exact: true }).click();
+    await expect(page).toHaveURL(/\/projects/);
   });
 });

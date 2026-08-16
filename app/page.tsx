@@ -2,7 +2,6 @@ import { Hero } from "@/components/home/hero";
 import { Intro } from "@/components/home/intro";
 import { SelectedWork } from "@/components/home/selected-work";
 import { WhatITest } from "@/components/home/what-i-test";
-import { QaLabPreview } from "@/components/home/qa-lab-preview";
 import { CurrentlyLearning } from "@/components/home/currently-learning";
 import { GitHubSection } from "@/components/home/github-section";
 import { LocalizedHeading } from "@/components/home/localized-heading";
@@ -26,10 +25,6 @@ export default function HomePage() {
 
       <Section id="what">
         <WhatITest />
-      </Section>
-
-      <Section id="lab" className="bg-card">
-        <QaLabPreview />
       </Section>
 
       <Section id="experience">

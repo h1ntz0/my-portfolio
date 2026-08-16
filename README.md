@@ -14,11 +14,9 @@ A modern, evidence-driven QA tester portfolio built as a **Digital QA Command Ce
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Home: hero + QA test execution panel, credibility metrics, featured projects, methodology, testing lab preview, skills, experience, contact, Recruiter / QA Deep Dive mode |
+| `/` | Home: hero, intro, selected work (real GitHub repos), what I test, experience, tools, currently learning, contact |
 | `/about` | Bio, methodology, certifications |
-| `/projects` | Project listing with category filter + search |
-| `/projects/[slug]` | Full case study (scope, strategy, test cases, defects, automation, metrics, lessons) |
-| `/testing-lab` | Interactive test case explorer, bug explorer, API showcase, automation, test runs |
+| `/projects` | Real projects from GitHub |
 | `/skills` | Skills grouped by discipline, tied to evidence |
 | `/experience` | Experience timeline + career path |
 | `/resume` | Printable resume (Print / Save as PDF) |

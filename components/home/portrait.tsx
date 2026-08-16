@@ -19,8 +19,8 @@ export function Portrait({
       <Image
         src="/images/portrait.jpg"
         alt={alt}
-        width={986}
-        height={1228}
+        width={959}
+        height={1280}
         priority={priority}
         className="h-full w-full object-cover"
       />

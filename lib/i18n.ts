@@ -45,10 +45,10 @@ export const translations = {
   // Selected work
   work_title: { en: "Selected work", id: "Karya pilihan" },
   work_desc: {
-    en: "A few things I've tested, automated, broken, and learned from.",
-    id: "Beberapa hal yang pernah kutes, kuautomasi, kupatahkan, dan kupelajari.",
+    en: "These are the real projects I work on. I treat them like little QA labs: I build them, I break them, and then I figure out why they broke. Each one links to the source on GitHub.",
+    id: "Ini project-project nyata yang kukerjakan. Aku memperlakukannya seperti lab QA kecil: kubangun, kupatahkan, lalu kucari tahu kenapa rusak. Semuanya mengarah ke source di GitHub.",
   },
-  work_read: { en: "Read case study", id: "Baca studi kasus" },
+  work_read: { en: "View on GitHub", id: "Lihat di GitHub" },
   work_more: {
     en: "One of the apps I've tested. More in selected work.",
     id: "Salah satu aplikasi yang pernah kutes. Selengkapnya di karya pilihan.",
@@ -57,7 +57,10 @@ export const translations = {
   // What I test
   what_num: { en: "03", id: "03" },
   what_title: { en: "What I like testing", id: "Apa yang suka kutest" },
-  what_desc: { en: "Things I enjoy poking at.", id: "Hal-hal yang suka kuselidiki." },
+  what_desc: {
+    en: "I like looking for the edge cases and the small details that trip people up. A few of the things I enjoy poking at:",
+    id: "Aku suka mencari edge case dan detail kecil yang bikin orang tersandung. Beberapa hal yang suka kuselidiki:",
+  },
 
   // QA Lab preview
   lab_num: { en: "04", id: "04" },

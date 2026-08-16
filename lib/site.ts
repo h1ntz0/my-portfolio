@@ -12,7 +12,7 @@ export const site = {
   location: "Jakarta, Indonesia",
   links: {
     github: "https://github.com/h1ntz0",
-    linkedin: "https://linkedin.com/in/h1ntz0",
+    linkedin: "https://www.linkedin.com/in/arrofizeinabdillah66/",
     email: "hello@benn.dev",
   },
   resumeUrl: "/resume",

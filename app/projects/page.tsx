@@ -18,13 +18,14 @@ export default function ProjectsPage() {
       <PageHeader
         eyebrow="Work"
         title="Things I've built"
-        description="Real projects straight from my GitHub."
+        description="Real projects straight from my GitHub. I build these, I test them, and I keep the source public so you can look at how I actually work."
       />
 
       <Section>
         <p className="text-muted-foreground">
-          These are the repos I actually work on. Each links straight to the
-          source on GitHub.
+          A few of these are small and experimental, a few are more complete.
+          What they have in common is that they&apos;re real: real code, real
+          bugs, and real lessons. Click any repo to open the source on GitHub.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {repos.map((repo) => (

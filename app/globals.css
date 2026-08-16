@@ -50,27 +50,27 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Light mode (default) — PRD-UI §46 */
+/* Light mode (default) — calm, with clear surface hierarchy */
 :root {
   --radius: 0.75rem;
 
-  --background: #f7f7f5;
-  --foreground: #18191b;
+  --background: #edeeeb;
+  --foreground: #191a1c;
 
   --card: #ffffff;
-  --card-foreground: #18191b;
+  --card-foreground: #191a1c;
 
   --popover: #ffffff;
-  --popover-foreground: #18191b;
+  --popover-foreground: #191a1c;
 
-  --primary: #18191b;
-  --primary-foreground: #f7f7f5;
+  --primary: #191a1c;
+  --primary-foreground: #ffffff;
 
-  --secondary: #efefec;
-  --secondary-foreground: #18191b;
+  --secondary: #e4e5e1;
+  --secondary-foreground: #191a1c;
 
-  --muted: #efefec;
-  --muted-foreground: #666a70;
+  --muted: #e8e9e5;
+  --muted-foreground: #565b60;
 
   --accent: #2b56ad;
   --accent-foreground: #ffffff;
@@ -78,8 +78,8 @@
   --destructive: #b0281d;
   --destructive-foreground: #ffffff;
 
-  --border: #e5e5e2;
-  --input: #e5e5e2;
+  --border: #d4d5d0;
+  --input: #d4d5d0;
   --ring: #2b56ad;
 
   --success: #0e5c39;

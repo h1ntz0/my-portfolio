@@ -4,7 +4,6 @@ export const translations = {
   // Navbar
   nav_home: { en: "Home", id: "Beranda" },
   nav_work: { en: "Work", id: "Karya" },
-  nav_lab: { en: "Lab", id: "Lab" },
   nav_about: { en: "About", id: "Tentang" },
   nav_resume: { en: "CV", id: "CV" },
   nav_talk: { en: "Let's talk", id: "Mari ngobrol" },
@@ -24,11 +23,6 @@ export const translations = {
   hero_see: { en: "See my work", id: "Lihat karyaku" },
   hero_github: { en: "GitHub", id: "GitHub" },
   hero_learning: { en: "Currently learning", id: "Sedang belajar" },
-  hero_selected: { en: "Selected work", id: "Karya pilihan" },
-  hero_one_of: {
-    en: "One of the apps I've tested. More in selected work.",
-    id: "Salah satu aplikasi yang pernah kutes. Selengkapnya di karya pilihan.",
-  },
 
   // Intro
   intro_num: { en: "01", id: "01" },
@@ -48,11 +42,6 @@ export const translations = {
     en: "These are the real projects I work on. I treat them like little QA labs: I build them, I break them, and then I figure out why they broke. Each one links to the source on GitHub.",
     id: "Ini project-project nyata yang kukerjakan. Aku memperlakukannya seperti lab QA kecil: kubangun, kupatahkan, lalu kucari tahu kenapa rusak. Semuanya mengarah ke source di GitHub.",
   },
-  work_read: { en: "View on GitHub", id: "Lihat di GitHub" },
-  work_more: {
-    en: "One of the apps I've tested. More in selected work.",
-    id: "Salah satu aplikasi yang pernah kutes. Selengkapnya di karya pilihan.",
-  },
 
   // What I test
   what_num: { en: "03", id: "03" },
@@ -61,17 +50,6 @@ export const translations = {
     en: "I like looking for the edge cases and the small details that trip people up. A few of the things I enjoy poking at:",
     id: "Aku suka mencari edge case dan detail kecil yang bikin orang tersandung. Beberapa hal yang suka kuselidiki:",
   },
-
-  // QA Lab preview
-  lab_num: { en: "04", id: "04" },
-  lab_title: { en: "Want the technical details?", id: "Mau detail teknisnya?" },
-  lab_sub: { en: "I keep the deeper testing evidence here.", id: "Bukti testing yang lebih dalam kusimpan di sini." },
-  lab_name: { en: "QA Lab", id: "QA Lab" },
-  lab_testcases: { en: "Test cases", id: "Test case" },
-  lab_bugs: { en: "Bug reports", id: "Laporan bug" },
-  lab_api: { en: "API tests", id: "Tes API" },
-  lab_automation: { en: "Automation", id: "Automation" },
-  lab_explore: { en: "Explore the lab", id: "Jelajahi lab" },
 
   // Experience
   exp_num: { en: "04", id: "04" },

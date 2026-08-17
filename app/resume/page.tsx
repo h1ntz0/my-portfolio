@@ -87,21 +87,23 @@ function ResumeDoc() {
         </div>
       </section>
 
-      <section>
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-accent">
-          Certifications
-        </h3>
-        <div className="mt-4 space-y-2">
-          {certifications.map((cert) => (
-            <p key={cert.name} className="text-sm">
-              <span className="font-medium">{cert.name}</span>
-              <span className="text-muted-foreground">
-                {" "}· {cert.issuer}, {cert.year}
-              </span>
-            </p>
-          ))}
-        </div>
-      </section>
+      {certifications.length > 0 && (
+        <section>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-accent">
+            Certifications
+          </h3>
+          <div className="mt-4 space-y-2">
+            {certifications.map((cert) => (
+              <p key={cert.name} className="text-sm">
+                <span className="font-medium">{cert.name}</span>
+                <span className="text-muted-foreground">
+                  {" "}· {cert.issuer}, {cert.year}
+                </span>
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

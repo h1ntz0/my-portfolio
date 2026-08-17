@@ -91,29 +91,31 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section>
-        <SectionHeading
-          eyebrow="Credentials"
-          title="Certifications"
-          description="Compact list with issuer, year, and credential."
-        />
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {certifications.map((cert) => (
-            <Card key={cert.name} className="h-full">
-              <CardContent className="p-5">
-                <h3 className="text-sm font-semibold leading-snug">{cert.name}</h3>
-                <p className="mt-1 text-xs text-accent">{cert.issuer} · {cert.year}</p>
-                <p className="mt-3 text-xs text-muted-foreground">{cert.description}</p>
-                {cert.credential && (
-                  <p className="mono mt-3 text-[11px] text-muted-foreground">
-                    {cert.credential}
-                  </p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
+      {certifications.length > 0 && (
+        <Section>
+          <SectionHeading
+            eyebrow="Credentials"
+            title="Certifications"
+            description="Compact list with issuer, year, and credential."
+          />
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {certifications.map((cert) => (
+              <Card key={cert.name} className="h-full">
+                <CardContent className="p-5">
+                  <h3 className="text-sm font-semibold leading-snug">{cert.name}</h3>
+                  <p className="mt-1 text-xs text-accent">{cert.issuer} · {cert.year}</p>
+                  <p className="mt-3 text-xs text-muted-foreground">{cert.description}</p>
+                  {cert.credential && (
+                    <p className="mono mt-3 text-[11px] text-muted-foreground">
+                      {cert.credential}
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Section>
+      )}
     </>
   );
 }

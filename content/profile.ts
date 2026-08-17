@@ -53,70 +53,52 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Testing",
     skills: [
-      { name: "Functional Testing", usedIn: ["E-Commerce Web Application", "SaaS Billing & Dashboard"] },
-      { name: "Regression Testing", usedIn: ["E-Commerce Web Application"] },
-      { name: "Smoke Testing", usedIn: ["E-Commerce Web Application"] },
-      { name: "Exploratory Testing", usedIn: ["SaaS Billing & Dashboard"] },
-      { name: "Integration Testing", usedIn: ["Inventory Management System"] },
-      { name: "Negative Testing", usedIn: ["E-Commerce Web Application"] },
-      { name: "Boundary Testing", usedIn: ["Inventory Management System"] },
+      { name: "Functional Testing", usedIn: ["WISECON · QA Tester", "Ranime"] },
+      { name: "Regression Testing", usedIn: ["WISECON · QA Tester"] },
+      { name: "Smoke Testing", usedIn: ["WISECON · QA Tester"] },
+      { name: "Exploratory Testing", usedIn: ["WISECON · QA Tester"] },
+      { name: "End-to-End Testing", usedIn: ["WISECON · QA Tester"] },
+      { name: "Test Case Design", usedIn: ["WISECON · QA Tester"] },
+      { name: "Bug Documentation", usedIn: ["WISECON · QA Tester"] },
     ],
   },
   {
     title: "Automation",
     skills: [
-      { name: "Playwright", usedIn: ["E-Commerce Web Application"] },
-      { name: "Cypress", usedIn: ["SaaS Billing & Dashboard"] },
+      { name: "Playwright", description: "Learning and building E2E suites for my projects" },
+      { name: "AI Testing Tools", usedIn: ["WISECON · QA Tester"] },
       { name: "Selenium", description: "Foundational automation knowledge" },
     ],
   },
   {
     title: "API",
     skills: [
-      { name: "Postman", usedIn: ["E-Commerce Web Application", "Inventory Management System"] },
-      { name: "REST API", usedIn: ["Inventory Management System"] },
-      { name: "JSON", usedIn: ["Inventory Management System"] },
+      { name: "Postman", usedIn: ["Ranime"] },
+      { name: "REST API", usedIn: ["Ranime"] },
+      { name: "GraphQL", usedIn: ["Ranime"] },
+      { name: "JSON", usedIn: ["Ranime"] },
       { name: "HTTP", description: "Methods, status codes, headers" },
     ],
   },
   {
     title: "Database",
     skills: [
-      { name: "SQL", usedIn: ["Inventory Management System"] },
-      { name: "MySQL", usedIn: ["Inventory Management System"] },
-      { name: "SQL Server", usedIn: ["SaaS Billing & Dashboard"] },
+      { name: "SQL", usedIn: ["WISECON · Application Support"] },
+      { name: "MySQL", usedIn: ["WISECON · Application Support"] },
+      { name: "PostgreSQL", usedIn: ["Ranime"] },
     ],
   },
   {
     title: "Dev Tools",
     skills: [
-      { name: "Git", usedIn: ["E-Commerce Web Application"] },
-      { name: "GitHub", usedIn: ["E-Commerce Web Application"] },
-      { name: "CI/CD", usedIn: ["E-Commerce Web Application"] },
-      { name: "Docker", usedIn: ["E-Commerce Web Application"] },
+      { name: "Git", usedIn: ["All GitHub projects"] },
+      { name: "GitHub", usedIn: ["All GitHub projects"] },
+      { name: "Terminal / CLI", usedIn: ["Todo-cli"] },
     ],
   },
 ];
 
-export const certifications: Certification[] = [
-  {
-    name: "ISTQB Foundation Level (CTFL)",
-    issuer: "ISTQB",
-    year: "2024",
-    credential: "CTFL-2024-000123",
-    description:
-      "Core testing concepts: test levels, test design techniques, defect management, and test management.",
-  },
-  {
-    name: "Postman API Fundamentals",
-    issuer: "Postman",
-    year: "2024",
-    description: "API requests, collections, environments, and automated API testing.",
-  },
-  {
-    name: "Playwright Testing with JavaScript",
-    issuer: "Online Course",
-    year: "2024",
-    description: "Building maintainable end-to-end test suites with Playwright.",
-  },
-];
+// Certifications are intentionally empty until real ones are confirmed.
+// The earlier entries (ISTQB, Postman, Playwright) were placeholders and
+// have been removed so the site never claims a credential that isn't real.
+export const certifications: Certification[] = [];

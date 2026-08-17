@@ -7,6 +7,8 @@ import {
   SiGithub,
   SiDocker,
   SiJson,
+  SiGraphql,
+  SiPostgresql,
 } from "@icons-pack/react-simple-icons";
 import {
   Check,
@@ -14,6 +16,8 @@ import {
   Globe,
   Webhook,
   Workflow,
+  Bot,
+  Terminal,
   type LucideIcon,
 } from "lucide-react";
 
@@ -40,6 +44,8 @@ const genericIcons: Record<string, LucideIcon> = {
   HTTP: Globe,
   SQL: Database,
   "CI/CD": Workflow,
+  "AI Testing Tools": Bot,
+  "Terminal / CLI": Terminal,
 };
 
 export function ToolIcon({ name }: { name: string }) {
@@ -74,4 +80,6 @@ const brandMap: Record<string, IconEntry> = {
   GitHub: { node: <SiGithub className="h-4 w-4" />, color: "#181717" },
   Docker: { node: <SiDocker className="h-4 w-4" />, color: "#2496ED" },
   JSON: { node: <SiJson className="h-4 w-4" />, color: "#000000" },
+  GraphQL: { node: <SiGraphql className="h-4 w-4" />, color: "#E10098" },
+  PostgreSQL: { node: <SiPostgresql className="h-4 w-4" />, color: "#4169E1" },
 };

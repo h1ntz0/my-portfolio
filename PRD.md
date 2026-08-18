@@ -1503,7 +1503,7 @@ YAGNI harus diterapkan.
 # 50. Suggested Project Structure
 
 ```text
-qa-portfolio/
+my-portfolio/
 │
 ├── app/
 │   ├── page.tsx
@@ -1997,7 +1997,6 @@ Experience
 ↓
 Top Projects
 ↓
-Skills
 ↓
 Resume
 ↓

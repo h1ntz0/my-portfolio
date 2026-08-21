@@ -19,7 +19,7 @@ export const repos: Repo[] = [
     topics: ["TypeScript", "React", "PostgreSQL", "API", "Web"],
     url: `${githubProfile}/Ranime`,
     featured: true,
-    image: "/images/ranime.png",
+    image: "/images/ranime.webp",
     alt: "Ranime Anime catalog platform screenshot with search, stats and anime cards",
   },
   {

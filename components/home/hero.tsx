@@ -21,7 +21,7 @@ export function Hero() {
           <p className="mono animate-fade-in-up text-xs text-muted-foreground">
             {site.name} · {t("hero_role")} · {t("hero_based")} {site.location}
           </p>
-          <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl min-h-[140px] sm:min-h-[160px] lg:min-h-[190px]">
             <Typewriter
               segments={[
                 { text: t("hero_hi").replace("{name}", site.firstName) },

@@ -17,10 +17,11 @@ export function Portrait({
       }
     >
       <Image
-        src="/images/portrait.jpg"
+        src="/images/portrait.webp"
         alt={alt}
-        width={959}
-        height={1280}
+        width={500}
+        height={625}
+        sizes="(max-width: 768px) 100vw, 400px"
         priority={priority}
         className="h-full w-full object-cover"
       />

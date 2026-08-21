@@ -29,8 +29,8 @@ export const repos: Repo[] = [
     topics: ["Python", "Telegram", "Bot", "SQLite"],
     url: `${githubProfile}/telegram-sticker-bot`,
     featured: true,
-    image: "/images/telegram-sticker-bot.svg",
-    alt: "Telegram Sticker Bot converting user photo to 512x512 WebP sticker format",
+    image: "/images/telegram-sticker-bot.webp",
+    alt: "Telegram Sticker Bot real app preview showing sticker creation and conversation flow",
   },
   {
     name: "Todo-cli",

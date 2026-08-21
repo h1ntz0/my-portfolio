@@ -63,7 +63,7 @@ export function SelectedWork() {
                     rel="noopener noreferrer"
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:underline"
                   >
-                    View on GitHub
+                    {t("work_view_github")}
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
                 </div>

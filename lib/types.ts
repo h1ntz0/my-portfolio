@@ -95,11 +95,16 @@ export interface Project {
 export interface ExperienceItem {
   company: string;
   role: string;
+  roleId?: string;
   period: string;
+  periodId?: string;
   responsibilities: string[];
+  responsibilitiesId?: string[];
   tools: string[];
   impact: string[];
+  impactId?: string[];
   testingActivities: string[];
+  testingActivitiesId?: string[];
 }
 
 export interface SkillGroup {

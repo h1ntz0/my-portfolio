@@ -5,6 +5,8 @@ export interface Repo {
   topics: string[];
   url: string;
   featured?: boolean;
+  image?: string;
+  alt?: string;
 }
 
 export const githubProfile = "https://github.com/h1ntz0";
@@ -17,6 +19,8 @@ export const repos: Repo[] = [
     topics: ["TypeScript", "React", "PostgreSQL", "API", "Web"],
     url: `${githubProfile}/Ranime`,
     featured: true,
+    image: "/images/ranime.png",
+    alt: "Ranime Anime catalog platform screenshot with search, stats and anime cards",
   },
   {
     name: "telegram-sticker-bot",
@@ -25,6 +29,8 @@ export const repos: Repo[] = [
     topics: ["Python", "Telegram", "Bot", "SQLite"],
     url: `${githubProfile}/telegram-sticker-bot`,
     featured: true,
+    image: "/images/telegram-sticker-bot.svg",
+    alt: "Telegram Sticker Bot converting user photo to 512x512 WebP sticker format",
   },
   {
     name: "Todo-cli",
@@ -33,6 +39,8 @@ export const repos: Repo[] = [
     topics: ["Go", "CLI", "Terminal"],
     url: `${githubProfile}/Todo-cli`,
     featured: true,
+    image: "/images/todo-cli.svg",
+    alt: "Todo CLI terminal output showing task commands and interactive task table",
   },
   {
     name: "Temperature_Converter_SIC",

@@ -82,6 +82,8 @@ export function SelectedWork() {
                       subtitle={repo.topics[0] ?? "GitHub"}
                       title={repo.name}
                       tags={repo.topics.slice(0, 4)}
+                      image={repo.image}
+                      alt={repo.alt}
                     />
                   </a>
                 </div>

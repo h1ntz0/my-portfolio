@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="termbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#030712"/>
+
+  <!-- Terminal Window -->
+  <g transform="translate(50, 40)" filter="url(#glow)">
+    <rect width="1100" height="670" rx="14" fill="url(#termbg)" stroke="#1f2937" stroke-width="1.5"/>
+    
+    <!-- Window Header -->
+    <rect width="1100" height="44" rx="14" fill="#131b2e"/>
+    <rect y="30" width="1100" height="14" fill="#131b2e"/>
+    <line x1="0" y1="44" x2="1100" y2="44" stroke="#1f2937" stroke-width="1"/>
+
+    <!-- Traffic lights -->
+    <circle cx="24" cy="22" r="6" fill="#ef4444"/>
+    <circle cx="44" cy="22" r="6" fill="#eab308"/>
+    <circle cx="64" cy="22" r="6" fill="#22c55e"/>
+
+    <!-- Window Title -->
+    <text x="550" y="27" fill="#9ca3af" font-family="monospace" font-size="13" text-anchor="middle">benn@workspace: ~/projects/Todo-cli (go)</text>
+
+    <!-- Terminal Content Area -->
+    <g transform="translate(32, 75)" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, monospace" font-size="14" line-height="1.6">
+      
+      <!-- Command 1: go build & add -->
+      <text y="20" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo add "Setup PostgreSQL schema for Ranime"</tspan></text>
+      <text y="45" fill="#4ade80">[✓] Task added successfully! (ID: 1)</text>
+
+      <text y="80" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo add "Implement AniList GraphQL API sync handler"</tspan></text>
+      <text y="105" fill="#4ade80">[✓] Task added successfully! (ID: 2)</text>
+
+      <text y="140" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo add "Write Telegram bot WebP 512x512 auto-padding tests"</tspan></text>
+      <text y="165" fill="#4ade80">[✓] Task added successfully! (ID: 3)</text>
+
+      <text y="200" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo add "Deploy updated portfolio to Vercel"</tspan></text>
+      <text y="225" fill="#4ade80">[✓] Task added successfully! (ID: 4)</text>
+
+      <!-- Command 2: done -->
+      <text y="265" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo done 1</tspan></text>
+      <text y="290" fill="#a855f7">[★] Task #1 marked as COMPLETED.</text>
+
+      <text y="325" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo done 2</tspan></text>
+      <text y="350" fill="#a855f7">[★] Task #2 marked as COMPLETED.</text>
+
+      <!-- Command 3: list -->
+      <text y="390" fill="#38bdf8">❯ <tspan fill="#f3f4f6">./todo list</tspan></text>
+      
+      <!-- Table output -->
+      <text y="420" fill="#e2e8f0" font-weight="bold">┌─────┬────────────┬────────────────────────────────────────────────────────┬─────────────────────┐</text>
+      <text y="445" fill="#e2e8f0" font-weight="bold">│ ID  │ STATUS     │ TASK DESCRIPTION                                       │ CREATED AT          │</text>
+      <text y="470" fill="#e2e8f0" font-weight="bold">├─────┼────────────┼────────────────────────────────────────────────────────┼─────────────────────┤</text>
+      <text y="495" fill="#94a3b8">│  1  │ <tspan fill="#4ade80" font-weight="bold">[DONE]    </tspan> │ <tspan fill="#64748b" text-decoration="line-through">Setup PostgreSQL schema for Ranime                  </tspan> │ 2026-08-22 09:15:00 │</text>
+      <text y="520" fill="#94a3b8">│  2  │ <tspan fill="#4ade80" font-weight="bold">[DONE]    </tspan> │ <tspan fill="#64748b" text-decoration="line-through">Implement AniList GraphQL API sync handler          </tspan> │ 2026-08-22 09:30:12 │</text>
+      <text y="545" fill="#94a3b8">│  3  │ <tspan fill="#f59e0b" font-weight="bold">[PENDING] </tspan> │ Write Telegram bot WebP 512x512 auto-padding tests     │ 2026-08-22 10:05:44 │</text>
+      <text y="570" fill="#94a3b8">│  4  │ <tspan fill="#f59e0b" font-weight="bold">[PENDING] </tspan> │ Deploy updated portfolio to Vercel                     │ 2026-08-22 11:20:10 │</text>
+      <text y="595" fill="#e2e8f0" font-weight="bold">└─────┴────────────┴────────────────────────────────────────────────────────┴─────────────────────┘</text>
+      <text y="625" fill="#64748b">Total: 4 tasks | Completed: 2 | Pending: 2 | Storage: tasks.json</text>
+    </g>
+  </g>
+</svg>

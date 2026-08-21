@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 
 export function BrowserVisual({
@@ -6,17 +7,21 @@ export function BrowserVisual({
   subtitle,
   tags,
   accent,
+  image,
+  alt,
 }: {
   url: string;
   title: string;
   subtitle?: string;
   tags: string[];
   accent?: boolean;
+  image?: string;
+  alt?: string;
 }) {
   return (
     <div
       className={
-        "overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-200 " +
+        "group overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-200 " +
         (accent ? "border-accent/40" : "border-border")
       }
     >
@@ -31,20 +36,33 @@ export function BrowserVisual({
           {url}
         </div>
       </div>
-      {/* body */}
-      <div className="p-6">
-        <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-          {subtitle}
-        </p>
-        <h4 className="mt-2 text-lg font-semibold tracking-tight">{title}</h4>
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {tags.map((tag) => (
-            <Badge key={tag} variant="outline">
-              {tag}
-            </Badge>
-          ))}
+      {/* screenshot preview or text body */}
+      {image ? (
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted/20">
+          <Image
+            src={image}
+            alt={alt || title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            priority={accent}
+          />
         </div>
-      </div>
+      ) : (
+        <div className="p-6">
+          <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
+            {subtitle}
+          </p>
+          <h4 className="mt-2 text-lg font-semibold tracking-tight">{title}</h4>
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {tags.map((tag) => (
+              <Badge key={tag} variant="outline">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

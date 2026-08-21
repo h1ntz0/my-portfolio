@@ -21,20 +21,21 @@ export function QaPreloader() {
   React.useEffect(() => {
     setMounted(true);
 
+    const stepTime = 500; // 500ms * 6 = 3000ms total
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
           setTimeout(() => {
             setDone(true);
-          }, 450);
+          }, 350);
           return 100;
         }
         const next = Math.min(prev + 20, 100);
         setLogIndex(Math.min(Math.floor((next / 100) * logs.length), logs.length - 1));
         return next;
       });
-    }, 380);
+    }, stepTime);
 
     return () => clearInterval(interval);
   }, [logs.length]);
@@ -43,11 +44,11 @@ export function QaPreloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background/98 backdrop-blur-md transition-opacity duration-500 ease-out will-change-opacity ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background/98 backdrop-blur-md transition-opacity duration-350 ease-out will-change-opacity ${
         progress >= 100 ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="w-full max-w-lg mx-4 rounded-xl border border-border/80 bg-card/90 p-6 shadow-2xl backdrop-blur-xl animate-fade-in-up">
+      <div className="w-full max-w-lg mx-4 rounded-xl border border-border/80 bg-card/95 p-6 shadow-2xl backdrop-blur-xl animate-fade-in-up">
         {/* Terminal Header */}
         <div className="flex items-center justify-between border-b border-border/60 pb-3">
           <div className="flex items-center gap-2">

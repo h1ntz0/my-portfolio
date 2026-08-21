@@ -109,7 +109,7 @@ export function Typewriter({
 function Cursor({ persistent = false }: { persistent?: boolean }) {
   return (
     <span
-      className={persistent ? "cursor-blink" : ""}
+      className={`inline-block w-[0.55ch] select-none text-left ${persistent ? "cursor-blink" : ""}`}
       aria-hidden
       style={{ color: "inherit" }}
     >

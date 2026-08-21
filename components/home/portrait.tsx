@@ -19,9 +19,10 @@ export function Portrait({
       <Image
         src="/images/portrait.webp"
         alt={alt}
-        width={500}
-        height={625}
-        sizes="(max-width: 768px) 100vw, 400px"
+        width={384}
+        height={480}
+        sizes="(max-width: 640px) 320px, 384px"
+        quality={80}
         priority={priority}
         className="h-full w-full object-cover"
       />

@@ -48,6 +48,8 @@ export const repos: Repo[] = [
       "A temperature unit converter (Kelvin, Celsius, Fahrenheit), built as part of a Dibimbing.id task.",
     topics: ["Python", "CLI", "Learning"],
     url: `${githubProfile}/Temperature_Converter_SIC`,
+    image: "/images/temperature-converter.svg",
+    alt: "Temperature Converter Python CLI terminal interface with conversion options and results",
   },
   {
     name: "Tic-Tac-Toe-ReactJs",
@@ -55,5 +57,7 @@ export const repos: Repo[] = [
       "A Tic-Tac-Toe game built with React to practice component state and interaction.",
     topics: ["React", "JavaScript", "Web"],
     url: `${githubProfile}/Tic-Tac-Toe-ReactJs`,
+    image: "/images/tic-tac-toe.svg",
+    alt: "React Tic-Tac-Toe game board UI with 3x3 grid, winning line highlight, and move history",
   },
 ];

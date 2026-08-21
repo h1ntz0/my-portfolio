@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-temp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="card-grad-temp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad-temp)"/>
+  <rect x="0" y="0" width="800" height="500" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- CLI Window Frame -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="40" width="700" height="420" rx="12" fill="url(#card-grad-temp)" stroke="#334155" stroke-width="1.5"/>
+    
+    <!-- Title Bar -->
+    <path d="M 50 52 C 50 45.37 55.37 40 62 40 L 738 40 C 744.63 40 750 45.37 750 52 L 750 82 L 50 82 Z" fill="#0b1120"/>
+    <line x1="50" y1="82" x2="750" y2="82" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Window Dots -->
+    <circle cx="78" cy="61" r="5.5" fill="#ef4444"/>
+    <circle cx="96" cy="61" r="5.5" fill="#f59e0b"/>
+    <circle cx="114" cy="61" r="5.5" fill="#10b981"/>
+    
+    <!-- Title Text -->
+    <text x="400" y="66" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="12.5" font-weight="600" text-anchor="middle" letter-spacing="0.5">python3 temperature_converter.py</text>
+    <text x="715" y="66" fill="#0ea5e9" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="end">v1.2.0</text>
+  </g>
+
+  <!-- Terminal Content -->
+  <g font-family="ui-monospace, monospace" font-size="13">
+    <!-- Header Banner -->
+    <text x="85" y="118" fill="#38bdf8" font-weight="700">=== TEMPERATURE CONVERTER CLI (Python / SIC) ===</text>
+    <text x="85" y="140" fill="#64748b">[System] Ready. Supported units: Celsius (°C), Fahrenheit (°F), Kelvin (K)</text>
+
+    <!-- Interactive Menu Box -->
+    <rect x="85" y="158" width="630" height="90" rx="6" fill="#0b1329" stroke="#1e293b" stroke-width="1"/>
+    <text x="105" y="185" fill="#e2e8f0" font-weight="600">Select conversion mode:</text>
+    <text x="105" y="210" fill="#94a3b8">  [1] Celsius to Fahrenheit &amp; Kelvin     [3] Kelvin to Celsius &amp; Fahrenheit</text>
+    <text x="105" y="232" fill="#94a3b8">  [2] Fahrenheit to Celsius &amp; Kelvin     [4] Batch Test Validations</text>
+
+    <!-- User Input Simulation -->
+    <text x="85" y="278" fill="#f8fafc" font-weight="600">&gt; Enter mode [1-4]: <tspan fill="#38bdf8">1</tspan></text>
+    <text x="85" y="302" fill="#f8fafc" font-weight="600">&gt; Input Temperature in Celsius (°C): <tspan fill="#38bdf8">100.0</tspan></text>
+
+    <!-- Conversion Results Table Box -->
+    <rect x="85" y="322" width="630" height="95" rx="6" fill="#042f2e" fill-opacity="0.4" stroke="#0d9488" stroke-width="1.2"/>
+    <text x="105" y="348" fill="#2dd4bf" font-weight="700">✓ CONVERSION RESULTS</text>
+    <text x="105" y="375" fill="#f8fafc">  • Fahrenheit : <tspan fill="#fbbf24" font-weight="700">212.0 °F</tspan>  <tspan fill="#64748b">(Formula: (100 × 9/5) + 32)</tspan></text>
+    <text x="105" y="398" fill="#f8fafc">  • Kelvin     : <tspan fill="#a78bfa" font-weight="700">373.15 K</tspan>  <tspan fill="#64748b">(Formula: 100 + 273.15)</tspan></text>
+
+    <!-- Prompt line -->
+    <text x="85" y="440" fill="#10b981">✓ Test status: 100% assertions passed</text>
+    <text x="440" y="440" fill="#64748b">&gt; Press [Enter] to continue...</text>
+  </g>
+</svg>

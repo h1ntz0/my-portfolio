@@ -36,14 +36,14 @@ export function QaPreloader() {
 
     setMounted(true);
 
-    const stepTime = 500; // 500ms * 6 = 3000ms total
+    const stepTime = 320; // 320ms * 5 steps = 1600ms + fade = ~2.0s total
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
           setTimeout(() => {
             setDone(true);
-          }, 350);
+          }, 300);
           return 100;
         }
         const next = Math.min(prev + 20, 100);

@@ -39,8 +39,8 @@ export const repos: Repo[] = [
     topics: ["Go", "CLI", "Terminal"],
     url: `${githubProfile}/Todo-cli`,
     featured: true,
-    image: "/images/todo-cli.svg",
-    alt: "Todo CLI terminal output showing task commands and interactive task table",
+    image: "/images/todo-cli.webp",
+    alt: "Todo CLI actual terminal output and task management workflow in Go",
   },
   {
     name: "Temperature_Converter_SIC",

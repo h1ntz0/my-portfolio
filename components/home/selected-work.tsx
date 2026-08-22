@@ -28,16 +28,12 @@ export function SelectedWork() {
         <div className="mt-10 space-y-16 sm:space-y-20">
           {featured.map((repo, i) => {
             const reverse = i % 2 === 1;
-            const large = i === 2;
             return (
               <article
                 key={repo.name}
-                className={cn(
-                  "grid gap-8",
-                  large ? "lg:grid-cols-1" : "lg:grid-cols-2 lg:items-center"
-                )}
+                className="grid gap-8 lg:grid-cols-2 lg:items-center"
               >
-                <div className={cn(!large && reverse && "lg:order-2")}>
+                <div className={cn(reverse && "lg:order-2")}>
                   <p className="mono text-sm text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </p>
@@ -68,7 +64,7 @@ export function SelectedWork() {
                   </a>
                 </div>
 
-                <div className={cn(!large && reverse && "lg:order-1")}>
+                <div className={cn(reverse && "lg:order-1")}>
                   <a
                     href={repo.url}
                     target="_blank"

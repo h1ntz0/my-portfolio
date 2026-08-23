@@ -49,10 +49,16 @@ export function Hero() {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
+              href="/resume"
+              className="inline-flex h-11 items-center gap-1.5 rounded-md border border-accent/40 bg-accent/5 px-6 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
+            >
+              {t("nav_resume")} / CV
+            </Link>
+            <Link
               href={site.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-11 items-center gap-1.5 rounded-md border px-6 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+              className="inline-flex h-11 items-center gap-1.5 rounded-md border px-5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >
               {t("hero_github")}
               <ArrowUpRight className="h-4 w-4" />

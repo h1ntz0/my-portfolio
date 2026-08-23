@@ -16,6 +16,7 @@ import { Container } from "@/components/layout/container";
 const links: { href: string; labelKey: TranslationKey; exact?: boolean }[] = [
   { href: "/", labelKey: "nav_home", exact: true },
   { href: "/projects", labelKey: "nav_work" },
+  { href: "/testing-lab", labelKey: "nav_lab" },
   { href: "/about", labelKey: "nav_about" },
   { href: "/resume", labelKey: "nav_resume" },
 ];

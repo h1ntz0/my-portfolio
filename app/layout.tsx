@@ -8,6 +8,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QaPreloader } from "@/components/qa/qa-preloader";
+import { QaCommandPalette } from "@/components/qa/qa-command-palette";
 
 import "./globals.css";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
             <Navbar />
             <main id="main">{children}</main>
             <Footer />
+            <QaCommandPalette />
             </TooltipProvider>
           </LangProvider>
         </ThemeProvider>

@@ -4,7 +4,6 @@ export const translations = {
   // Navbar
   nav_home: { en: "Home", id: "Beranda" },
   nav_work: { en: "Work", id: "Karya" },
-  nav_lab: { en: "Testing Lab", id: "Lab Pengujian" },
   nav_about: { en: "About", id: "Tentang" },
   nav_resume: { en: "CV", id: "CV" },
   nav_talk: { en: "Let's talk", id: "Hubungi saya" },

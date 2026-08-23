@@ -1,7 +1,6 @@
 import { Hero } from "@/components/home/hero";
 import { Intro } from "@/components/home/intro";
 import { SelectedWork } from "@/components/home/selected-work";
-import { InteractiveLabTeaser } from "@/components/home/interactive-lab-teaser";
 import { WhatITest } from "@/components/home/what-i-test";
 import { CurrentlyLearning } from "@/components/home/currently-learning";
 import { GitHubSection } from "@/components/home/github-section";
@@ -22,10 +21,6 @@ export default function HomePage() {
 
       <Section id="work" className="bg-card">
         <SelectedWork />
-      </Section>
-
-      <Section id="testing-lab">
-        <InteractiveLabTeaser />
       </Section>
 
       <Section id="what">

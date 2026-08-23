@@ -22,10 +22,11 @@ export const site = {
 
 export const navItems = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/testing-lab", label: "Testing Lab" },
-  { href: "/about", label: "About" },
-  { href: "/resume", label: "CV" },
+  { href: "/skills", label: "Skills" },
+  { href: "/experience", label: "Experience" },
   { href: "/contact", label: "Contact" },
 ] as const;
 

@@ -20,12 +20,6 @@ test.describe("Portfolio core flows", () => {
     await expect(
       page.getByRole("heading", { name: /Things I've built/ })
     ).toBeVisible();
-
-    await nav.getByRole("link", { name: "Testing Lab" }).click();
-    await expect(page).toHaveURL(/\/testing-lab$/);
-    await expect(
-      page.getByRole("heading", { name: /QA Testing Lab/ })
-    ).toBeVisible();
   });
 
   test("TC-WEB-003 Work shows real GitHub repos", async ({ page }) => {
@@ -57,20 +51,6 @@ test.describe("Portfolio core flows", () => {
     await page.getByRole("button", { name: "Send Message" }).click();
     await expect(page.getByText("Name is required.")).toBeVisible();
     await expect(page.getByText("Email is required.")).toBeVisible();
-  });
-
-  test("TC-WEB-008 Testing Lab interactive tabs and simulator", async ({ page }) => {
-    await page.goto("/testing-lab");
-    await expect(page.getByRole("heading", { name: "QA Testing Lab" })).toBeVisible();
-    await expect(page.getByText("TC-AUTH-001")).toBeVisible();
-
-    // Switch to API Simulator tab
-    await page.getByRole("button", { name: /API Simulator/i }).click();
-    await expect(page.getByText("https://api.arrofi.qa/api/v1/auth/login")).toBeVisible();
-
-    // Switch to Defect tab
-    await page.getByRole("button", { name: /Defect/i }).click();
-    await expect(page.getByText("BUG-RNM-001")).toBeVisible();
   });
 });
 

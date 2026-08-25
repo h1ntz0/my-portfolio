@@ -14,16 +14,6 @@ export const githubProfile = "https://github.com/h1ntz0";
 
 export const repos: Repo[] = [
   {
-    name: "api-contract-regression-tester",
-    description:
-      "Autonomous OpenAPI Contract & Regression Testing Engine in Python. Auto-generates positive and negative test suites with interactive HTML reporting.",
-    topics: ["Python", "OpenAPI", "API-Testing", "Regression", "QA-Automation"],
-    language: "Python",
-    url: `${githubProfile}/api-contract-regression-tester`,
-    featured: true,
-    alt: "API Contract & Regression Testing Engine architecture and automated report preview",
-  },
-  {
     name: "Ranime",
     description:
       "Anime discovery, catalog, tracking, rating and review platform. Local-first, powered by the AniList GraphQL API, Fastify, Docker, and PostgreSQL.",
@@ -35,24 +25,13 @@ export const repos: Repo[] = [
     alt: "Ranime Anime catalog platform screenshot with search, stats and anime cards",
   },
   {
-    name: "Todo-cli",
-    description:
-      "A lightweight, minimalistic command-line ToDo list application built with Go. Manage, complete, and track tasks directly from your terminal.",
-    topics: ["Go", "CLI", "Terminal", "Productivity"],
-    language: "Go",
-    url: `${githubProfile}/Todo-cli`,
-    featured: true,
-    image: "/images/todo-cli.webp",
-    alt: "Todo CLI actual terminal output and task management workflow in Go",
-  },
-  {
     name: "telegram-sticker-bot",
     description:
-      "Telegram bot to convert any photo into a ready-to-use sticker with automatic resizing and transparent padding. Built with python-telegram-bot, Pillow, and SQLite.",
+      "Telegram bot that converts any photo into a ready-to-use sticker with automatic resizing and transparent padding. Built with python-telegram-bot, Pillow, and SQLite.",
     topics: ["Python", "Telegram", "Bot", "SQLite", "Pillow"],
     language: "Python",
     url: `${githubProfile}/telegram-sticker-bot`,
-    featured: false,
+    featured: true,
     image: "/images/telegram-sticker-bot.webp",
     alt: "Telegram Sticker Bot real app preview showing sticker creation and conversation flow",
   },
@@ -63,8 +42,30 @@ export const repos: Repo[] = [
     topics: ["Next.js", "React", "TypeScript", "Playwright", "TailwindCSS"],
     language: "TypeScript",
     url: `${githubProfile}/my-portfolio`,
+    featured: true,
+    image: "/images/my-portfolio.webp",
+    alt: "Digital QA Command Center portfolio UI preview and automated testing platform",
+  },
+  {
+    name: "api-contract-regression-tester",
+    description:
+      "Autonomous OpenAPI Contract & Regression Testing Engine in Python. Auto-generates positive and negative test suites with interactive HTML reporting.",
+    topics: ["Python", "OpenAPI", "API-Testing", "Regression", "QA-Automation"],
+    language: "Python",
+    url: `${githubProfile}/api-contract-regression-tester`,
     featured: false,
-    alt: "Source code of this QA command center portfolio web application",
+    alt: "API Contract & Regression Testing Engine architecture and automated report preview",
+  },
+  {
+    name: "Todo-cli",
+    description:
+      "A lightweight, minimalistic command-line ToDo list application built with Go. Manage, complete, and track tasks directly from your terminal.",
+    topics: ["Go", "CLI", "Terminal", "Productivity"],
+    language: "Go",
+    url: `${githubProfile}/Todo-cli`,
+    featured: false,
+    image: "/images/todo-cli.webp",
+    alt: "Todo CLI actual terminal output and task management workflow in Go",
   },
   {
     name: "Temperature_Converter_SIC",

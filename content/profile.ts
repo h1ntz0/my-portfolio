@@ -21,7 +21,7 @@ export const experience: ExperienceItem[] = [
       "Berkolaborasi dengan tim lintas fungsi untuk menyelesaikan kendala teknis dan meningkatkan kualitas produk.",
       "Memanfaatkan AI-powered tools untuk mempercepat regression testing dan meningkatkan efisiensi pengujian.",
     ],
-    tools: ["Software Testing", "Software Quality", "AI testing tools"],
+    tools: ["Playwright", "Software Testing", "Software Quality", "AI testing tools"],
     impact: [
       "Reduced escaped issues by designing structured test cases for internal applications.",
       "Streamlined regression testing with AI-powered tooling.",
@@ -103,7 +103,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Automation",
     skills: [
-      { name: "Playwright", description: "Learning and building E2E suites for my projects" },
+      { name: "Playwright", usedIn: ["WISECON · QA Tester", "my-portfolio"] },
       { name: "AI Testing Tools", usedIn: ["WISECON · QA Tester"] },
       { name: "Selenium", description: "Foundational automation knowledge" },
     ],

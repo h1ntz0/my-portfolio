@@ -14,7 +14,7 @@ export function Reveal({
   delay?: number;
 }) {
   const ref = React.useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = React.useState(true);
 
   React.useEffect(() => {
     const el = ref.current;
@@ -32,7 +32,7 @@ export function Reveal({
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.05, rootMargin: "50px" }
     );
     io.observe(el);
     return () => io.disconnect();

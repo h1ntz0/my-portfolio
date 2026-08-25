@@ -215,23 +215,10 @@
   animation: blink 1.4s steps(1) infinite;
 }
 
-/* Scroll-reveal: smooth opacity & translateY transition */
+/* Scroll-reveal */
 .reveal {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.reveal:not(.is-visible) {
-  opacity: 0;
-  transform: translateY(16px);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

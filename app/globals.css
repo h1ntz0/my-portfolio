@@ -50,7 +50,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Light mode (default) — calm, with clear surface hierarchy */
+/* Light mode (default) calm, with clear surface hierarchy */
 :root {
   --radius: 0.75rem;
 
@@ -87,7 +87,7 @@
   --info: #2b56ad;
 }
 
-/* Dark mode — PRD-UI §45 */
+/* Dark mode PRD-UI 45 */
 .dark {
   --background: #111315;
   --foreground: #f2f3f5;

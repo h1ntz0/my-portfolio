@@ -31,7 +31,7 @@ test.describe("Accessibility (WCAG 2.2 AA)", () => {
       );
 
       expect(
-        blocking.map((v) => `${v.id} (${v.impact}): ${v.help} — ${v.nodes.length} node(s)`),
+        blocking.map((v) => `${v.id} (${v.impact}): ${v.help} [${v.nodes.length} node(s)]`),
         blocking.map((v) => v.help).join(" | ")
       ).toEqual([]);
     });
@@ -67,7 +67,7 @@ test.describe("Accessibility (WCAG 2.2 AA)", () => {
           ["serious", "critical"].includes(v.impact ?? "")
         );
         expect(
-          blocking.map((v) => `${v.id}: ${v.help} — ${v.nodes.length}`),
+          blocking.map((v) => `${v.id}: ${v.help} [${v.nodes.length}]`),
           blocking.map((v) => v.help).join(" | ")
         ).toEqual([]);
       });

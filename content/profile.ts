@@ -115,8 +115,8 @@ export const skillGroups: SkillGroup[] = [
       { name: "Linux", usedIn: ["Servers & Projects"] },
       { name: "Debian", usedIn: ["Servers"] },
       { name: "Ubuntu", usedIn: ["Servers"] },
-      { name: "AWS Cloud", description: "AWS Knowledge: Cloud Essentials — 2025" },
-      { name: "Cisco Security", description: "Cisco Junior Cybersecurity Analyst — 2025" },
+      { name: "AWS Cloud", description: "AWS Knowledge: Cloud Essentials 2025" },
+      { name: "Cisco Security", description: "Cisco Junior Cybersecurity Analyst 2025" },
     ],
   },
   {

@@ -50,9 +50,9 @@ export function Hero() {
             </Link>
             <Link
               href="/resume"
-              className="inline-flex h-11 items-center gap-1.5 rounded-md border border-accent/40 bg-accent/5 px-6 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
+              className="inline-flex h-11 items-center gap-1.5 rounded-md border border-border bg-secondary/50 px-6 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >
-              {t("nav_resume")} / CV
+              {t("nav_resume")}
             </Link>
             <Link
               href={site.links.github}

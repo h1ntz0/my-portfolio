@@ -35,7 +35,6 @@ export function AboutClient() {
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-semibold tracking-tight">
               {site.name}
-              <span className="text-accent">.qa</span>
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               {t("about_p1")}

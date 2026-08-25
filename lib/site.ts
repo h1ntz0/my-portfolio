@@ -31,7 +31,7 @@ export const navItems = [
 ] as const;
 
 export const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://arrofi.qa";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://arrofizein.vercel.app";
 
 export function buildMetadata(overrides?: Partial<Metadata>): Metadata {
   return {

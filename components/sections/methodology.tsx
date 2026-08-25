@@ -1,72 +1,59 @@
-import { methodology, riskItems } from "@/content/methodology";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { practicalWorkflow, testingCompetencies } from "@/content/methodology";
+import { CheckCircle2, Check } from "lucide-react";
 
 export function MethodologyAccordion() {
   return (
-    <Accordion type="single" collapsible className="w-full">
-      {methodology.map((step, i) => (
-        <AccordionItem key={step.title} value={step.title}>
-          <AccordionTrigger>
-            <span className="mono mr-3 text-xs text-accent">
-              {String(i + 1).padStart(2, "0")}
+    <div className="space-y-4">
+      {practicalWorkflow.map((step) => (
+        <div
+          key={step.title}
+          className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-sm transition-all hover:border-accent/50"
+        >
+          <div className="flex items-center justify-between gap-2">
+            <span className="mono text-xs font-semibold text-accent uppercase tracking-wider">
+              {step.category}
             </span>
-            <span className="font-semibold">{step.title}</span>
-            <span className="ml-2 text-xs font-normal text-muted-foreground">
-              {step.description}
-            </span>
-          </AccordionTrigger>
-          <AccordionContent>
-            <p className="pl-9 text-sm text-muted-foreground">{step.detail}</p>
-          </AccordionContent>
-        </AccordionItem>
+          </div>
+          <h4 className="mt-1.5 font-semibold text-foreground">{step.title}</h4>
+          <p className="mt-1 text-xs text-muted-foreground">{step.description}</p>
+          <ul className="mt-3 space-y-1.5 border-t border-border/50 pt-3 text-xs text-muted-foreground">
+            {step.practicalTasks.map((task) => (
+              <li key={task} className="flex items-center gap-2">
+                <Check className="h-3.5 w-3.5 shrink-0 text-accent" />
+                <span>{task}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       ))}
-    </Accordion>
+    </div>
   );
 }
 
-const riskTone: Record<string, "destructive" | "warning" | "muted"> = {
-  HIGH: "destructive",
-  MEDIUM: "warning",
-  LOW: "muted",
-};
-
 export function RiskMatrix() {
   return (
-    <Card>
-      <CardContent className="p-5">
-        <p className="mono text-[11px] uppercase tracking-wide text-accent">
-          Risk Thinking
-        </p>
-        <ul className="mt-3 space-y-3">
-          {riskItems.map((risk) => (
-            <li
-              key={risk.area}
-              className="flex flex-wrap items-center gap-2 rounded-md border bg-muted/40 px-3 py-2.5"
-            >
-              <span className="flex-1 text-sm font-medium">{risk.area}</span>
-              <span className="mono text-[11px] uppercase text-muted-foreground">
-                Risk
-              </span>
-              <Badge variant={riskTone[risk.risk]}>{risk.risk}</Badge>
-              <span className="mono text-[11px] uppercase text-muted-foreground">
-                Impact
-              </span>
-              <Badge variant={riskTone[risk.impact]}>{risk.impact}</Badge>
-              <span className="mono text-[11px] uppercase text-muted-foreground">
-                Priority
-              </span>
-              <Badge variant="outline">{risk.priority}</Badge>
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-    </Card>
+    <div className="space-y-4">
+      {testingCompetencies.map((comp) => (
+        <div
+          key={comp.title}
+          className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-sm transition-all hover:border-accent/50"
+        >
+          <div className="flex items-center justify-between gap-2">
+            <h4 className="font-semibold text-sm text-foreground">{comp.title}</h4>
+            <span className="mono rounded-full bg-accent/10 border border-accent/30 px-2.5 py-0.5 text-[10px] font-medium text-accent">
+              {comp.badge}
+            </span>
+          </div>
+          <ul className="mt-3 space-y-2 text-xs text-muted-foreground">
+            {comp.points.map((pt) => (
+              <li key={pt} className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
+                <span>{pt}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 }

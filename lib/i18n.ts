@@ -123,28 +123,28 @@ export const translations = {
 
   // About Page
   about_eyebrow: { en: "About", id: "Tentang" },
-  about_title: { en: "A QA engineer who treats testing as engineering.", id: "QA Engineer yang mengedepankan presisi & rekayasa sistem." },
+  about_title: { en: "Junior QA Tester focused on practical quality & test automation.", id: "Junior QA Tester yang berfokus pada pengujian praktis & otomatisasi test." },
   about_desc: {
-    en: "I do not just claim to know quality. I show the process, the evidence, and the result.",
-    id: "Bukan sekadar klaim kualitas, melainkan proses pengujian terstruktur, bukti defect, dan verifikasi nyata.",
+    en: "Hands-on experience in manual testing, API validation, Playwright automation, and bug reporting.",
+    id: "Berpengalaman langsung dalam manual testing, validasi API, otomasi Playwright, dan dokumentasi defect yang jelas.",
   },
   about_p1: {
-    en: "I test software to find problems early, document them clearly, and verify that fixes actually work. My work covers functional and regression testing, API validation, database checks, and building automation that runs in CI.",
-    id: "Saya menguji software untuk mendeteksi defect sedini mungkin, menyusun bug report terstruktur, dan memverifikasi bug fix. Lingkup kerja saya mencakup functional testing, regression, API validation, database validation, hingga otomasi testing.",
+    en: "I am a Software Quality Assurance Tester with a background in IT Application Support. I specialize in validating functional workflows, finding edge-case defects, designing test cases, and ensuring software stability before releases.",
+    id: "Saya adalah Software Quality Assurance Tester dengan latar belakang IT Application Support. Saya terbiasa menguji alur fungsional, mencari edge-case defect, merancang test case terstruktur, dan memastikan stabilitas software sebelum rilis.",
   },
   about_p2: {
-    en: "Every claim on this site points to evidence: a test case, a bug report, an API check, or a test run. If a number is a demo execution, I say so. That is how I want my own quality to be judged.",
-    id: "Setiap implementasi pengujian didasari bukti nyata: test case, laporan defect, validasi endpoint, atau hasil test suite eksekusi.",
+    en: "During my internship at WISECON, I execute manual and exploratory testing across internal web applications, test REST APIs with Postman, build automated E2E test suites with Playwright, and leverage SQL queries to investigate data anomalies.",
+    id: "Selama magang di WISECON, saya mengeksekusi manual & exploratory testing pada web internal, menguji REST API dengan Postman, membangun automated E2E test suite dengan Playwright, dan memanfaatkan query SQL untuk investigasi anomali data.",
   },
-  about_focus_heading: { en: "What I focus on", id: "Fokus Utama" },
-  about_snapshot: { en: "Snapshot", id: "Ringkasan" },
+  about_focus_heading: { en: "Core Testing Skills", id: "Keahlian Pengujian Utama" },
+  about_snapshot: { en: "Profile Snapshot", id: "Ringkasan Profil" },
   about_role: { en: "Role", id: "Peran" },
   about_location: { en: "Location", id: "Lokasi" },
-  about_methodology_eyebrow: { en: "How I Test", id: "Metodologi" },
-  about_methodology_title: { en: "My methodology", id: "Alur & Metodologi Pengujian" },
+  about_methodology_eyebrow: { en: "Daily Workflow", id: "Alur Kerja Nyata" },
+  about_methodology_title: { en: "How I Test in Practice", id: "Praktik Pengujian Sehari-hari" },
   about_methodology_desc: {
-    en: "A repeatable process from understanding requirements to improving the process.",
-    id: "Proses terstruktur dari analisa requirement, test design, eksekusi, pelaporan defect, hingga evaluasi.",
+    en: "A straightforward, hands-on QA workflow from requirements to regression verification.",
+    id: "Alur kerja QA praktis dan langsung: dari memahami requirement hingga verifikasi regression.",
   },
 
   // Resume Page

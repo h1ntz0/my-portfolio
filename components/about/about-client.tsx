@@ -11,12 +11,12 @@ import { Badge } from "@/components/ui/badge";
 import { MethodologyAccordion, RiskMatrix } from "@/components/sections/methodology";
 
 const focus = [
-  "Manual & functional testing",
-  "API validation",
-  "UI automation",
-  "Regression & smoke suites",
-  "Defect documentation",
-  "SQL / database validation",
+  "Manual & Functional Testing",
+  "API Testing (Postman / REST)",
+  "Playwright Automation (E2E)",
+  "Test Case & Scenario Design",
+  "Bug Documentation & Reproducibility",
+  "SQL & Data Integrity (MySQL / PostgreSQL)",
 ];
 
 export function AboutClient() {

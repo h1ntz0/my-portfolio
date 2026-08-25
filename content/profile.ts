@@ -89,54 +89,54 @@ export const experience: ExperienceItem[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Testing",
+    title: "Testing & QA",
     skills: [
-      { name: "Functional Testing", usedIn: ["WISECON · QA Tester", "Ranime"] },
-      { name: "Regression Testing", usedIn: ["WISECON · QA Tester"] },
-      { name: "Smoke Testing", usedIn: ["WISECON · QA Tester"] },
-      { name: "Exploratory Testing", usedIn: ["WISECON · QA Tester"] },
-      { name: "End-to-End Testing", usedIn: ["WISECON · QA Tester"] },
-      { name: "Test Case Design", usedIn: ["WISECON · QA Tester"] },
-      { name: "Bug Documentation", usedIn: ["WISECON · QA Tester"] },
+      { name: "Manual & Exploratory Testing", usedIn: ["WISECON · QA Tester", "Ranime"] },
+      { name: "Test Case Design & Documentation", usedIn: ["WISECON · QA Tester"] },
+      { name: "Bug Reporting & Tracking", usedIn: ["WISECON · QA Tester"] },
+      { name: "Functional & Regression Testing", usedIn: ["WISECON · QA Tester"] },
+      { name: "AI Powered Test Automation", usedIn: ["WISECON · QA Tester"] },
     ],
   },
   {
-    title: "Automation",
+    title: "Automation & Tools",
     skills: [
       { name: "Playwright", usedIn: ["WISECON · QA Tester", "my-portfolio"] },
       { name: "AI Testing Tools", usedIn: ["WISECON · QA Tester"] },
-      { name: "Selenium", description: "Foundational automation knowledge" },
+      { name: "Postman / REST API", usedIn: ["Ranime", "WISECON"] },
+      { name: "SQL Server Management Studio (SSMS)", usedIn: ["WISECON"] },
     ],
   },
   {
-    title: "API",
+    title: "Systems & Cloud",
     skills: [
-      { name: "Postman", usedIn: ["Ranime"] },
-      { name: "REST API", usedIn: ["Ranime"] },
-      { name: "GraphQL", usedIn: ["Ranime"] },
-      { name: "JSON", usedIn: ["Ranime"] },
-      { name: "HTTP", description: "Methods, status codes, headers" },
+      { name: "Linux Administration (Debian/Ubuntu)", usedIn: ["Servers & Projects"] },
+      { name: "AWS Cloud Essentials", description: "AWS Knowledge: Cloud Essentials Training Badge" },
+      { name: "Cybersecurity Analyst Foundation", description: "Cisco Certified Junior Cybersecurity Analyst" },
     ],
   },
   {
-    title: "Database",
+    title: "Databases & Dev",
     skills: [
-      { name: "SQL", usedIn: ["WISECON · Application Support"] },
-      { name: "MySQL", usedIn: ["WISECON · Application Support"] },
-      { name: "PostgreSQL", usedIn: ["Ranime"] },
-    ],
-  },
-  {
-    title: "Dev Tools",
-    skills: [
-      { name: "Git", usedIn: ["All GitHub projects"] },
-      { name: "GitHub", usedIn: ["All GitHub projects"] },
-      { name: "Terminal / CLI", usedIn: ["Todo-cli"] },
+      { name: "SQL & MySQL", usedIn: ["WISECON · Application Support"] },
+      { name: "PostgreSQL & GraphQL", usedIn: ["Ranime"] },
+      { name: "Git & GitHub", usedIn: ["All Projects"] },
+      { name: "Python & Go", usedIn: ["StickerBot", "Todo-cli"] },
     ],
   },
 ];
 
-// Certifications are intentionally empty until real ones are confirmed.
-// The earlier entries (ISTQB, Postman, Playwright) were placeholders and
-// have been removed so the site never claims a credential that isn't real.
-export const certifications: Certification[] = [];
+export const certifications: Certification[] = [
+  {
+    name: "AWS Knowledge: Cloud Essentials",
+    issuer: "Amazon Web Services (AWS)",
+    year: "2025",
+    description: "Core cloud concepts, AWS services, security, pricing, and shared responsibility model.",
+  },
+  {
+    name: "Cisco Certified Junior Cybersecurity Analyst",
+    issuer: "Cisco Networking Academy",
+    year: "2025",
+    description: "Cybersecurity fundamentals, network defense, threat detection, and security operations.",
+  },
+];

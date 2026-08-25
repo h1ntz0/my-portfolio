@@ -4,12 +4,12 @@ export const site = {
   name: "Arrofi Zein Abdillah",
   brand: "Arrofi Zein Abdillah",
   firstName: "Arrofi",
-  title: "Arrofi Zein Abdillah · QA Tester & QA Automation Engineer",
-  role: "QA Tester / QA Automation Engineer",
-  eyebrow: "QUALITY ASSURANCE / SOFTWARE TESTING",
+  title: "Arrofi Zein Abdillah · Quality Assurance Tester & Linux System Enthusiast",
+  role: "Quality Assurance Tester Intern & Linux Enthusiast",
+  eyebrow: "QUALITY ASSURANCE / SYSTEM ENTHUSIAST",
   tagline: "I test software with evidence, not assumptions.",
   description:
-    "QA Tester focused on functional testing, API validation, automation, and finding defects before users do.",
+    "Quality Assurance Tester with a passion for Linux systems and AI-driven automation. Experience in application support, manual testing, API validation, and test case design at WISECON.",
   email: "arrofi.zein12@gmail.com",
   location: "Jakarta, Indonesia",
   links: {

@@ -123,20 +123,23 @@ export const translations = {
 
   // About Page
   about_eyebrow: { en: "About", id: "Tentang" },
-  about_title: { en: "Junior QA Tester focused on practical quality & test automation.", id: "Junior QA Tester yang berfokus pada pengujian praktis & otomatisasi test." },
+  about_title: {
+    en: "Quality Assurance Tester with a passion for Linux systems and AI-driven automation.",
+    id: "Quality Assurance Tester dengan minat mendalam pada sistem Linux & otomatisasi berbasis AI.",
+  },
   about_desc: {
-    en: "Hands-on experience in manual testing, API validation, Playwright automation, and bug reporting.",
-    id: "Berpengalaman langsung dalam manual testing, validasi API, otomasi Playwright, dan dokumentasi defect yang jelas.",
+    en: "Interning at PT Wisesa Consulting Indonesia (WISECON) · Application Support & QA Tester.",
+    id: "Sedang magang di PT Wisesa Consulting Indonesia (WISECON) · Application Support & QA Tester.",
   },
   about_p1: {
-    en: "I am a Software Quality Assurance Tester with a background in IT Application Support. I specialize in validating functional workflows, finding edge-case defects, designing test cases, and ensuring software stability before releases.",
-    id: "Saya adalah Software Quality Assurance Tester dengan latar belakang IT Application Support. Saya terbiasa menguji alur fungsional, mencari edge-case defect, merancang test case terstruktur, dan memastikan stabilitas software sebelum rilis.",
+    en: "Currently interning at PT Wisesa Consulting Indonesia, where I handle application support, troubleshoot technical issues, and ensure smooth daily system operations. I believe quality isn't just about finding bugs, it's about building processes that prevent them.",
+    id: "Saat ini magang di PT Wisesa Consulting Indonesia (WISECON), menangani application support, investigasi kendala teknis, dan memastikan operasional sistem harian berjalan lancar. Bagi saya, kualitas bukan sekadar mencari bug, melainkan membangun proses terstruktur untuk mencegahnya.",
   },
   about_p2: {
-    en: "During my internship at WISECON, I execute manual and exploratory testing across internal web applications, test REST APIs with Postman, build automated E2E test suites with Playwright, and leverage SQL queries to investigate data anomalies.",
-    id: "Selama magang di WISECON, saya mengeksekusi manual & exploratory testing pada web internal, menguji REST API dengan Postman, membangun automated E2E test suite dengan Playwright, dan memanfaatkan query SQL untuk investigasi anomali data.",
+    en: "That's why I combine manual testing discipline with AI automation tools to deliver faster, more reliable results. When I'm not testing, you'll find me deep in the Linux terminal, configuring servers, exploring open-source tools, and pushing the boundaries of what automation can do.",
+    id: "Oleh karena itu, saya memadukan kedisiplinan manual testing dengan tools otomasi AI untuk hasil pengujian yang lebih cepat dan andal. Di luar testing, saya aktif mengeksplorasi terminal Linux, konfigurasi server Debian/Ubuntu, dan berbagai open-source tools.",
   },
-  about_focus_heading: { en: "Core Testing Skills", id: "Keahlian Pengujian Utama" },
+  about_focus_heading: { en: "Core Skills", id: "Keahlian Utama" },
   about_snapshot: { en: "Profile Snapshot", id: "Ringkasan Profil" },
   about_role: { en: "Role", id: "Peran" },
   about_location: { en: "Location", id: "Lokasi" },

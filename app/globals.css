@@ -50,41 +50,41 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Light mode (default) calm, with clear surface hierarchy */
+/* Light mode Swiss Minimalism calm, high contrast, no gradients */
 :root {
-  --radius: 0.75rem;
+  --radius: 0.625rem;
 
-  --background: #edeeeb;
-  --foreground: #191a1c;
+  --background: #f8fafc;
+  --foreground: #0f172a;
 
   --card: #ffffff;
-  --card-foreground: #191a1c;
+  --card-foreground: #0f172a;
 
   --popover: #ffffff;
-  --popover-foreground: #191a1c;
+  --popover-foreground: #0f172a;
 
-  --primary: #191a1c;
-  --primary-foreground: #ffffff;
+  --primary: #0f172a;
+  --primary-foreground: #f8fafc;
 
-  --secondary: #e4e5e1;
-  --secondary-foreground: #191a1c;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
 
-  --muted: #e8e9e5;
-  --muted-foreground: #565b60;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
 
-  --accent: #2b56ad;
+  --accent: #1d4ed8;
   --accent-foreground: #ffffff;
 
-  --destructive: #b0281d;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
 
-  --border: #d4d5d0;
-  --input: #d4d5d0;
-  --ring: #2b56ad;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
 
-  --success: #0e5c39;
-  --warning: #6f470a;
-  --info: #2b56ad;
+  --success: #047857;
+  --warning: #b45309;
+  --info: #1d4ed8;
 }
 
 /* Dark mode PRD-UI 45 */
@@ -141,6 +141,14 @@
   ::selection {
     background-color: var(--accent);
     color: var(--accent-foreground);
+  }
+
+  /* Light mode subtle card elevation Swiss style no AI gradients */
+  :root:not(.dark) .bg-card {
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.06);
+  }
+  :root:not(.dark) header {
+    border-color: #e2e8f0;
   }
 }
 

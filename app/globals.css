@@ -50,27 +50,27 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Light mode Swiss Minimalism calm, high contrast, no gradients */
+/* Light mode Warm Paper eye comfortable, no AI gradients */
 :root {
   --radius: 0.625rem;
 
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #fdfbf7;
+  --foreground: #1c1917;
 
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #1c1917;
 
   --popover: #ffffff;
-  --popover-foreground: #0f172a;
+  --popover-foreground: #1c1917;
 
-  --primary: #0f172a;
-  --primary-foreground: #f8fafc;
+  --primary: #1c1917;
+  --primary-foreground: #fdfbf7;
 
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
+  --secondary: #f5f1eb;
+  --secondary-foreground: #1c1917;
 
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
+  --muted: #f5f1eb;
+  --muted-foreground: #57534e;
 
   --accent: #1d4ed8;
   --accent-foreground: #ffffff;
@@ -78,8 +78,8 @@
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
 
-  --border: #e2e8f0;
-  --input: #e2e8f0;
+  --border: #e7e0d6;
+  --input: #e7e0d6;
   --ring: #2563eb;
 
   --success: #047857;
@@ -143,12 +143,13 @@
     color: var(--accent-foreground);
   }
 
-  /* Light mode subtle card elevation Swiss style no AI gradients */
+  /* Light mode Warm Paper subtle elevation no AI gradients */
   :root:not(.dark) .bg-card {
-    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 3px rgba(28, 25, 23, 0.04), 0 1px 2px rgba(28, 25, 23, 0.06);
   }
   :root:not(.dark) header {
-    border-color: #e2e8f0;
+    border-color: #e7e0d6;
+    background: rgba(253, 251, 247, 0.8);
   }
 }
 

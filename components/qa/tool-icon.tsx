@@ -9,6 +9,10 @@ import {
   SiJson,
   SiGraphql,
   SiPostgresql,
+  SiDebian,
+  SiUbuntu,
+  SiPython,
+  SiGo,
 } from "@icons-pack/react-simple-icons";
 import {
   Check,
@@ -18,6 +22,14 @@ import {
   Workflow,
   Bot,
   Terminal,
+  Search,
+  Bug,
+  Layers,
+  FlaskConical,
+  ClipboardList,
+  Shield,
+  Cloud,
+  Server,
   type LucideIcon,
 } from "lucide-react";
 
@@ -46,6 +58,15 @@ const genericIcons: Record<string, LucideIcon> = {
   "CI/CD": Workflow,
   "AI Testing Tools": Bot,
   "Terminal / CLI": Terminal,
+  "Manual Testing": Search,
+  "Exploratory Testing": FlaskConical,
+  "Test Case Design": ClipboardList,
+  "Bug Reporting": Bug,
+  "Functional Testing": Layers,
+  "Regression Testing": Workflow,
+  "AWS Cloud": Cloud,
+  "Cisco Security": Shield,
+  Linux: Server,
 };
 
 export function ToolIcon({ name }: { name: string }) {
@@ -82,4 +103,8 @@ const brandMap: Record<string, IconEntry> = {
   JSON: { node: <SiJson className="h-4 w-4" />, color: "#000000" },
   GraphQL: { node: <SiGraphql className="h-4 w-4" />, color: "#E10098" },
   PostgreSQL: { node: <SiPostgresql className="h-4 w-4" />, color: "#4169E1" },
+  Python: { node: <SiPython className="h-4 w-4" />, color: "#3776AB" },
+  Go: { node: <SiGo className="h-4 w-4" />, color: "#00ADD8" },
+  Debian: { node: <SiDebian className="h-4 w-4" />, color: "#A81D33" },
+  Ubuntu: { node: <SiUbuntu className="h-4 w-4" />, color: "#E95420" },
 };

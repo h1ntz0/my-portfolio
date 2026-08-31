@@ -1,0 +1,410 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to content" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link "Arrofi Zein Abdillah home" [ref=f2e5] [cursor=pointer]:
+        - /url: /
+        - text: Arrofi Zein Abdillah
+      - generic [ref=f2e6]:
+        - group "Language / Bahasa" [ref=f2e7]:
+          - button "en" [pressed] [ref=f2e8]
+          - button "id" [ref=f2e9]
+        - button "Switch to light mode" [ref=f2e10]
+        - button "Open menu" [ref=f2e11]
+  - main [ref=f2e13]:
+    - generic [ref=f2e15]:
+      - generic [ref=f2e16]:
+        - paragraph [ref=f2e17]: Arrofi Zein Abdillah · QA tester · based in Jakarta, Indonesia
+        - heading [level=1] [ref=f2e18]:
+          - generic "Hey, I'm Arrofi. I break software so users don't have to." [ref=f2e19]:
+            - text: Hey, I'm Arrofi.I break softwareso users don't have to.
+            - generic [ref=f2e20]: "|"
+        - paragraph [ref=f2e21]: QA tester focused on web testing, API validation, SQL, and automation. I like finding the edge cases, breaking the happy path, and turning bugs into test cases.
+        - generic [ref=f2e22]:
+          - link "See my work" [ref=f2e23] [cursor=pointer]:
+            - /url: /projects
+          - link "CV" [ref=f2e26] [cursor=pointer]:
+            - /url: /resume
+          - link "GitHub" [ref=f2e27] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0
+        - paragraph [ref=f2e34]: Currently learning · Playwright · API automation · CI/CD
+      - generic [ref=f2e35]:
+        - img "Arrofi Zein Abdillah, Quality Assurance Tester Intern & Linux Enthusiast" [ref=f2e37]
+        - paragraph [ref=f2e40]: Arrofi · QA tester · Jakarta, Indonesia
+    - generic [ref=f2e43]:
+      - generic [ref=f2e44]: "01"
+      - generic [ref=f2e45]:
+        - heading "A little about me" [level=2] [ref=f2e46]
+        - paragraph [ref=f2e47]: I'm interested in what happens when software meets real users.
+        - paragraph [ref=f2e48]: "I enjoy exploring edge cases, breaking flows, checking APIs, querying databases, and figuring out why something doesn't behave the way it should. For me, testing is less about a checklist and more about curiosity: asking \"what if?\" and following the thread until I understand the actual cause."
+    - generic [ref=f2e51]:
+      - generic [ref=f2e52]: "02"
+      - generic [ref=f2e53]:
+        - generic [ref=f2e54]:
+          - heading "Selected work" [level=2] [ref=f2e55]
+          - paragraph [ref=f2e56]: "These are the real projects I work on. I treat them like little QA labs: I build them, I break them, and then I figure out why they broke. Each one links to the source on GitHub."
+        - generic [ref=f2e57]:
+          - article [ref=f2e58]:
+            - generic [ref=f2e59]:
+              - paragraph [ref=f2e60]: "01"
+              - heading "Ranime" [level=3] [ref=f2e61]
+              - generic [ref=f2e62]:
+                - generic [ref=f2e63]: TypeScript
+                - generic [ref=f2e64]: React
+                - generic [ref=f2e65]: GraphQL
+                - generic [ref=f2e66]: PostgreSQL
+              - paragraph [ref=f2e67]: Anime discovery, catalog, tracking, rating and review platform. Local-first, powered by the AniList GraphQL API, Fastify, Docker, and PostgreSQL.
+              - link "View on GitHub" [ref=f2e68] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Ranime
+            - link "Open Ranime on GitHub" [ref=f2e73] [cursor=pointer]:
+              - /url: https://github.com/h1ntz0/Ranime
+              - generic [ref=f2e74]:
+                - generic [ref=f2e75]: h1ntz0/Ranime
+                - img "Ranime Anime catalog platform screenshot with search, stats and anime cards" [ref=f2e82]
+          - article [ref=f2e83]:
+            - generic [ref=f2e84]:
+              - paragraph [ref=f2e85]: "02"
+              - heading "Agents-Telegram" [level=3] [ref=f2e86]
+              - generic [ref=f2e87]:
+                - generic [ref=f2e88]: Python
+                - generic [ref=f2e89]: Telegram
+                - generic [ref=f2e90]: AI-Agents
+                - generic [ref=f2e91]: SQLite
+              - paragraph [ref=f2e92]: Self-hosted AI agent framework on Telegram. Features dynamic model switching, autonomous multi-agent SDLC workflows, proactive cron schedules, and humanizer filtering.
+              - link "View on GitHub" [ref=f2e93] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Agents-Telegram
+            - link "Open Agents-Telegram on GitHub" [ref=f2e98] [cursor=pointer]:
+              - /url: https://github.com/h1ntz0/Agents-Telegram
+              - generic [ref=f2e99]:
+                - generic [ref=f2e100]: h1ntz0/Agents-Telegram
+                - img "Agents Telegram multi-agent orchestrator preview on desktop and mobile" [ref=f2e107]
+          - article [ref=f2e108]:
+            - generic [ref=f2e109]:
+              - paragraph [ref=f2e110]: "03"
+              - heading "Pemangan" [level=3] [ref=f2e111]
+              - generic [ref=f2e112]:
+                - generic [ref=f2e113]: React
+                - generic [ref=f2e114]: TypeScript
+                - generic [ref=f2e115]: TailwindCSS
+                - generic [ref=f2e116]: Playwright
+              - paragraph [ref=f2e117]: Room and lab reservation system for SMK Negeri 1 Jakarta. Built with React 19, TypeScript, Tailwind CSS v4, dynamic timetable matrix, and Playwright E2E testing.
+              - link "View on GitHub" [ref=f2e118] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Pemangan
+            - link "Open Pemangan on GitHub" [ref=f2e123] [cursor=pointer]:
+              - /url: https://github.com/h1ntz0/Pemangan
+              - generic [ref=f2e124]:
+                - generic [ref=f2e125]: h1ntz0/Pemangan
+                - img "Pemangan room and laboratory booking web app interface" [ref=f2e132]
+    - generic [ref=f2e135]:
+      - generic [ref=f2e136]: "03"
+      - generic [ref=f2e137]:
+        - heading "What I like testing" [level=2] [ref=f2e138]
+        - paragraph [ref=f2e139]: "I like looking for the edge cases and the small details that trip people up. A few of the things I enjoy poking at:"
+        - generic [ref=f2e140]:
+          - generic [ref=f2e141]: Web applications
+          - generic [ref=f2e142]: API behaviour
+          - generic [ref=f2e143]: Authentication flows
+          - generic [ref=f2e144]: Forms & validation
+          - generic [ref=f2e145]: Edge cases
+          - generic [ref=f2e146]: Responsive layouts
+          - generic [ref=f2e147]: Database behaviour
+          - generic [ref=f2e148]: Regression
+    - generic [ref=f2e151]:
+      - generic [ref=f2e152]: "04"
+      - generic [ref=f2e153]:
+        - heading "Experience" [level=2] [ref=f2e154]
+        - paragraph [ref=f2e155]: Where I've built quality so far.
+        - generic [ref=f2e156]:
+          - generic [ref=f2e157]:
+            - generic [ref=f2e158]: Jul 2026 · Present
+            - generic [ref=f2e159]:
+              - heading "Software Quality Assurance Tester · Internship" [level=3] [ref=f2e160]
+              - paragraph [ref=f2e161]: WISECON (Wisesa Consulting Indonesia)
+              - list [ref=f2e162]:
+                - listitem [ref=f2e163]:
+                  - generic [ref=f2e165]: Perform end-to-end software testing on internal applications to ensure quality, reliability, and a smooth user experience.
+                - listitem [ref=f2e166]:
+                  - generic [ref=f2e168]: Design test cases and execute manual and exploratory testing.
+                - listitem [ref=f2e169]:
+                  - generic [ref=f2e171]: Document bugs with clear reproduction steps so developers can act quickly.
+                - listitem [ref=f2e172]:
+                  - generic [ref=f2e174]: Collaborate with cross-functional teams to resolve issues and improve product quality.
+                - listitem [ref=f2e175]:
+                  - generic [ref=f2e177]: Leverage AI-powered tools to streamline regression testing and improve test efficiency.
+              - generic [ref=f2e178]:
+                - paragraph [ref=f2e179]: What I did
+                - generic [ref=f2e180]:
+                  - generic [ref=f2e181]: End-to-end testing
+                  - generic [ref=f2e182]: Test case design
+                  - generic [ref=f2e183]: Manual testing
+                  - generic [ref=f2e184]: Exploratory testing
+                  - generic [ref=f2e185]: Bug documentation
+                  - generic [ref=f2e186]: Regression testing
+              - generic [ref=f2e187]:
+                - paragraph [ref=f2e188]: Impact
+                - list [ref=f2e189]:
+                  - listitem [ref=f2e190]:
+                    - generic [ref=f2e192]: Reduced escaped issues by designing structured test cases for internal applications.
+                  - listitem [ref=f2e193]:
+                    - generic [ref=f2e195]: Streamlined regression testing with AI-powered tooling.
+          - generic [ref=f2e196]:
+            - generic [ref=f2e197]: Feb 2026 · Jul 2026
+            - generic [ref=f2e198]:
+              - heading "Information Technology Application Support" [level=3] [ref=f2e199]
+              - paragraph [ref=f2e200]: WISECON (Wisesa Consulting Indonesia)
+              - list [ref=f2e201]:
+                - listitem [ref=f2e202]:
+                  - generic [ref=f2e204]: Handle user issues related to Wisecon's internal applications as part of the DCT Support division.
+                - listitem [ref=f2e205]:
+                  - generic [ref=f2e207]: Investigate reported issues, verify fixes, and guide users back to a working state.
+                - listitem [ref=f2e208]:
+                  - generic [ref=f2e210]: Use SQL and communication skills to trace and explain data-related problems.
+              - generic [ref=f2e211]:
+                - paragraph [ref=f2e212]: What I did
+                - generic [ref=f2e213]:
+                  - generic [ref=f2e214]: Application support
+                  - generic [ref=f2e215]: Issue investigation
+                  - generic [ref=f2e216]: User support
+                  - generic [ref=f2e217]: SQL validation
+              - generic [ref=f2e218]:
+                - paragraph [ref=f2e219]: Impact
+                - list [ref=f2e220]:
+                  - listitem [ref=f2e221]:
+                    - generic [ref=f2e223]: Resolved daily user issues for Wisecon's internal applications.
+                  - listitem [ref=f2e224]:
+                    - generic [ref=f2e226]: Built a working understanding of how real users hit real bugs.
+    - generic [ref=f2e229]:
+      - generic [ref=f2e230]: "05"
+      - generic [ref=f2e231]:
+        - heading "Tools I use" [level=2] [ref=f2e232]
+        - paragraph [ref=f2e233]: No invented percentages. Just the tools and the work they were used in.
+        - generic [ref=f2e234]:
+          - generic [ref=f2e235]:
+            - heading "Testing & QA" [level=3] [ref=f2e236]
+            - generic [ref=f2e237]:
+              - generic [ref=f2e243]:
+                - generic [ref=f2e244]: Manual Testing
+                - generic [ref=f2e245]: used in WISECON · QA Tester
+              - generic [ref=f2e250]:
+                - generic [ref=f2e251]: Exploratory Testing
+                - generic [ref=f2e252]: used in WISECON · QA Tester
+              - generic [ref=f2e258]:
+                - generic [ref=f2e259]: Test Case Design
+                - generic [ref=f2e260]: used in WISECON · QA Tester
+              - generic [ref=f2e272]:
+                - generic [ref=f2e273]: Bug Reporting
+                - generic [ref=f2e274]: used in WISECON · QA Tester
+              - generic [ref=f2e281]:
+                - generic [ref=f2e282]: Functional Testing
+                - generic [ref=f2e283]: used in WISECON · QA Tester, Ranime
+              - generic [ref=f2e290]:
+                - generic [ref=f2e291]: Regression Testing
+                - generic [ref=f2e292]: used in WISECON · QA Tester
+          - generic [ref=f2e293]:
+            - heading "Automation & Tools" [level=3] [ref=f2e294]
+            - generic [ref=f2e295]:
+              - generic [ref=f2e300]:
+                - generic [ref=f2e301]: Playwright
+                - generic [ref=f2e302]: used in WISECON · QA Tester, Pemangan
+              - generic [ref=f2e307]:
+                - generic [ref=f2e308]: Postman
+                - generic [ref=f2e309]: used in WISECON · QA Tester, Ranime
+              - generic [ref=f2e316]:
+                - generic [ref=f2e317]: REST API
+                - generic [ref=f2e318]: used in WISECON · QA Tester, Ranime
+              - generic [ref=f2e323]:
+                - generic [ref=f2e324]: SQL Server
+                - generic [ref=f2e325]: used in WISECON · Application Support
+              - generic [ref=f2e331]:
+                - generic [ref=f2e332]: AI Testing Tools
+                - generic [ref=f2e333]: used in WISECON · QA Tester, Agents-Telegram
+          - generic [ref=f2e334]:
+            - heading "Systems & Cloud" [level=3] [ref=f2e335]
+            - generic [ref=f2e336]:
+              - generic [ref=f2e342]:
+                - generic [ref=f2e343]: Linux
+                - generic [ref=f2e344]: used in Servers & Projects
+              - generic [ref=f2e349]:
+                - generic [ref=f2e350]: Debian
+                - generic [ref=f2e351]: used in Servers
+              - generic [ref=f2e356]:
+                - generic [ref=f2e357]: Ubuntu
+                - generic [ref=f2e358]: used in Servers
+              - generic [ref=f2e363]:
+                - generic [ref=f2e364]: AWS Cloud
+                - generic [ref=f2e365]: "AWS Knowledge: Cloud Essentials 2025"
+              - generic [ref=f2e370]:
+                - generic [ref=f2e371]: Cisco Security
+                - generic [ref=f2e372]: Cisco Junior Cybersecurity Analyst 2025
+          - generic [ref=f2e373]:
+            - heading "Databases & Dev" [level=3] [ref=f2e374]
+            - generic [ref=f2e375]:
+              - generic [ref=f2e380]:
+                - generic [ref=f2e381]: MySQL
+                - generic [ref=f2e382]: used in WISECON · Application Support
+              - generic [ref=f2e387]:
+                - generic [ref=f2e388]: PostgreSQL
+                - generic [ref=f2e389]: used in Ranime
+              - generic [ref=f2e394]:
+                - generic [ref=f2e395]: GraphQL
+                - generic [ref=f2e396]: used in Ranime
+              - generic [ref=f2e401]:
+                - generic [ref=f2e402]: Git
+                - generic [ref=f2e403]: used in All Projects
+              - generic [ref=f2e408]:
+                - generic [ref=f2e409]: GitHub
+                - generic [ref=f2e410]: used in All Projects
+              - generic [ref=f2e415]:
+                - generic [ref=f2e416]: Python
+                - generic [ref=f2e417]: used in Agents-Telegram
+              - generic [ref=f2e422]:
+                - generic [ref=f2e423]: Go
+                - generic [ref=f2e424]: used in Todo-cli
+              - generic [ref=f2e429]:
+                - generic [ref=f2e430]: Docker
+                - generic [ref=f2e431]: used in Ranime, Agents-Telegram
+        - paragraph [ref=f2e432]:
+          - text: Every skill is tied to real work.
+          - link "Browse the projects →" [ref=f2e433] [cursor=pointer]:
+            - /url: /projects
+    - generic [ref=f2e436]:
+      - generic [ref=f2e437]: "06"
+      - generic [ref=f2e438]:
+        - generic [ref=f2e439]:
+          - generic [ref=f2e440]:
+            - heading "I build things and keep them on GitHub" [level=2] [ref=f2e441]
+            - paragraph [ref=f2e442]: A few real projects I've worked on. Some are more testing-heavy than others, but they're all real.
+          - link "@h1ntz0 on GitHub" [ref=f2e443] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0
+        - generic [ref=f2e451]:
+          - link "Ranime Anime discovery, catalog, tracking, rating and review platform. Local-first, powered by the AniList GraphQL API, Fastify, Docker, and PostgreSQL. TypeScript React GraphQL +3 TypeScript" [ref=f2e452] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/Ranime
+            - generic [ref=f2e453]:
+              - generic [ref=f2e454]: Ranime
+              - paragraph [ref=f2e465]: Anime discovery, catalog, tracking, rating and review platform. Local-first, powered by the AniList GraphQL API, Fastify, Docker, and PostgreSQL.
+            - generic [ref=f2e466]:
+              - generic [ref=f2e467]:
+                - generic [ref=f2e468]: TypeScript
+                - generic [ref=f2e469]: React
+                - generic [ref=f2e470]: GraphQL
+                - generic [ref=f2e471]: "+3"
+              - generic [ref=f2e472]: TypeScript
+          - link "Agents-Telegram Self-hosted AI agent framework on Telegram. Features dynamic model switching, autonomous multi-agent SDLC workflows, proactive cron schedules, and humanizer filtering. Python Telegram AI-Agents +2 Python" [ref=f2e473] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/Agents-Telegram
+            - generic [ref=f2e474]:
+              - generic [ref=f2e475]: Agents-Telegram
+              - paragraph [ref=f2e486]: Self-hosted AI agent framework on Telegram. Features dynamic model switching, autonomous multi-agent SDLC workflows, proactive cron schedules, and humanizer filtering.
+            - generic [ref=f2e487]:
+              - generic [ref=f2e488]:
+                - generic [ref=f2e489]: Python
+                - generic [ref=f2e490]: Telegram
+                - generic [ref=f2e491]: AI-Agents
+                - generic [ref=f2e492]: "+2"
+              - generic [ref=f2e493]: Python
+          - link "Pemangan Room and lab reservation system for SMK Negeri 1 Jakarta. Built with React 19, TypeScript, Tailwind CSS v4, dynamic timetable matrix, and Playwright E2E testing. React TypeScript TailwindCSS +2 TypeScript" [ref=f2e494] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/Pemangan
+            - generic [ref=f2e495]:
+              - generic [ref=f2e496]: Pemangan
+              - paragraph [ref=f2e507]: Room and lab reservation system for SMK Negeri 1 Jakarta. Built with React 19, TypeScript, Tailwind CSS v4, dynamic timetable matrix, and Playwright E2E testing.
+            - generic [ref=f2e508]:
+              - generic [ref=f2e509]:
+                - generic [ref=f2e510]: React
+                - generic [ref=f2e511]: TypeScript
+                - generic [ref=f2e512]: TailwindCSS
+                - generic [ref=f2e513]: "+2"
+              - generic [ref=f2e514]: TypeScript
+          - link "api-contract-regression-tester Autonomous OpenAPI Contract & Regression Testing Engine in Python. Auto-generates positive and negative test suites with interactive HTML reporting. Python OpenAPI API-Testing +2 Python" [ref=f2e515] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/api-contract-regression-tester
+            - generic [ref=f2e516]:
+              - generic [ref=f2e517]: api-contract-regression-tester
+              - paragraph [ref=f2e528]: Autonomous OpenAPI Contract & Regression Testing Engine in Python. Auto-generates positive and negative test suites with interactive HTML reporting.
+            - generic [ref=f2e529]:
+              - generic [ref=f2e530]:
+                - generic [ref=f2e531]: Python
+                - generic [ref=f2e532]: OpenAPI
+                - generic [ref=f2e533]: API-Testing
+                - generic [ref=f2e534]: "+2"
+              - generic [ref=f2e535]: Python
+          - link "Todo-cli A lightweight, minimalistic command-line ToDo list application built with Go. Manage, complete, and track tasks directly from your terminal. Go CLI Terminal +1 Go" [ref=f2e536] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/Todo-cli
+            - generic [ref=f2e537]:
+              - generic [ref=f2e538]: Todo-cli
+              - paragraph [ref=f2e549]: A lightweight, minimalistic command-line ToDo list application built with Go. Manage, complete, and track tasks directly from your terminal.
+            - generic [ref=f2e550]:
+              - generic [ref=f2e551]:
+                - generic [ref=f2e552]: Go
+                - generic [ref=f2e553]: CLI
+                - generic [ref=f2e554]: Terminal
+                - generic [ref=f2e555]: "+1"
+              - generic [ref=f2e556]: Go
+          - link "telegram-sticker-bot Telegram bot that converts any photo into a ready-to-use sticker with automatic resizing and transparent padding. Built with python-telegram-bot, Pillow, and SQLite. Python Telegram Bot +2 Python" [ref=f2e557] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/telegram-sticker-bot
+            - generic [ref=f2e558]:
+              - generic [ref=f2e559]: telegram-sticker-bot
+              - paragraph [ref=f2e570]: Telegram bot that converts any photo into a ready-to-use sticker with automatic resizing and transparent padding. Built with python-telegram-bot, Pillow, and SQLite.
+            - generic [ref=f2e571]:
+              - generic [ref=f2e572]:
+                - generic [ref=f2e573]: Python
+                - generic [ref=f2e574]: Telegram
+                - generic [ref=f2e575]: Bot
+                - generic [ref=f2e576]: "+2"
+              - generic [ref=f2e577]: Python
+          - link "Temperature_Converter_SIC Temperature unit converter CLI (Kelvin, Celsius, Fahrenheit) built in Python with input boundary validation. Python CLI Validation Python" [ref=f2e578] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/Temperature_Converter_SIC
+            - generic [ref=f2e579]:
+              - generic [ref=f2e580]: Temperature_Converter_SIC
+              - paragraph [ref=f2e591]: Temperature unit converter CLI (Kelvin, Celsius, Fahrenheit) built in Python with input boundary validation.
+            - generic [ref=f2e592]:
+              - generic [ref=f2e593]:
+                - generic [ref=f2e594]: Python
+                - generic [ref=f2e595]: CLI
+                - generic [ref=f2e596]: Validation
+              - generic [ref=f2e597]: Python
+          - link "Tic-Tac-Toe-ReactJs Interactive Tic-Tac-Toe game built with React to practice deterministic state machines, move history, and UI event flows. React JavaScript State-Machine JavaScript" [ref=f2e598] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0/Tic-Tac-Toe-ReactJs
+            - generic [ref=f2e599]:
+              - generic [ref=f2e600]: Tic-Tac-Toe-ReactJs
+              - paragraph [ref=f2e611]: Interactive Tic-Tac-Toe game built with React to practice deterministic state machines, move history, and UI event flows.
+            - generic [ref=f2e612]:
+              - generic [ref=f2e613]:
+                - generic [ref=f2e614]: React
+                - generic [ref=f2e615]: JavaScript
+                - generic [ref=f2e616]: State-Machine
+              - generic [ref=f2e617]: JavaScript
+    - generic [ref=f2e620]:
+      - generic [ref=f2e621]: "07"
+      - generic [ref=f2e622]:
+        - heading "Currently learning" [level=2] [ref=f2e623]
+        - paragraph [ref=f2e624]: I'm always trying to get better at the parts of testing that are hardest to do well.
+        - generic [ref=f2e625]:
+          - generic [ref=f2e626]: Playwright
+          - generic [ref=f2e627]: API automation
+          - generic [ref=f2e628]: CI/CD
+          - generic [ref=f2e629]: Advanced SQL
+          - generic [ref=f2e630]: Test architecture
+    - generic [ref=f2e633]:
+      - generic [ref=f2e634]: "08"
+      - generic [ref=f2e635]:
+        - heading "Got a QA opportunity?" [level=2] [ref=f2e636]
+        - paragraph [ref=f2e637]: I'm always open to discussing QA, testing projects, and opportunities.
+        - generic [ref=f2e638]:
+          - link "Email me" [ref=f2e639] [cursor=pointer]:
+            - /url: mailto:arrofi.zein12@gmail.com
+          - link "LinkedIn" [ref=f2e645] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/arrofizeinabdillah66/
+          - link "GitHub" [ref=f2e653] [cursor=pointer]:
+            - /url: https://github.com/h1ntz0
+  - contentinfo [ref=f2e660]:
+    - generic [ref=f2e661]:
+      - generic [ref=f2e662]:
+        - paragraph [ref=f2e663]: Arrofi Zein Abdillah
+        - paragraph [ref=f2e664]: Built with curiosity, tested with intention.
+      - generic [ref=f2e665]:
+        - link "GitHub" [ref=f2e666] [cursor=pointer]:
+          - /url: https://github.com/h1ntz0
+        - link "LinkedIn" [ref=f2e673] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/arrofizeinabdillah66/
+        - link "Email" [ref=f2e681] [cursor=pointer]:
+          - /url: mailto:arrofi.zein12@gmail.com
+    - generic [ref=f2e688]: © 2026 Arrofi Zein Abdillah. QA tester focused on software quality and test engineering.

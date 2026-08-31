@@ -1,0 +1,194 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - generic [ref=f3e5]: arrofi.qa
+      - generic [ref=f3e13]: runner --suite=all
+    - generic [ref=f3e17]:
+      - generic [ref=f3e18]: INIT
+      - generic [ref=f3e19]: "arrofi.qa :: Initializing test engine v2.6.0..."
+    - generic [ref=f3e21]:
+      - generic [ref=f3e22]: Executing Test Suite
+      - generic [ref=f3e23]: 0%
+  - link "Skip to content" [ref=f3e25] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e26]:
+    - generic [ref=f3e27]:
+      - link "Arrofi Zein Abdillah home" [ref=f3e28] [cursor=pointer]:
+        - /url: /
+        - text: Arrofi Zein Abdillah
+      - generic [ref=f3e29]:
+        - group "Language / Bahasa" [ref=f3e30]:
+          - button "en" [pressed] [ref=f3e31]
+          - button "id" [ref=f3e32]
+        - button "Switch to light mode" [ref=f3e33]
+        - button "Open menu" [ref=f3e34]
+  - main [ref=f3e36]:
+    - generic [ref=f3e39]:
+      - text: Work
+      - heading "Things I've built" [level=1] [ref=f3e40]
+      - paragraph [ref=f3e41]: Real projects straight from my GitHub. I build these, I test them, and I keep the source public so you can look at how I actually work.
+    - generic [ref=f3e43]:
+      - paragraph [ref=f3e44]: "A few of these are small and experimental, a few are more complete. What they have in common is that they're real: real code, real bugs, and real lessons. Click any repo to open the source on GitHub."
+      - generic [ref=f3e45]:
+        - article [ref=f3e46]:
+          - generic [ref=f3e47]:
+            - img "Ranime Anime catalog platform screenshot with search, stats and anime cards" [ref=f3e48]
+            - generic [ref=f3e49]: Featured
+          - generic [ref=f3e53]:
+            - generic [ref=f3e54]:
+              - generic [ref=f3e55]:
+                - heading "Ranime" [level=3] [ref=f3e56]
+                - link "Open Ranime on GitHub" [ref=f3e57] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/Ranime
+              - paragraph [ref=f3e61]: Anime discovery, catalog, tracking, rating and review platform. Local-first, powered by the AniList GraphQL API, Fastify, Docker, and PostgreSQL.
+            - generic [ref=f3e62]:
+              - generic [ref=f3e63]:
+                - generic [ref=f3e64]: TypeScript
+                - generic [ref=f3e65]: React
+                - generic [ref=f3e66]: GraphQL
+                - generic [ref=f3e67]: PostgreSQL
+                - generic [ref=f3e68]: Fastify
+                - generic [ref=f3e69]: Docker
+              - link "View Repository" [ref=f3e70] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Ranime
+        - article [ref=f3e75]:
+          - generic [ref=f3e76]:
+            - img "Agents Telegram multi-agent orchestrator preview on desktop and mobile" [ref=f3e77]
+            - generic [ref=f3e78]: Featured
+          - generic [ref=f3e82]:
+            - generic [ref=f3e83]:
+              - generic [ref=f3e84]:
+                - heading "Agents-Telegram" [level=3] [ref=f3e85]
+                - link "Open Agents-Telegram on GitHub" [ref=f3e86] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/Agents-Telegram
+              - paragraph [ref=f3e90]: Self-hosted AI agent framework on Telegram. Features dynamic model switching, autonomous multi-agent SDLC workflows, proactive cron schedules, and humanizer filtering.
+            - generic [ref=f3e91]:
+              - generic [ref=f3e92]:
+                - generic [ref=f3e93]: Python
+                - generic [ref=f3e94]: Telegram
+                - generic [ref=f3e95]: AI-Agents
+                - generic [ref=f3e96]: SQLite
+                - generic [ref=f3e97]: Clean-Architecture
+              - link "View Repository" [ref=f3e98] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Agents-Telegram
+        - article [ref=f3e103]:
+          - generic [ref=f3e104]:
+            - img "Pemangan room and laboratory booking web app interface" [ref=f3e105]
+            - generic [ref=f3e106]: Featured
+          - generic [ref=f3e110]:
+            - generic [ref=f3e111]:
+              - generic [ref=f3e112]:
+                - heading "Pemangan" [level=3] [ref=f3e113]
+                - link "Open Pemangan on GitHub" [ref=f3e114] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/Pemangan
+              - paragraph [ref=f3e118]: Room and lab reservation system for SMK Negeri 1 Jakarta. Built with React 19, TypeScript, Tailwind CSS v4, dynamic timetable matrix, and Playwright E2E testing.
+            - generic [ref=f3e119]:
+              - generic [ref=f3e120]:
+                - generic [ref=f3e121]: React
+                - generic [ref=f3e122]: TypeScript
+                - generic [ref=f3e123]: TailwindCSS
+                - generic [ref=f3e124]: Playwright
+                - generic [ref=f3e125]: Nginx
+              - link "View Repository" [ref=f3e126] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Pemangan
+        - article [ref=f3e131]:
+          - generic [ref=f3e132]:
+            - generic [ref=f3e133]: Python
+            - heading "api-contract-regression-tester" [level=3] [ref=f3e139]
+          - generic [ref=f3e140]:
+            - generic [ref=f3e141]:
+              - generic [ref=f3e142]:
+                - heading "api-contract-regression-tester" [level=3] [ref=f3e143]
+                - link "Open api-contract-regression-tester on GitHub" [ref=f3e144] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/api-contract-regression-tester
+              - paragraph [ref=f3e148]: Autonomous OpenAPI Contract & Regression Testing Engine in Python. Auto-generates positive and negative test suites with interactive HTML reporting.
+            - generic [ref=f3e149]:
+              - generic [ref=f3e150]:
+                - generic [ref=f3e151]: Python
+                - generic [ref=f3e152]: OpenAPI
+                - generic [ref=f3e153]: API-Testing
+                - generic [ref=f3e154]: Regression
+                - generic [ref=f3e155]: QA-Automation
+              - link "View Repository" [ref=f3e156] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/api-contract-regression-tester
+        - article [ref=f3e161]:
+          - img "Todo CLI actual terminal output and task management workflow in Go" [ref=f3e163]
+          - generic [ref=f3e164]:
+            - generic [ref=f3e165]:
+              - generic [ref=f3e166]:
+                - heading "Todo-cli" [level=3] [ref=f3e167]
+                - link "Open Todo-cli on GitHub" [ref=f3e168] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/Todo-cli
+              - paragraph [ref=f3e172]: A lightweight, minimalistic command-line ToDo list application built with Go. Manage, complete, and track tasks directly from your terminal.
+            - generic [ref=f3e173]:
+              - generic [ref=f3e174]:
+                - generic [ref=f3e175]: Go
+                - generic [ref=f3e176]: CLI
+                - generic [ref=f3e177]: Terminal
+                - generic [ref=f3e178]: Productivity
+              - link "View Repository" [ref=f3e179] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Todo-cli
+        - article [ref=f3e184]:
+          - img "Telegram Sticker Bot real app preview showing sticker creation and conversation flow" [ref=f3e186]
+          - generic [ref=f3e187]:
+            - generic [ref=f3e188]:
+              - generic [ref=f3e189]:
+                - heading "telegram-sticker-bot" [level=3] [ref=f3e190]
+                - link "Open telegram-sticker-bot on GitHub" [ref=f3e191] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/telegram-sticker-bot
+              - paragraph [ref=f3e195]: Telegram bot that converts any photo into a ready-to-use sticker with automatic resizing and transparent padding. Built with python-telegram-bot, Pillow, and SQLite.
+            - generic [ref=f3e196]:
+              - generic [ref=f3e197]:
+                - generic [ref=f3e198]: Python
+                - generic [ref=f3e199]: Telegram
+                - generic [ref=f3e200]: Bot
+                - generic [ref=f3e201]: SQLite
+                - generic [ref=f3e202]: Pillow
+              - link "View Repository" [ref=f3e203] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/telegram-sticker-bot
+        - article [ref=f3e208]:
+          - img "Temperature Converter Python CLI terminal interface with conversion options and results" [ref=f3e210]
+          - generic [ref=f3e211]:
+            - generic [ref=f3e212]:
+              - generic [ref=f3e213]:
+                - heading "Temperature_Converter_SIC" [level=3] [ref=f3e214]
+                - link "Open Temperature_Converter_SIC on GitHub" [ref=f3e215] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/Temperature_Converter_SIC
+              - paragraph [ref=f3e219]: Temperature unit converter CLI (Kelvin, Celsius, Fahrenheit) built in Python with input boundary validation.
+            - generic [ref=f3e220]:
+              - generic [ref=f3e221]:
+                - generic [ref=f3e222]: Python
+                - generic [ref=f3e223]: CLI
+                - generic [ref=f3e224]: Validation
+              - link "View Repository" [ref=f3e225] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Temperature_Converter_SIC
+        - article [ref=f3e230]:
+          - img "React Tic-Tac-Toe game board UI with 3x3 grid, winning line highlight, and move history" [ref=f3e232]
+          - generic [ref=f3e233]:
+            - generic [ref=f3e234]:
+              - generic [ref=f3e235]:
+                - heading "Tic-Tac-Toe-ReactJs" [level=3] [ref=f3e236]
+                - link "Open Tic-Tac-Toe-ReactJs on GitHub" [ref=f3e237] [cursor=pointer]:
+                  - /url: https://github.com/h1ntz0/Tic-Tac-Toe-ReactJs
+              - paragraph [ref=f3e241]: Interactive Tic-Tac-Toe game built with React to practice deterministic state machines, move history, and UI event flows.
+            - generic [ref=f3e242]:
+              - generic [ref=f3e243]:
+                - generic [ref=f3e244]: React
+                - generic [ref=f3e245]: JavaScript
+                - generic [ref=f3e246]: State-Machine
+              - link "View Repository" [ref=f3e247] [cursor=pointer]:
+                - /url: https://github.com/h1ntz0/Tic-Tac-Toe-ReactJs
+  - contentinfo [ref=f3e252]:
+    - generic [ref=f3e253]:
+      - generic [ref=f3e254]:
+        - paragraph [ref=f3e255]: Arrofi Zein Abdillah
+        - paragraph [ref=f3e256]: Built with curiosity, tested with intention.
+      - generic [ref=f3e257]:
+        - link "GitHub" [ref=f3e258] [cursor=pointer]:
+          - /url: https://github.com/h1ntz0
+        - link "LinkedIn" [ref=f3e265] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/arrofizeinabdillah66/
+        - link "Email" [ref=f3e273] [cursor=pointer]:
+          - /url: mailto:arrofi.zein12@gmail.com
+    - generic [ref=f3e280]: © 2026 Arrofi Zein Abdillah. QA tester focused on software quality and test engineering.
+  - alert [ref=f3e282]

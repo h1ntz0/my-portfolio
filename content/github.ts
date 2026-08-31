@@ -78,26 +78,4 @@ export const repos: Repo[] = [
     image: "/images/telegram-sticker-bot.webp",
     alt: "Telegram Sticker Bot real app preview showing sticker creation and conversation flow",
   },
-  {
-    name: "Temperature_Converter_SIC",
-    description:
-      "Temperature unit converter CLI (Kelvin, Celsius, Fahrenheit) built in Python with input boundary validation.",
-    topics: ["Python", "CLI", "Validation"],
-    language: "Python",
-    url: `${githubProfile}/Temperature_Converter_SIC`,
-    featured: false,
-    image: "/images/temperature-converter.svg",
-    alt: "Temperature Converter Python CLI terminal interface with conversion options and results",
-  },
-  {
-    name: "Tic-Tac-Toe-ReactJs",
-    description:
-      "Interactive Tic-Tac-Toe game built with React to practice deterministic state machines, move history, and UI event flows.",
-    topics: ["React", "JavaScript", "State-Machine"],
-    language: "JavaScript",
-    url: `${githubProfile}/Tic-Tac-Toe-ReactJs`,
-    featured: false,
-    image: "/images/tic-tac-toe.svg",
-    alt: "React Tic-Tac-Toe game board UI with 3x3 grid, winning line highlight, and move history",
-  },
 ];

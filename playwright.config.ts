@@ -21,4 +21,10 @@ export default defineConfig({
       use: { ...devices["Pixel 5"] },
     },
   ],
+  webServer: {
+    command: "npm run start -- -p 3100",
+    port: 3100,
+    reuseExistingServer: !process.env.CI,
+    timeout: 120000,
+  },
 });

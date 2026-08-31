@@ -102,11 +102,11 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Automation & Tools",
     skills: [
-      { name: "Playwright", usedIn: ["WISECON · QA Tester", "my-portfolio"] },
+      { name: "Playwright", usedIn: ["WISECON · QA Tester", "Pemangan"] },
       { name: "Postman", usedIn: ["WISECON · QA Tester", "Ranime"] },
       { name: "REST API", usedIn: ["WISECON · QA Tester", "Ranime"] },
       { name: "SQL Server", usedIn: ["WISECON · Application Support"] },
-      { name: "AI Testing Tools", usedIn: ["WISECON · QA Tester"] },
+      { name: "AI Testing Tools", usedIn: ["WISECON · QA Tester", "Agents-Telegram"] },
     ],
   },
   {
@@ -127,9 +127,9 @@ export const skillGroups: SkillGroup[] = [
       { name: "GraphQL", usedIn: ["Ranime"] },
       { name: "Git", usedIn: ["All Projects"] },
       { name: "GitHub", usedIn: ["All Projects"] },
-      { name: "Python", usedIn: ["StickerBot"] },
+      { name: "Python", usedIn: ["Agents-Telegram"] },
       { name: "Go", usedIn: ["Todo-cli"] },
-      { name: "Docker", usedIn: ["Ranime"] },
+      { name: "Docker", usedIn: ["Ranime", "Agents-Telegram"] },
     ],
   },
 ];

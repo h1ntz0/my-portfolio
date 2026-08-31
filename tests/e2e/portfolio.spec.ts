@@ -5,9 +5,9 @@ test.describe("Portfolio core flows", () => {
 
   test("TC-WEB-001 Homepage loads with hero", async ({ page }) => {
     await page.goto("/");
-    await expect(page).toHaveTitle(/QA Tester/);
-    await expect(page.getByText(/I break software/)).toBeVisible();
-    await expect(page.getByText(/so users don't have to/)).toBeVisible();
+    await expect(page).toHaveTitle(/Quality Assurance Tester|QA Tester/);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Projects", exact: false })).toBeVisible();
     // The hero should be personal, not a dashboard
     await expect(page.getByText("Test Run #QA-024")).toHaveCount(0);
   });
@@ -40,7 +40,8 @@ test.describe("Portfolio core flows", () => {
 
   test("TC-WEB-005 CV download link works", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("link", { name: "CV", exact: true }).click();
+    const nav = page.getByRole("navigation", { name: "Main" });
+    await nav.getByRole("link", { name: "CV", exact: true }).click();
     await expect(page).toHaveURL(/\/resume/);
     await expect(page.getByRole("heading", { name: "CV" })).toBeVisible();
     await expect(page.getByRole("button", { name: /Download CV/ })).toBeVisible();

@@ -38,6 +38,3 @@ next-env.d.ts
 /playwright-report/
 /bloat-report/
 /shots/
-.stitch/
-stitch-export/
-.playwright-mcp/

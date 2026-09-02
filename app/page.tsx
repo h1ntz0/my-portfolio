@@ -9,11 +9,16 @@ import { Section } from "@/components/layout/section";
 import { ExperienceTimeline } from "@/components/sections/experience";
 import { SkillGroups, SkillToProjectHint } from "@/components/sections/skills";
 import { ContactSection } from "@/components/sections/contact";
+import { TestMatrixInteractive } from "@/components/qa/test-matrix-interactive";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+
+      <Section id="matrix" className="bg-card/40">
+        <TestMatrixInteractive />
+      </Section>
 
       <Section id="intro">
         <Intro />

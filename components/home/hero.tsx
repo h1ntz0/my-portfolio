@@ -6,8 +6,8 @@ import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import { site } from "@/lib/site";
 import { useLang } from "@/components/lang-provider";
 import { Container } from "@/components/layout/container";
-import { Portrait } from "@/components/home/portrait";
 import { Typewriter } from "@/components/home/typewriter";
+import { CommandPipeline3D } from "@/components/qa/command-pipeline-3d";
 
 const currentlyLearning = ["Playwright", "API automation", "CI/CD"];
 
@@ -78,15 +78,12 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Portrait */}
+        {/* Tactical 3D HUD & Portrait */}
         <div
-          className="animate-fade-in-up mx-auto w-full max-w-sm lg:mx-0"
+          className="animate-fade-in-up mx-auto w-full max-w-lg lg:mx-0 space-y-6"
           style={{ animationDelay: "0.2s" }}
         >
-          <Portrait alt={`${site.name}, ${site.role}`} priority />
-          <p className="mt-3 text-center text-xs text-muted-foreground lg:text-left">
-            {site.firstName} · {t("hero_role")} · {site.location}
-          </p>
+          <CommandPipeline3D />
         </div>
       </Container>
     </section>

@@ -43,6 +43,7 @@ export const repos: Repo[] = [
       "Room and lab reservation system for SMK Negeri 1 Jakarta. Built with React 19, TypeScript, Tailwind CSS v4, dynamic timetable matrix, and Playwright E2E testing.",
     topics: ["React", "TypeScript", "TailwindCSS", "Playwright", "Nginx"],
     language: "TypeScript",
+    liveUrl: "https://pemangan.vercel.app/",
     url: `${githubProfile}/Pemangan`,
     featured: true,
     image: "/images/pemangan.png",

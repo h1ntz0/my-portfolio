@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
+
 
 import { repos } from "@/content/github";
 import { cn } from "@/lib/utils";
@@ -53,28 +54,41 @@ export function SelectedWork() {
                   <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
                     {repo.description}
                   </p>
-                  <a
-                    href={repo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:underline"
-                  >
-                    {t("work_view_github")}
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
+                  <div className="mt-5 flex flex-wrap items-center gap-4">
+                    <a
+                      href={repo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:underline"
+                    >
+                      {t("work_view_github")}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                    {repo.liveUrl && (
+                      <a
+                        href={repo.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-accent hover:underline"
+                      >
+                        {t("work_view_live")}
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <div className={cn(reverse && "lg:order-1")}>
                   <a
-                    href={repo.url}
+                    href={repo.liveUrl ?? repo.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block transition-transform duration-200 hover:-translate-y-1"
-                    aria-label={`Open ${repo.name} on GitHub`}
+                    aria-label={`Open ${repo.name} ${repo.liveUrl ? "live site" : "on GitHub"}`}
                   >
                     <BrowserVisual
                       accent={i === 0}
-                      url={domain(repo.url)}
+                      url={repo.liveUrl ? repo.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "") : domain(repo.url)}
                       subtitle={repo.topics[0] ?? "GitHub"}
                       title={repo.name}
                       tags={repo.topics.slice(0, 4)}

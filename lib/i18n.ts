@@ -43,6 +43,7 @@ export const translations = {
     id: "Project nyata yang saya kembangkan dan uji secara menyeluruh sebagai pembuktian teknis. Setiap project dilengkapi link repositori GitHub.",
   },
   work_view_github: { en: "View on GitHub", id: "Lihat di GitHub" },
+  work_view_live: { en: "Live Site", id: "Lihat Website" },
 
   // What I test
   what_num: { en: "03", id: "03" },

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Github, ArrowUpRight, Sparkles, Terminal } from "lucide-react";
+import { Github, ArrowUpRight, Sparkles, Terminal, ExternalLink } from "lucide-react";
 
 import { repos } from "@/content/github";
 import { useLang } from "@/components/lang-provider";
@@ -74,16 +74,29 @@ export function ProjectsClient() {
                     <h3 className="font-semibold text-lg tracking-tight text-foreground group-hover:text-accent transition-colors">
                       {repo.name}
                     </h3>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {repo.liveUrl && (
+                      <a
+                        href={repo.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-lg border border-border p-2 text-muted-foreground transition-colors hover:border-accent hover:text-accent hover:bg-secondary/50"
+                        aria-label={`Open ${repo.name} live website`}
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
                     <a
                       href={repo.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-lg border border-border p-2 text-muted-foreground transition-colors hover:border-accent hover:text-accent hover:bg-secondary/50 shrink-0"
+                      className="inline-flex items-center justify-center rounded-lg border border-border p-2 text-muted-foreground transition-colors hover:border-accent hover:text-accent hover:bg-secondary/50"
                       aria-label={`Open ${repo.name} on GitHub`}
                     >
                       <Github className="h-4 w-4" />
                     </a>
                   </div>
+                </div>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {repo.description}

@@ -4,6 +4,7 @@ export interface Repo {
   description: string;
   topics: string[];
   url: string;
+  liveUrl?: string;
   language?: string;
   featured?: boolean;
   image?: string;
@@ -20,6 +21,7 @@ export const repos: Repo[] = [
     topics: ["TypeScript", "React", "GraphQL", "PostgreSQL", "Fastify", "Docker"],
     language: "TypeScript",
     url: `${githubProfile}/Ranime`,
+    liveUrl: "https://ranime-rate.vercel.app/",
     featured: true,
     image: "/images/ranime.webp",
     alt: "Ranime Anime catalog platform screenshot with search, stats and anime cards",

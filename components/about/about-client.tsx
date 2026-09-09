@@ -10,17 +10,27 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MethodologyAccordion, RiskMatrix } from "@/components/sections/methodology";
 
-const focus = [
-  "Manual & Exploratory Testing",
-  "Test Case Design & Documentation",
-  "AI Powered Test Automation",
-  "Linux System Administration (Debian/Ubuntu)",
-  "API & Functional Testing",
-  "Bug Reporting & Tracking",
-];
+const focus: Record<"en" | "id", string[]> = {
+  en: [
+    "Manual & Exploratory Testing",
+    "Test Case Design & Documentation",
+    "AI Powered Test Automation",
+    "Linux System Administration (Debian/Ubuntu)",
+    "API & Functional Testing",
+    "Bug Reporting & Tracking",
+  ],
+  id: [
+    "Manual & Exploratory Testing",
+    "Desain & Dokumentasi Test Case",
+    "Test Automation berbasis AI",
+    "Administrasi Linux (Debian/Ubuntu)",
+    "API & Functional Testing",
+    "Pelaporan & Pelacakan Bug",
+  ],
+};
 
 export function AboutClient() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <>
@@ -46,7 +56,7 @@ export function AboutClient() {
               {t("about_focus_heading")}
             </h3>
             <div className="mt-3 flex flex-wrap gap-2">
-              {focus.map((f) => (
+              {(focus[lang] ?? focus.en).map((f) => (
                 <Badge key={f} variant="outline">
                   {f}
                 </Badge>
@@ -60,7 +70,7 @@ export function AboutClient() {
                 {t("about_snapshot")}
               </p>
               <dl className="mt-3 space-y-3 text-sm">
-                <Row label={t("about_role")} value={site.role} />
+                <Row label={t("about_role")} value={t("role_full")} />
                 <Row label={t("about_location")} value={site.location} />
                 <Row label="Email" value={site.email} />
               </dl>
@@ -84,9 +94,9 @@ export function AboutClient() {
       {certifications.length > 0 && (
         <Section>
           <SectionHeading
-            eyebrow="Credentials"
-            title="Certifications"
-            description="Compact list with issuer, year, and credential."
+            eyebrow={t("about_creds_eyebrow")}
+            title={t("about_creds_title")}
+            description={t("about_creds_desc")}
           />
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {certifications.map((cert) => (

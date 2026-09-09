@@ -29,48 +29,54 @@ export function ResumeClient() {
 }
 
 function ResumeDoc() {
+  const { t, lang } = useLang();
+  const isId = lang === "id";
+
   return (
     <div className="space-y-8 print:space-y-6">
       <header className="border-b pb-6">
         <h2 className="text-3xl font-semibold tracking-tight">
           {site.name}
         </h2>
-        <p className="mt-1 text-sm font-medium text-accent">{site.role}</p>
+        <p className="mt-1 text-sm font-medium text-accent">{t("role_full")}</p>
         <div className="mono mt-2 text-xs text-muted-foreground">
           {site.email} · {site.location} · github.com/h1ntz0 · linkedin.com/in/arrofizeinabdillah66
         </div>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          QA Tester focused on functional testing, API validation, automation,
-          and finding defects before users do. Documents every result with
-          evidence.
+          {t("resume_summary")}
         </p>
       </header>
 
       <section>
         <h3 className="text-sm font-semibold uppercase tracking-wide text-accent">
-          Experience
+          {t("resume_exp_heading")}
         </h3>
         <div className="mt-4 space-y-6">
-          {experience.map((job) => (
-            <div key={job.company}>
-              <div className="flex items-baseline justify-between gap-4">
-                <h4 className="font-semibold">{job.company}</h4>
-                <span className="mono text-xs text-muted-foreground">{job.period}</span>
+          {experience.map((job) => {
+            const period = isId && job.periodId ? job.periodId : job.period;
+            const role = isId && job.roleId ? job.roleId : job.role;
+            const resp = isId && job.responsibilitiesId ? job.responsibilitiesId : job.responsibilities;
+            return (
+              <div key={job.company}>
+                <div className="flex items-baseline justify-between gap-4">
+                  <h4 className="font-semibold">{job.company}</h4>
+                  <span className="mono text-xs text-muted-foreground">{period}</span>
+                </div>
+                <p className="text-sm text-muted-foreground">{role}</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+                  {resp.map((r) => (
+                    <li key={r}>{r}</li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-sm text-muted-foreground">{job.role}</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
-                {job.responsibilities.map((r) => (
-                  <li key={r}>{r}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
       <section>
         <h3 className="text-sm font-semibold uppercase tracking-wide text-accent">
-          Skills
+          {t("resume_skills_heading")}
         </h3>
         <div className="mt-4 space-y-3">
           {skillGroups.map((group) => (
@@ -89,7 +95,7 @@ function ResumeDoc() {
       {certifications.length > 0 && (
         <section>
           <h3 className="text-sm font-semibold uppercase tracking-wide text-accent">
-            Certifications
+            {t("resume_certs_heading")}
           </h3>
           <div className="mt-4 space-y-2">
             {certifications.map((cert) => (

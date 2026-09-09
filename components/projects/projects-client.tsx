@@ -9,7 +9,8 @@ import { PageHeader } from "@/components/qa/page-header";
 import { Section } from "@/components/layout/section";
 
 export function ProjectsClient() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const isId = lang === "id";
 
   return (
     <>
@@ -42,7 +43,7 @@ export function ProjectsClient() {
                   {repo.featured && (
                     <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-accent/90 px-2.5 py-1 text-[10px] font-mono font-medium text-accent-foreground backdrop-blur-md">
                       <Sparkles className="h-3 w-3" />
-                      <span>Featured</span>
+                      <span>{t("projects_featured")}</span>
                     </div>
                   )}
                 </div>
@@ -56,7 +57,7 @@ export function ProjectsClient() {
                     {repo.featured && (
                       <div className="flex items-center gap-1 rounded-full bg-accent/90 px-2.5 py-1 text-[10px] font-mono font-medium text-accent-foreground backdrop-blur-md">
                         <Sparkles className="h-3 w-3" />
-                        <span>Featured QA Tool</span>
+                        <span>{t("projects_featured_tool")}</span>
                       </div>
                     )}
                   </div>
@@ -81,7 +82,7 @@ export function ProjectsClient() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-lg border border-border p-2 text-muted-foreground transition-colors hover:border-accent hover:text-accent hover:bg-secondary/50"
-                        aria-label={`Open ${repo.name} live website`}
+                        aria-label={isId ? `Buka website ${repo.name}` : `Open ${repo.name} live website`}
                       >
                         <ExternalLink className="h-4 w-4" />
                       </a>
@@ -91,7 +92,7 @@ export function ProjectsClient() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center rounded-lg border border-border p-2 text-muted-foreground transition-colors hover:border-accent hover:text-accent hover:bg-secondary/50"
-                      aria-label={`Open ${repo.name} on GitHub`}
+                      aria-label={isId ? `Buka repo ${repo.name} di GitHub` : `Open ${repo.name} on GitHub`}
                     >
                       <Github className="h-4 w-4" />
                     </a>
@@ -99,7 +100,7 @@ export function ProjectsClient() {
                 </div>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {repo.description}
+                    {isId && repo.descriptionId ? repo.descriptionId : repo.description}
                   </p>
                 </div>
 
@@ -121,7 +122,7 @@ export function ProjectsClient() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-accent hover:underline ml-auto"
                   >
-                    <span>View Repository</span>
+                    <span>{t("projects_view_repo")}</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                 </div>

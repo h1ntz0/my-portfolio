@@ -3,7 +3,10 @@
 import * as React from "react";
 import { Terminal, ShieldCheck } from "lucide-react";
 
+import { useLang } from "@/components/lang-provider";
+
 export function QaPreloader() {
+  const { t } = useLang();
   const [mounted, setMounted] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const [logIndex, setLogIndex] = React.useState(0);
@@ -105,7 +108,9 @@ export function QaPreloader() {
         {/* Progress bar */}
         <div className="mt-6 space-y-2 border-t border-border/40 pt-4">
           <div className="flex justify-between text-xs font-mono">
-            <span className="text-muted-foreground uppercase tracking-wider text-[11px]">Executing Test Suite</span>
+            <span className="text-muted-foreground uppercase tracking-wider text-[11px]">
+              {t("qa_executing")}
+            </span>
             <span className="text-accent font-semibold">{progress}%</span>
           </div>
           <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary/80">

@@ -6,7 +6,8 @@ import { repos, githubProfile } from "@/content/github";
 import { useLang } from "@/components/lang-provider";
 
 export function GitHubSection() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const isId = lang === "id";
   return (
     <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
       <span className="mono text-sm text-accent sm:pt-2">{t("gh_num")}</span>
@@ -49,7 +50,7 @@ export function GitHubSection() {
                 </div>
 
                 <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground line-clamp-3">
-                  {repo.description}
+                  {isId && repo.descriptionId ? repo.descriptionId : repo.description}
                 </p>
               </div>
 

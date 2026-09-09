@@ -13,8 +13,20 @@ export const testInterests = [
   "Regression",
 ];
 
+export const testInterestsId = [
+  "Aplikasi web",
+  "Perilaku API",
+  "Alur login",
+  "Form & validasi",
+  "Edge case",
+  "Tampilan responsif",
+  "Perilaku database",
+  "Regresi",
+];
+
 export function WhatITest() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const items = lang === "id" ? testInterestsId : testInterests;
   return (
     <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
       <span className="mono text-sm text-accent sm:pt-2">{t("what_num")}</span>
@@ -24,7 +36,7 @@ export function WhatITest() {
         </h2>
         <p className="mt-3 text-muted-foreground">{t("what_desc")}</p>
         <div className="mt-6 flex flex-wrap gap-2.5">
-          {testInterests.map((item) => (
+          {items.map((item) => (
             <span
               key={item}
               className="rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-accent/50 hover:text-foreground"

@@ -12,7 +12,8 @@ const domain = (url: string) =>
   url.replace("https://github.com/", "");
 
 export function SelectedWork() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const isId = lang === "id";
   const featured = repos.filter((r) => r.featured).slice(0, 3);
 
   return (
@@ -52,7 +53,7 @@ export function SelectedWork() {
                     ))}
                   </div>
                   <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
-                    {repo.description}
+                    {isId && repo.descriptionId ? repo.descriptionId : repo.description}
                   </p>
                   <div className="mt-5 flex flex-wrap items-center gap-4">
                     <a

@@ -14,14 +14,14 @@ export const testInterests = [
 ];
 
 export const testInterestsId = [
-  "Aplikasi web",
-  "Perilaku API",
-  "Alur login",
-  "Form & validasi",
-  "Edge case",
-  "Tampilan responsif",
-  "Perilaku database",
-  "Regresi",
+  "Aplikasi Web",
+  "Validasi Endpoint API",
+  "Alur Autentikasi",
+  "Validasi Form & Input",
+  "Skenario Edge Case",
+  "Tata Letak Responsif",
+  "Integritas Database SQL",
+  "Pengujian Regresi",
 ];
 
 export function WhatITest() {

@@ -20,11 +20,11 @@ const focus: Record<"en" | "id", string[]> = {
     "Bug Reporting & Tracking",
   ],
   id: [
-    "Manual & Exploratory Testing",
-    "Desain & Dokumentasi Test Case",
-    "Test Automation berbasis AI",
-    "Administrasi Linux (Debian/Ubuntu)",
-    "API & Functional Testing",
+    "Pengujian Manual & Eksploratori",
+    "Perancangan & Dokumentasi Test Case",
+    "Otomatisasi Pengujian Berbasis AI",
+    "Administrasi Sistem Linux (Debian/Ubuntu)",
+    "Pengujian API & Fungsional",
     "Pelaporan & Pelacakan Bug",
   ],
 };

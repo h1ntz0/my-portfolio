@@ -11,40 +11,40 @@ export interface WorkflowStep {
 export const practicalWorkflow: WorkflowStep[] = [
   {
     title: "Requirement & Acceptance Criteria Analysis",
-    titleId: "Bedah Requirement & Acceptance Criteria",
+    titleId: "Analisis Requirement & Kriteria Penerimaan",
     category: "Step 01",
     description:
       "Review user stories and features, clarifying expected behavior before drafting tests.",
     descriptionId:
-      "Pelajari user story dan alur fitur, pastikan ekspektasi sistem jelas sebelum bikin test case.",
+      "Evaluasi user story dan alur fitur untuk memastikan perilaku sistem yang diharapkan sebelum penyusunan test case.",
     practicalTasks: [
       "Understand happy path and negative boundary conditions",
       "Identify high-risk workflows (auth, data mutation, forms)",
       "Clarify ambiguous acceptance criteria with team",
     ],
     practicalTasksId: [
-      "Pahami happy path dan batas-batas skenario negatif",
-      "Petakan alur rawan error (autentikasi, mutasi data, form)",
-      "Klarifikasi kriteria penerimaan yang masih rancu bareng tim",
+      "Identifikasi happy path beserta batas skenario negatif",
+      "Petakan alur berisiko tinggi (autentikasi, mutasi data, form)",
+      "Klarifikasi kriteria penerimaan yang ambigu bersama tim",
     ],
   },
   {
     title: "Test Case & Scenario Design",
-    titleId: "Desain Test Case & Skenario Uji",
+    titleId: "Perancangan Test Case & Skenario Uji",
     category: "Step 02",
     description:
       "Draft structured, repeatable manual test cases with clear expected results.",
     descriptionId:
-      "Susun test case manual yang rapi dan terukur dengan hasil ekspektasi yang jelas.",
+      "Susun test case manual yang terstruktur dan terukur dengan hasil yang diharapkan secara jelas.",
     practicalTasks: [
       "Write step-by-step reproduction steps and expected outcomes",
       "Prepare realistic test data and edge cases",
       "Map test cases into functional and regression suites",
     ],
     practicalTasksId: [
-      "Tulis langkah pengujian bertahap beserta ekspektasi hasil akhirnya",
-      "Siapkan data uji realistis dan variasi edge case",
-      "Kelompokkan skenario ke test suite fungsional dan regresi",
+      "Dokumentasikan langkah pengujian bertahap beserta hasil yang diharapkan",
+      "Siapkan data uji realistis dengan variasi edge case",
+      "Kategorikan skenario ke dalam test suite fungsional dan regresi",
     ],
   },
   {
@@ -54,7 +54,7 @@ export const practicalWorkflow: WorkflowStep[] = [
     description:
       "Execute test cases and conduct unscripted exploratory testing across browsers and devices.",
     descriptionId:
-      "Jalankan test case terjadwal plus exploratory testing tanpa skrip di berbagai browser & layar.",
+      "Eksekusi test case terencana beserta exploratory testing lintas browser dan perangkat.",
     practicalTasks: [
       "Validate web UI responsiveness and form field constraints",
       "Perform REST API testing using Postman (payloads, status codes, headers)",
@@ -62,8 +62,8 @@ export const practicalWorkflow: WorkflowStep[] = [
     ],
     practicalTasksId: [
       "Validasi responsivitas UI web dan batasan input form",
-      "Tes REST API pakai Postman (payload, status code, header)",
-      "Query database SQL (MySQL/PostgreSQL) buat bukti integritas data",
+      "Uji endpoint REST API menggunakan Postman (payload, status code, header)",
+      "Verifikasi integritas data melalui query SQL (MySQL/PostgreSQL)",
     ],
   },
   {
@@ -73,16 +73,16 @@ export const practicalWorkflow: WorkflowStep[] = [
     description:
       "Log detailed defect tickets with clear severity, steps to reproduce, and evidence.",
     descriptionId:
-      "Catat tiket defect lengkap dengan tingkat keparahan, langkah reproduksi, dan tangkapan bukti.",
+      "Dokumentasikan tiket defect secara detail disertai tingkat severity, langkah reproduksi, dan bukti pendukung.",
     practicalTasks: [
       "Document actual vs expected behavior with screenshots/logs",
       "Assign severity and priority (Critical, Major, Minor)",
       "Provide developers with exact payloads and network trace details",
     ],
     practicalTasksId: [
-      "Dokumentasikan hasil aktual vs ekspektasi bareng screenshot/log",
-      "Tentukan severity dan prioritas (Critical, Major, Minor)",
-      "Beri developer payload persis serta jejak network trace",
+      "Dokumentasikan hasil aktual versus ekspektasi dengan screenshot/log",
+      "Tetapkan tingkat severity dan prioritas (Critical, Major, Minor)",
+      "Sediakan payload akurat beserta detail network trace kepada developer",
     ],
   },
   {
@@ -92,16 +92,16 @@ export const practicalWorkflow: WorkflowStep[] = [
     description:
       "Retest resolved defects and execute regression test suites to safeguard unaffected areas.",
     descriptionId:
-      "Uji ulang bug yang sudah diperbaiki dan jalankan suite regresi biar area lain tetap aman.",
+      "Uji ulang bug yang telah diperbaiki serta jalankan suite pengujian regresi guna memastikan stabilitas area sistem lainnya.",
     practicalTasks: [
       "Verify bug fixes across staging environments",
       "Run regression suites manually or via Playwright automated tests",
       "Provide sign-off for release readiness",
     ],
     practicalTasksId: [
-      "Verifikasi perbaikan bug di environment staging",
-      "Jalankan regresi secara manual atau otomatis lewat Playwright",
-      "Beri sign-off kesiapan rilis setelah semua test lolos",
+      "Verifikasi perbaikan bug pada lingkungan staging",
+      "Eksekusi regression suite secara manual maupun terotomasi via Playwright",
+      "Memberikan sign-off kesiapan rilis setelah seluruh kriteria terpenuhi",
     ],
   },
 ];

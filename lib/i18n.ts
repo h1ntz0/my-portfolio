@@ -186,7 +186,7 @@ export const translations = {
   resume_skills_heading: { en: "Skills", id: "Keahlian Teknis" },
   resume_exp_heading: { en: "Experience", id: "Pengalaman Kerja" },
   resume_certs_heading: { en: "Certifications", id: "Sertifikasi" },
-  qa_executing: { en: "Executing Test Suite", id: "Menjalankan Test Suite" },
+  loader_aria: { en: "Loading page", id: "Memuat halaman" },
   role_full: {
     en: "Quality Assurance Tester Intern & Linux Enthusiast",
     id: "QA Tester Intern & Linux System Enthusiast",

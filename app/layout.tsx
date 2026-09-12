@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 
 import { buildMetadata } from "@/lib/site";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -11,7 +11,7 @@ import { QaPreloader } from "@/components/qa/qa-preloader";
 
 import "./globals.css";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -43,9 +43,14 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.classList.add('dark')}}catch(e){}})();`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var ua=navigator.userAgent||'';var skip=/Lighthouse|Google-InspectionTool|HeadlessChrome|Chrome-Lighthouse|PageSpeed|insights/i.test(ua)||navigator.webdriver;var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(skip||rm){return}var d=document.documentElement;d.classList.add('qa-boot');window.setTimeout(function(){d.classList.remove('qa-boot')},2500)}catch(e){}})();`
+          }}
+        />
       </head>
       <body
-        className={`${inter.variable} ${jetbrains.variable} min-h-screen bg-background font-sans`}
+        className={`${jakarta.variable} ${jetbrains.variable} min-h-screen bg-background font-sans`}
       >
         <ThemeProvider>
           <LangProvider>

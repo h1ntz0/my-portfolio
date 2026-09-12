@@ -151,6 +151,15 @@
     border-color: #D2C4B0;
     background: rgba(234, 224, 208, 0.88);
   }
+
+  /* Boot cover: painted before hydration, cleared by QaPreloader */
+  html.qa-boot body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: var(--background);
+  }
 }
 
 @layer utilities {

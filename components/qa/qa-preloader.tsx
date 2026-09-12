@@ -5,12 +5,17 @@ import * as React from "react";
 import { site } from "@/lib/site";
 import { useLang } from "@/components/lang-provider";
 
-const DURATION = 700;
-const EXIT = 260;
+const DURATION = 850;
+const EXIT = 620;
+
+const words = site.name.split(" ");
+const lineOne = words.slice(0, 2).join(" ");
+const lineTwo = words.slice(2).join(" ");
 
 /**
- * Quiet letterhead intro: name, role, a hairline that fills, and a mono counter.
- * No fabricated test logs, no traffic lights, no glow, no uppercase-tracking labels.
+ * Cinematic letterhead intro: masked type rise, top progress hairline, mono counter,
+ * paper grain, then the whole sheet curtains upward to reveal the page.
+ * No fabricated test logs, no traffic lights, no glow.
  */
 export function QaPreloader() {
   const { t } = useLang();
@@ -67,35 +72,67 @@ export function QaPreloader() {
   if (!mounted || done) return null;
 
   const leaving = progress >= 100;
+  const curtain =
+    "transition-transform duration-[620ms] [transition-timing-function:cubic-bezier(0.76,0,0.24,1)]";
 
   return (
     <div
       role="status"
       aria-live="polite"
-      className={`fixed inset-0 z-[100] flex items-end bg-background p-8 transition-[opacity,transform] duration-[260ms] ease-out sm:p-14 ${
-        leaving ? "translate-y-1 opacity-0" : "translate-y-0 opacity-100"
+      className={`qa-grain fixed inset-0 z-[100] overflow-hidden bg-background ${curtain} ${
+        leaving ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       <span className="sr-only">{t("loader_aria")}</span>
 
-      <div className="w-72 sm:w-80" aria-hidden="true">
-        <p className="text-lg font-medium leading-tight tracking-tight text-foreground">
-          {site.name}
-        </p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          {t("hero_role")} · {site.location}
-        </p>
+      {/* progress hairline pinned to the top edge */}
+      <div className="absolute inset-x-0 top-0 h-px bg-border" aria-hidden="true">
+        <span
+          className="block h-px w-full origin-left bg-foreground"
+          style={{ transform: `scaleX(${progress / 100})` }}
+        />
+      </div>
 
-        <div className="mt-5 h-px w-full overflow-hidden bg-border">
-          <span
-            className="block h-px w-full origin-left bg-foreground"
-            style={{ transform: `scaleX(${progress / 100})` }}
-          />
+      {/* letterhead */}
+      <div
+        aria-hidden="true"
+        className={`absolute inset-0 flex flex-col justify-center px-8 sm:px-14 ${curtain} ${
+          leaving ? "-translate-y-10" : "translate-y-0"
+        }`}
+      >
+        <div className="text-[clamp(2.5rem,8vw,5.5rem)] font-medium leading-[1.02] tracking-tight text-foreground">
+          <span className="block overflow-hidden pb-[0.06em]">
+            <span className="qa-rise block" style={{ animationDelay: "40ms" }}>
+              {lineOne}
+            </span>
+          </span>
+          {lineTwo && (
+            <span className="block overflow-hidden pb-[0.06em]">
+              <span className="qa-rise block" style={{ animationDelay: "130ms" }}>
+                {lineTwo}
+              </span>
+            </span>
+          )}
         </div>
 
-        <p className="mono mt-2 text-right text-[10px] tabular-nums text-muted-foreground">
-          {String(progress).padStart(3, "0")}
+        <p
+          className="qa-fade mt-6 text-sm text-muted-foreground"
+          style={{ animationDelay: "360ms" }}
+        >
+          {t("hero_role")} · {site.location}
         </p>
+      </div>
+
+      {/* counter */}
+      <div
+        aria-hidden="true"
+        className={`absolute bottom-8 right-8 sm:bottom-14 sm:right-14 ${curtain} ${
+          leaving ? "-translate-y-10" : "translate-y-0"
+        }`}
+      >
+        <span className="mono text-xs tabular-nums text-muted-foreground">
+          {String(progress).padStart(3, "0")}
+        </span>
       </div>
     </div>
   );

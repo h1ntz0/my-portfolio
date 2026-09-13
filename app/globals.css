@@ -215,7 +215,7 @@
   animation: qa-draw 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .qa-fade {
-  animation: qa-fade 700ms ease-out both;
+  animation: qa-fade 420ms ease-out both;
 }
 @media (prefers-reduced-motion: reduce) {
   .qa-rise,

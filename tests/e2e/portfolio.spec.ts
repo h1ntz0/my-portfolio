@@ -24,10 +24,10 @@ test.describe("Portfolio core flows", () => {
 
   test("TC-WEB-003 Work shows real GitHub repos", async ({ page }) => {
     await page.goto("/projects");
-    await expect(page.getByRole("link", { name: /Ranime/ })).toBeVisible();
-    // All repo links point to the real GitHub account
-    const href = await page.getByRole("link", { name: /Ranime/ }).getAttribute("href");
-    expect(href).toMatch(/github\.com\/h1ntz0\/Ranime/);
+    // The card links to the real repository, not a placeholder.
+    await expect(
+      page.locator('a[href="https://github.com/h1ntz0/Ranime"]').first()
+    ).toBeVisible();
   });
 
   test("TC-WEB-004 Home shows selected work repos", async ({ page }) => {

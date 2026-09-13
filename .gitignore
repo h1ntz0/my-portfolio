@@ -38,3 +38,6 @@ next-env.d.ts
 /playwright-report/
 /bloat-report/
 /shots/
+
+.vercel
+.env.local

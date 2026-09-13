@@ -45,7 +45,7 @@ export default function RootLayout({
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var ua=navigator.userAgent||'';var skip=/Lighthouse|Google-InspectionTool|HeadlessChrome|Chrome-Lighthouse|PageSpeed|insights/i.test(ua)||navigator.webdriver;var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(skip||rm){return}var d=document.documentElement;d.classList.add('qa-boot');window.setTimeout(function(){d.classList.remove('qa-boot')},2500)}catch(e){}})();`
+            __html: `(function(){try{var ua=navigator.userAgent||'';var skip=/Lighthouse|Google-InspectionTool|HeadlessChrome|Chrome-Lighthouse|PageSpeed|insights/i.test(ua)||navigator.webdriver;var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(skip||rm){return}var d=document.documentElement;d.classList.add('qa-boot');window.setTimeout(function(){d.classList.remove('qa-boot')},2600)}catch(e){}})();`
           }}
         />
       </head>

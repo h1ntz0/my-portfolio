@@ -25,6 +25,7 @@
   --color-warning: var(--warning);
   --color-info: var(--info);
   --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
   --font-mono: var(--font-mono);
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -138,6 +139,13 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+
   ::selection {
     background-color: var(--accent);
     color: var(--accent-foreground);
@@ -159,6 +167,53 @@
     inset: 0;
     z-index: 100;
     background-color: var(--background);
+  }
+}
+
+@layer components {
+  /* One type scale. Every heading and paragraph picks a step instead of
+     inventing sizes, so the rhythm holds across all seven routes. */
+  .display {
+    font-size: clamp(2.6rem, 6.2vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+  .title {
+    font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+  .h2 {
+    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+  .h3 {
+    font-size: 1.0625rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+  .lead {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  .body-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  /* Long-form measure. Prose wider than this stops being scannable. */
+  .measure {
+    max-width: 36rem;
   }
 }
 

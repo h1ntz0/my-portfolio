@@ -134,6 +134,22 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
+export const learningNext: string[] = [
+  "Playwright",
+  "API automation",
+  "CI/CD",
+  "Advanced SQL",
+  "Test architecture",
+];
+
+export const learningNextId: string[] = [
+  "Playwright",
+  "Otomasi API",
+  "CI/CD",
+  "SQL lanjutan",
+  "Arsitektur pengujian",
+];
+
 export const certifications: Certification[] = [
   {
     name: "AWS Knowledge: Cloud Essentials",

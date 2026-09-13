@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Archivo, JetBrains_Mono } from "next/font/google";
 
 import { buildMetadata } from "@/lib/site";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -11,7 +11,13 @@ import { QaPreloader } from "@/components/qa/qa-preloader";
 
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
+const display = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const sans = Archivo({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -50,7 +56,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${jakarta.variable} ${jetbrains.variable} min-h-screen bg-background font-sans`}
+        className={`${sans.variable} ${display.variable} ${jetbrains.variable} min-h-screen bg-background font-sans`}
       >
         <ThemeProvider>
           <LangProvider>

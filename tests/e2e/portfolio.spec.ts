@@ -7,7 +7,7 @@ test.describe("Portfolio core flows", () => {
     await page.goto("/");
     await expect(page).toHaveTitle(/Quality Assurance Tester|QA Tester/);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Projects", exact: false })).toBeVisible();
+    await expect(page.getByRole("link", { name: "See my work" })).toBeVisible();
     // The hero should be personal, not a dashboard
     await expect(page.getByText("Test Run #QA-024")).toHaveCount(0);
   });
@@ -18,7 +18,7 @@ test.describe("Portfolio core flows", () => {
     await nav.getByRole("link", { name: "Work" }).click();
     await expect(page).toHaveURL(/\/projects$/);
     await expect(
-      page.getByRole("heading", { name: /Things I've built/ })
+      page.getByRole("heading", { name: "Work", exact: true })
     ).toBeVisible();
   });
 
@@ -49,7 +49,7 @@ test.describe("Portfolio core flows", () => {
 
   test("TC-WEB-006 Contact form validation", async ({ page }) => {
     await page.goto("/contact");
-    await page.getByRole("button", { name: "Send Message" }).click();
+    await page.getByRole("button", { name: "Open in mail client" }).click();
     await expect(page.getByText("Name is required.")).toBeVisible();
     await expect(page.getByText("Email is required.")).toBeVisible();
   });
@@ -62,7 +62,10 @@ test.describe("Mobile navigation", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
     await page.getByRole("button", { name: "Open menu" }).click();
-    await page.getByRole("link", { name: "Work", exact: true }).click();
+    await page
+      .locator("header")
+      .getByRole("link", { name: "Work", exact: true })
+      .click();
     await expect(page).toHaveURL(/\/projects/);
   });
 });

@@ -5,27 +5,24 @@ import { certifications } from "@/content/profile";
 import { useLang } from "@/components/lang-provider";
 import { PageHeader } from "@/components/qa/page-header";
 import { Section } from "@/components/layout/section";
-import { SectionHeading } from "@/components/layout/section-heading";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MethodologyAccordion, RiskMatrix } from "@/components/sections/methodology";
+import { WorkflowSteps, TestingCompetencies } from "@/components/sections/methodology";
 
 const focus: Record<"en" | "id", string[]> = {
   en: [
-    "Manual & Exploratory Testing",
-    "Test Case Design & Documentation",
-    "AI Powered Test Automation",
-    "Linux System Administration (Debian/Ubuntu)",
-    "API & Functional Testing",
-    "Bug Reporting & Tracking",
+    "Manual and exploratory testing",
+    "Test case design and documentation",
+    "API and functional testing",
+    "Bug reporting and tracking",
+    "Playwright automation",
+    "Linux system administration (Debian and Ubuntu)",
   ],
   id: [
-    "Pengujian Manual & Eksploratori",
-    "Perancangan & Dokumentasi Test Case",
-    "Otomatisasi Pengujian Berbasis AI",
-    "Administrasi Sistem Linux (Debian/Ubuntu)",
-    "Pengujian API & Fungsional",
-    "Pelaporan & Pelacakan Bug",
+    "Pengujian manual dan eksploratori",
+    "Perancangan dan dokumentasi test case",
+    "Pengujian API dan fungsional",
+    "Pelaporan dan pelacakan bug",
+    "Otomasi Playwright",
+    "Administrasi sistem Linux (Debian dan Ubuntu)",
   ],
 };
 
@@ -34,84 +31,72 @@ export function AboutClient() {
 
   return (
     <>
-      <PageHeader
-        eyebrow={t("about_eyebrow")}
-        title={t("about_title")}
-        description={t("about_desc")}
-      />
+      <PageHeader title={t("about_title")} description={t("about_desc")} />
 
       <Section>
-        <div className="grid gap-10 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              {site.name}
-            </h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              {t("about_p1")}
-            </p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
+        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
+          <div>
+            <p className="lead measure text-foreground">{t("about_p1")}</p>
+            <p className="body-text measure mt-6 text-muted-foreground">
               {t("about_p2")}
             </p>
-            <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-accent">
-              {t("about_focus_heading")}
-            </h3>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {(focus[lang] ?? focus.en).map((f) => (
-                <Badge key={f} variant="outline">
-                  {f}
-                </Badge>
+
+            <h2 className="label mt-10 text-accent">{t("about_focus_heading")}</h2>
+            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+              {(focus[lang] ?? focus.en).map((item) => (
+                <li key={item} className="body-text text-muted-foreground">
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          <Card className="h-fit">
-            <CardContent className="p-6">
-              <p className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-                {t("about_snapshot")}
-              </p>
-              <dl className="mt-3 space-y-3 text-sm">
-                <Row label={t("about_role")} value={t("role_full")} />
-                <Row label={t("about_location")} value={site.location} />
-                <Row label="Email" value={site.email} />
-              </dl>
-            </CardContent>
-          </Card>
+          <div className="h-fit">
+            <p className="label border-t border-border pt-4 text-muted-foreground">
+              {t("about_snapshot")}
+            </p>
+            <dl>
+              <Row label={t("about_role")} value={t("role_full")} />
+              <Row label={t("about_location")} value={site.location} />
+              <Row label="Email" value={site.email} />
+            </dl>
+          </div>
         </div>
       </Section>
 
       <Section className="bg-card">
-        <SectionHeading
-          eyebrow={t("about_methodology_eyebrow")}
-          title={t("about_methodology_title")}
-          description={t("about_methodology_desc")}
-        />
-        <div className="mt-8 grid gap-8 lg:grid-cols-2">
-          <MethodologyAccordion />
-          <RiskMatrix />
+        <h2 className="h2">{t("about_methodology_title")}</h2>
+        <p className="lead measure mt-4 text-muted-foreground">
+          {t("about_methodology_desc")}
+        </p>
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <WorkflowSteps />
+          <TestingCompetencies />
         </div>
       </Section>
 
       {certifications.length > 0 && (
         <Section>
-          <SectionHeading
-            eyebrow={t("about_creds_eyebrow")}
-            title={t("about_creds_title")}
-            description={t("about_creds_desc")}
-          />
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <h2 className="h2">{t("about_creds_title")}</h2>
+          <p className="lead measure mt-4 text-muted-foreground">
+            {t("about_creds_desc")}
+          </p>
+          <div className="mt-10 grid gap-8 border-t border-border pt-8 sm:grid-cols-2">
             {certifications.map((cert) => (
-              <Card key={cert.name} className="h-full">
-                <CardContent className="p-5">
-                  <h3 className="text-sm font-semibold leading-snug">{cert.name}</h3>
-                  <p className="mt-1 text-xs text-accent">{cert.issuer} · {cert.year}</p>
-                  <p className="mt-3 text-xs text-muted-foreground">{cert.description}</p>
-                  {cert.credential && (
-                    <p className="mono mt-3 text-[11px] text-muted-foreground">
-                      {cert.credential}
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
+              <div key={cert.name}>
+                <h3 className="h3">{cert.name}</h3>
+                <p className="label mt-2 text-accent">
+                  {cert.issuer} · {cert.year}
+                </p>
+                <p className="body-text mt-3 text-muted-foreground">
+                  {cert.description}
+                </p>
+                {cert.credential && (
+                  <p className="mono mt-3 text-xs text-muted-foreground">
+                    {cert.credential}
+                  </p>
+                )}
+              </div>
             ))}
           </div>
         </Section>
@@ -122,11 +107,9 @@ export function AboutClient() {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div>
-      <dt className="mono text-[11px] uppercase tracking-wide text-muted-foreground">
-        {label}
-      </dt>
-      <dd className="mt-0.5 font-medium">{value}</dd>
+    <div className="border-t border-border py-4">
+      <dt className="label text-muted-foreground">{label}</dt>
+      <dd className="mt-1.5 text-sm font-medium">{value}</dd>
     </div>
   );
 }

@@ -17,18 +17,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/arrofizeinabdillah66/",
     email: "arrofi.zein12@gmail.com",
   },
-  resumeUrl: "/resume",
 } as const;
-
-export const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/testing-lab", label: "Testing Lab" },
-  { href: "/skills", label: "Skills" },
-  { href: "/experience", label: "Experience" },
-  { href: "/contact", label: "Contact" },
-] as const;
 
 export const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://arrofizein.vercel.app";

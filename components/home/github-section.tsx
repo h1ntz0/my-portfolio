@@ -1,86 +1,58 @@
 "use client";
 
-import { Github, ArrowUpRight, FolderGit2 } from "lucide-react";
+import { Github, ArrowUpRight } from "lucide-react";
 
 import { repos, githubProfile } from "@/content/github";
 import { useLang } from "@/components/lang-provider";
 
+/**
+ * Index section. Rows, not cards, so it reads differently from the grid on the
+ * Work page where the same repositories appear at full size.
+ */
 export function GitHubSection() {
   const { t, lang } = useLang();
   const isId = lang === "id";
-  return (
-    <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-      <span className="mono text-sm text-accent sm:pt-2">{t("gh_num")}</span>
-      <div>
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              {t("gh_title")}
-            </h2>
-            <p className="mt-3 max-w-xl text-muted-foreground">{t("gh_desc")}</p>
-          </div>
-          <a
-            href={githubProfile}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-xs font-mono font-medium text-foreground transition-colors hover:border-accent hover:text-accent shrink-0"
-          >
-            <Github className="h-4 w-4" />
-            <span>@h1ntz0 on GitHub</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
-        </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {repos.map((repo) => (
+  return (
+    <div>
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="measure">
+          <h2 className="h2">{t("gh_title")}</h2>
+          <p className="lead mt-4 text-muted-foreground">{t("gh_desc")}</p>
+        </div>
+        <a
+          href={githubProfile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex shrink-0 items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+        >
+          <Github className="h-4 w-4" />
+          @h1ntz0
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
+
+      <ul className="mt-10 border-t border-border">
+        {repos.map((repo) => (
+          <li key={repo.name}>
             <a
-              key={repo.name}
               href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col justify-between rounded-xl border border-border bg-card/60 p-5 backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:border-accent/60 hover:bg-card hover:shadow-md"
+              className="group grid gap-1 border-b border-border py-4 transition-colors hover:bg-secondary/40 sm:grid-cols-[1fr_1.6fr_auto] sm:items-baseline sm:gap-8 sm:px-2"
             >
-              <div>
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-foreground group-hover:text-accent">
-                    <FolderGit2 className="h-4 w-4 text-accent" />
-                    <span className="truncate">{repo.name}</span>
-                  </div>
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
-                </div>
-
-                <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground line-clamp-3">
-                  {isId && repo.descriptionId ? repo.descriptionId : repo.description}
-                </p>
-              </div>
-
-              <div className="mt-4 pt-3 border-t border-border/50 flex items-center justify-between gap-2">
-                <div className="flex flex-wrap gap-1.5 overflow-hidden">
-                  {repo.topics.slice(0, 3).map((topic) => (
-                    <span
-                      key={topic}
-                      className="mono rounded-md bg-secondary/70 border border-border/60 px-2 py-0.5 text-[10px] text-muted-foreground"
-                    >
-                      {topic}
-                    </span>
-                  ))}
-                  {repo.topics.length > 3 && (
-                    <span className="mono text-[10px] text-muted-foreground self-center">
-                      +{repo.topics.length - 3}
-                    </span>
-                  )}
-                </div>
-
-                {repo.language && (
-                  <span className="mono text-[11px] font-medium text-accent shrink-0">
-                    {repo.language}
-                  </span>
-                )}
-              </div>
+              <span className="h3 flex items-center gap-2">
+                {repo.name}
+                <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
+              </span>
+              <span className="body-text text-muted-foreground">
+                {isId && repo.descriptionId ? repo.descriptionId : repo.description}
+              </span>
+              <span className="label text-accent">{repo.language ?? "Tool"}</span>
             </a>
-          ))}
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

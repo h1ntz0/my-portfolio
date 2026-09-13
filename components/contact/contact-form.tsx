@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
 import { Send } from "lucide-react";
+import * as React from "react";
 
 import { site } from "@/lib/site";
 import { useLang } from "@/components/lang-provider";
@@ -35,20 +35,29 @@ export function ContactForm() {
     if (!email) {
       next.email = lang === "id" ? "Email wajib diisi." : "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      next.email = lang === "id" ? "Masukkan format email yang valid." : "Enter a valid email address.";
+      next.email =
+        lang === "id"
+          ? "Format email belum benar. Contoh: nama@domain.com"
+          : "That email address is missing something. Try name@domain.com";
     }
-    if (!subject) next.subject = lang === "id" ? "Subjek wajib diisi." : "Subject is required.";
+    if (!subject) {
+      next.subject = lang === "id" ? "Subjek wajib diisi." : "Subject is required.";
+    }
     if (!message) {
       next.message = lang === "id" ? "Pesan wajib diisi." : "Message is required.";
     } else if (message.length < 20) {
-      next.message = lang === "id" ? "Pesan minimal 20 karakter." : "Message must be at least 20 characters.";
+      next.message =
+        lang === "id"
+          ? "Tulis minimal 20 karakter agar saya bisa menanggapi dengan tepat."
+          : "Write at least 20 characters so I can answer properly.";
     }
 
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    const body = encodeURIComponent(message);
-    const mailto = `mailto:${site.links.email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailto = `mailto:${site.links.email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(message)}`;
     window.location.href = mailto;
     setSent(true);
     form.reset();
@@ -59,15 +68,35 @@ export function ContactForm() {
       {sent && (
         <div className="rounded-md border border-success/40 bg-success/10 px-4 py-3 text-sm text-success">
           {lang === "id"
-            ? "Membuka email client. Pesan akan dialamatkan ke email saya."
-            : "Opening your email client. Your message will be addressed to me."}
+            ? "Klien email Anda terbuka. Pesannya sudah dialamatkan ke saya."
+            : "Your mail client is open with the message addressed to me."}
         </div>
       )}
+
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label={t("contact_name")} name="name" type="text" error={errors.name} autoComplete="name" />
-        <Field label={t("contact_email_label")} name="email" type="email" error={errors.email} autoComplete="email" />
+        <Field
+          label={t("contact_name")}
+          name="name"
+          type="text"
+          error={errors.name}
+          autoComplete="name"
+        />
+        <Field
+          label={t("contact_email_label")}
+          name="email"
+          type="email"
+          error={errors.email}
+          autoComplete="email"
+        />
       </div>
-      <Field label={t("contact_subject")} name="subject" type="text" error={errors.subject} />
+
+      <Field
+        label={t("contact_subject")}
+        name="subject"
+        type="text"
+        error={errors.subject}
+      />
+
       <div>
         <Label htmlFor="message">{t("contact_message")}</Label>
         <textarea
@@ -76,9 +105,13 @@ export function ContactForm() {
           rows={5}
           className="mt-1.5 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           placeholder={t("contact_placeholder_msg")}
+          aria-invalid={!!errors.message}
         />
-        {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
+        {errors.message && (
+          <p className="mt-1 text-xs text-destructive">{errors.message}</p>
+        )}
       </div>
+
       <Button type="submit" variant="accent">
         <Send className="h-4 w-4" />
         {t("contact_send")}

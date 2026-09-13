@@ -4,71 +4,70 @@ import { practicalWorkflow, testingCompetencies } from "@/content/methodology";
 import { useLang } from "@/components/lang-provider";
 import { CheckCircle2, Check } from "lucide-react";
 
-export function MethodologyAccordion() {
+export function WorkflowSteps() {
   const { lang } = useLang();
   const isId = lang === "id";
 
   return (
-    <div className="space-y-4">
+    <ol className="border-t border-border">
       {practicalWorkflow.map((step) => (
-        <div
-          key={step.title}
-          className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-sm transition-all hover:border-accent/50"
-        >
-          <div className="flex items-center justify-between gap-2">
-            <span className="mono text-xs font-semibold text-accent uppercase tracking-wider">
-              {step.category}
-            </span>
-          </div>
-          <h4 className="mt-1.5 font-semibold text-foreground">
+        <li key={step.title} className="border-b border-border py-5">
+          <p className="label text-accent">{step.category}</p>
+          <h3 className="h3 mt-2">
             {isId && step.titleId ? step.titleId : step.title}
-          </h4>
-          <p className="mt-1 text-xs text-muted-foreground">
+          </h3>
+          <p className="body-text mt-2 text-muted-foreground">
             {isId && step.descriptionId ? step.descriptionId : step.description}
           </p>
-          <ul className="mt-3 space-y-1.5 border-t border-border/50 pt-3 text-xs text-muted-foreground">
-            {(isId && step.practicalTasksId ? step.practicalTasksId : step.practicalTasks).map((task) => (
-              <li key={task} className="flex items-center gap-2">
-                <Check className="h-3.5 w-3.5 shrink-0 text-accent" />
+          <ul className="mt-3 space-y-1.5">
+            {(isId && step.practicalTasksId
+              ? step.practicalTasksId
+              : step.practicalTasks
+            ).map((task) => (
+              <li
+                key={task}
+                className="flex items-start gap-2.5 text-xs text-muted-foreground"
+              >
+                <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
                 <span>{task}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }
 
-export function RiskMatrix() {
+export function TestingCompetencies() {
   const { lang } = useLang();
   const isId = lang === "id";
 
   return (
-    <div className="space-y-4">
+    <ul className="border-t border-border">
       {testingCompetencies.map((comp) => (
-        <div
-          key={comp.title}
-          className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-sm transition-all hover:border-accent/50"
-        >
-          <div className="flex items-center justify-between gap-2">
-            <h4 className="font-semibold text-sm text-foreground">
+        <li key={comp.title} className="border-b border-border py-5">
+          <div className="flex items-baseline justify-between gap-3">
+            <h3 className="h3">
               {isId && comp.titleId ? comp.titleId : comp.title}
-            </h4>
-            <span className="mono rounded-full bg-accent/10 border border-accent/30 px-2.5 py-0.5 text-[10px] font-medium text-accent">
+            </h3>
+            <span className="label shrink-0 text-muted-foreground">
               {isId && comp.badgeId ? comp.badgeId : comp.badge}
             </span>
           </div>
-          <ul className="mt-3 space-y-2 text-xs text-muted-foreground">
+          <ul className="mt-3 space-y-2">
             {(isId && comp.pointsId ? comp.pointsId : comp.points).map((pt) => (
-              <li key={pt} className="flex items-start gap-2">
+              <li
+                key={pt}
+                className="flex items-start gap-2.5 text-xs text-muted-foreground"
+              >
                 <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
                 <span>{pt}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

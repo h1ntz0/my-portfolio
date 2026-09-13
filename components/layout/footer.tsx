@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 import { site } from "@/lib/site";
+import type { TranslationKey } from "@/lib/i18n";
 import { useLang } from "@/components/lang-provider";
 import { Container } from "@/components/layout/container";
 
@@ -12,40 +14,67 @@ const socials = [
   { label: "Email", href: `mailto:${site.links.email}`, icon: Mail },
 ];
 
+const pages: { href: string; labelKey: TranslationKey }[] = [
+  { href: "/projects", labelKey: "nav_work" },
+  { href: "/skills", labelKey: "nav_skills" },
+  { href: "/experience", labelKey: "nav_experience" },
+  { href: "/about", labelKey: "nav_about" },
+  { href: "/resume", labelKey: "nav_resume" },
+  { href: "/contact", labelKey: "nav_contact" },
+];
+
 export function Footer() {
   const { t } = useLang();
   return (
     <footer className="border-t border-border/70 bg-card">
-      <Container className="flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
+      <Container className="grid gap-10 py-14 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="text-lg font-semibold tracking-tight">
-            {site.brand}
-          </p>
-          <p className="mt-2 max-w-xs text-sm text-muted-foreground">
+          <p className="h3">{site.brand}</p>
+          <p className="body-text measure mt-3 text-muted-foreground">
             {t("footer_tagline")}
           </p>
         </div>
 
-        <div className="flex items-center gap-6">
-          {socials.map(({ label, href, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              aria-label={label}
-            >
-              <Icon className="h-4 w-4" />
-              {label}
-              <ArrowUpRight className="h-3 w-3" />
-            </a>
-          ))}
+        <div className="flex flex-col gap-8 sm:flex-row sm:justify-between lg:justify-end lg:gap-16">
+          <nav aria-label="Footer">
+            <ul className="space-y-2.5">
+              {pages.map((page) => (
+                <li key={page.href}>
+                  <Link
+                    href={page.href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {t(page.labelKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <ul className="space-y-2.5">
+            {socials.map(({ label, href, icon: Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  {...(href.startsWith("mailto:")
+                    ? {}
+                    : { target: "_blank", rel: "noopener noreferrer" })}
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                  {label}
+                  <ArrowUpRight className="h-3 w-3" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
+
       <div className="border-t border-border/60">
-        <Container className="py-5 text-xs text-muted-foreground">
-          © 2026 {site.name}. {t("footer_copyright")}
+        <Container className="flex flex-col gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 {site.name}</span>
+          <span className="mono">{t("footer_note")}</span>
         </Container>
       </div>
     </footer>

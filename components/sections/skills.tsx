@@ -2,43 +2,56 @@
 
 import Link from "next/link";
 
-import { skillGroups } from "@/content/profile";
+import { skillGroups, learningNext, learningNextId } from "@/content/profile";
 import { useLang } from "@/components/lang-provider";
 import { ToolIcon } from "@/components/qa/tool-icon";
 
+/**
+ * Index section. Group name in a fixed gutter, skills on the right, one rule
+ * per group. Cards here made four groups of six look like twenty four things.
+ */
 export function SkillGroups() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const learning = lang === "id" ? learningNextId : learningNext;
+
   return (
-    <div className="mt-10 space-y-10">
+    <div className="mt-10 border-t border-border">
       {skillGroups.map((group) => (
-        <div key={group.title}>
-          <h3 className="text-sm font-semibold tracking-tight text-foreground">
-            {group.title}
-          </h3>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          key={group.title}
+          className="grid gap-4 border-b border-border py-6 sm:grid-cols-[9rem_1fr] sm:gap-10"
+        >
+          <h3 className="h3 text-muted-foreground">{group.title}</h3>
+          <ul className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
             {group.skills.map((skill) => (
-              <div
-                key={skill.name}
-                className="flex min-w-0 items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-colors hover:border-accent/30 hover:bg-card/80"
-              >
+              <li key={skill.name} className="flex min-w-0 items-start gap-3">
                 <ToolIcon name={skill.name} />
-                <div className="min-w-0">
-                  <span className="block text-sm font-medium leading-tight">{skill.name}</span>
+                <span className="min-w-0">
+                  <span className="block text-sm font-medium leading-tight">
+                    {skill.name}
+                  </span>
                   {skill.usedIn && skill.usedIn.length > 0 ? (
-                    <span className="block truncate text-[11px] text-muted-foreground">
+                    <span className="block text-xs leading-snug text-muted-foreground">
                       {t("tools_used")} {skill.usedIn.join(", ")}
                     </span>
                   ) : skill.description ? (
-                    <span className="block truncate text-[11px] text-muted-foreground">
+                    <span className="block text-xs leading-snug text-muted-foreground">
                       {skill.description}
                     </span>
                   ) : null}
-                </div>
-              </div>
+                </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       ))}
+
+      <div className="grid gap-4 border-b border-border py-6 sm:grid-cols-[9rem_1fr] sm:gap-10">
+        <h3 className="h3 text-muted-foreground">{t("tools_learning")}</h3>
+        <p className="mono self-center text-sm">
+          {learning.join("  ·  ")}
+        </p>
+      </div>
     </div>
   );
 }
@@ -46,8 +59,7 @@ export function SkillGroups() {
 export function SkillToProjectHint() {
   const { t } = useLang();
   return (
-    <p className="mt-8 text-sm text-muted-foreground">
-      {t("tools_every")}{" "}
+    <p className="body-text mt-6 text-muted-foreground">
       <Link href="/projects" className="font-medium text-accent hover:underline">
         {t("tools_browse")} →
       </Link>

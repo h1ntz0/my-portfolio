@@ -3,28 +3,27 @@
 import type { TranslationKey } from "@/lib/i18n";
 import { useLang } from "@/components/lang-provider";
 
+/**
+ * Section heading that lives in a client boundary, so the server page can pass
+ * translation keys without becoming a client component itself.
+ */
 export function LocalizedHeading({
-  numKey,
   titleKey,
   descKey,
   children,
 }: {
-  numKey: TranslationKey;
   titleKey: TranslationKey;
-  descKey: TranslationKey;
+  descKey?: TranslationKey;
   children?: React.ReactNode;
 }) {
   const { t } = useLang();
   return (
-    <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-      <span className="mono text-sm text-accent sm:pt-2">{t(numKey)}</span>
-      <div>
-        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          {t(titleKey)}
-        </h2>
-        <p className="mt-3 text-muted-foreground">{t(descKey)}</p>
-        {children}
-      </div>
+    <div>
+      <h2 className="h2">{t(titleKey)}</h2>
+      {descKey && (
+        <p className="lead mt-4 max-w-2xl text-muted-foreground">{t(descKey)}</p>
+      )}
+      {children}
     </div>
   );
 }

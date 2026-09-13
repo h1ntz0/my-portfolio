@@ -14,8 +14,9 @@ import { LangToggle } from "@/components/lang-toggle";
 import { Container } from "@/components/layout/container";
 
 const links: { href: string; labelKey: TranslationKey; exact?: boolean }[] = [
-  { href: "/", labelKey: "nav_home", exact: true },
   { href: "/projects", labelKey: "nav_work" },
+  { href: "/skills", labelKey: "nav_skills" },
+  { href: "/experience", labelKey: "nav_experience" },
   { href: "/about", labelKey: "nav_about" },
   { href: "/resume", labelKey: "nav_resume" },
 ];
@@ -34,16 +35,16 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/70 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <Container className="flex h-16 items-center justify-between gap-3">
+      <Container className="flex h-16 items-center justify-between gap-4">
         <Link
           href="/"
-          className="text-base font-semibold tracking-tight"
+          className="text-base font-medium tracking-tight"
           aria-label={`${site.name} home`}
         >
           {site.brand}
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
           {links.map((item) => {
             const active = isActive(item.href, item.exact);
             return (
@@ -77,7 +78,7 @@ export function Navbar() {
             href="/contact"
             className="hidden items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-accent transition-colors hover:bg-secondary lg:inline-flex"
           >
-            {t("nav_talk")}
+            {t("nav_contact")}
             <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>
           <button
@@ -114,7 +115,7 @@ export function Navbar() {
               href="/contact"
               className="mt-1 inline-flex items-center gap-1 rounded-md bg-accent px-3 py-2.5 text-base font-medium text-accent-foreground"
             >
-              {t("nav_talk")}
+              {t("nav_contact")}
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </Container>

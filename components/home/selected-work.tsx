@@ -17,7 +17,7 @@ export function SelectedWork() {
   const featured = repos.filter((r) => r.featured).slice(0, 3);
 
   return (
-    <div>
+    <div data-reveal>
       <div className="measure">
         <h2 className="h2">{t("work_title")}</h2>
         <p className="lead mt-4 text-muted-foreground">{t("work_desc")}</p>

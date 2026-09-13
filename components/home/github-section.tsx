@@ -14,7 +14,7 @@ export function GitHubSection() {
   const isId = lang === "id";
 
   return (
-    <div>
+    <div data-reveal>
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="measure">
           <h2 className="h2">{t("gh_title")}</h2>

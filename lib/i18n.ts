@@ -206,6 +206,30 @@ export const translations = {
   resume_skills_heading: { en: "Skills", id: "Keahlian" },
   resume_certs_heading: { en: "Certifications", id: "Sertifikasi" },
 
+  // Audit report
+  audit_title: {
+    en: "This site is the test subject",
+    id: "Situs ini adalah objek ujinya",
+  },
+  audit_desc: {
+    en: "Every figure below came from a real run against a real server. Nothing here is a mock-up, and nothing is a promise.",
+    id: "Semua angka di bawah ini berasal dari eksekusi nyata pada server nyata. Tidak ada yang dibuat-buat, tidak ada yang sekadar janji.",
+  },
+  audit_checks: { en: "checks run", id: "pemeriksaan dijalankan" },
+  audit_blocking: { en: "blocking violations", id: "pelanggaran blocking" },
+  audit_e2e: { en: "browser tests passing", id: "tes browser lulus" },
+  audit_themes: { en: "themes audited", id: "tema diaudit" },
+  audit_route: { en: "Route", id: "Rute" },
+  audit_dark: { en: "Dark", id: "Gelap" },
+  audit_light: { en: "Light", id: "Terang" },
+  audit_clean: { en: "clean", id: "bersih" },
+  audit_captured: { en: "Captured", id: "Diambil" },
+  audit_reproduce: { en: "Reproduce it", id: "Cara mengulang" },
+  audit_command: {
+    en: "npx playwright test",
+    id: "npx playwright test",
+  },
+
   // Footer
   footer_tagline: {
     en: "Built in Jakarta. Every claim on this site is one I can show you.",

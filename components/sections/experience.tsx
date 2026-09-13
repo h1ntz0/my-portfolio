@@ -13,7 +13,7 @@ export function ExperienceTimeline() {
   const isId = lang === "id";
 
   return (
-    <div className="mt-8">
+    <div className="mt-8" data-reveal>
       {experience.map((item) => {
         const period = isId && item.periodId ? item.periodId : item.period;
         const role = isId && item.roleId ? item.roleId : item.role;

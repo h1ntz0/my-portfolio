@@ -1,7 +1,9 @@
 import { Hero } from "@/components/home/hero";
+import { Marquee } from "@/components/home/marquee";
 import { Intro } from "@/components/home/intro";
 import { SelectedWork } from "@/components/home/selected-work";
 import { WhatITest } from "@/components/home/what-i-test";
+import { AuditPanel } from "@/components/home/audit-panel";
 import { GitHubSection } from "@/components/home/github-section";
 import { LocalizedHeading } from "@/components/home/localized-heading";
 import { Section } from "@/components/layout/section";
@@ -11,15 +13,17 @@ import { ContactSection } from "@/components/sections/contact";
 
 /**
  * Section order, and the layout family each one uses so no two neighbours read
- * the same: split hero, prose, alternating media, ruled index, timeline,
- * grouped index, ruled index, closing statement.
+ * the same: kinetic hero, ticker, prose, alternating media, ruled index,
+ * timeline, grouped index, instrument panel, ruled index, closing statement.
  */
 export default function HomePage() {
   return (
     <>
       <Hero />
 
-      <Section id="how" className="border-t border-border/60">
+      <Marquee />
+
+      <Section id="how">
         <Intro />
       </Section>
 
@@ -42,6 +46,10 @@ export default function HomePage() {
           <SkillGroups />
           <SkillToProjectHint />
         </LocalizedHeading>
+      </Section>
+
+      <Section id="audit" className="border-t border-border/60">
+        <AuditPanel />
       </Section>
 
       <Section id="github" className="border-t border-border/60">

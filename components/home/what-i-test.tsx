@@ -63,7 +63,7 @@ export function WhatITest() {
   const isId = lang === "id";
 
   return (
-    <div>
+    <div data-reveal>
       <h2 className="h2">{t("what_title")}</h2>
       <p className="lead mt-4 max-w-2xl text-muted-foreground">{t("what_desc")}</p>
 

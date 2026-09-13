@@ -1,9 +1,19 @@
 import { test, expect } from "@playwright/test";
+import type { Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 // Let entrance/reveal animations (typewriter ~2s, reveals ~0.7s) settle so
 // axe audits the final, fully-visible state rather than mid-transition.
 const SETTLE_MS = 2000;
+
+async function revealAll(page: Page) {
+  await page.evaluate(() => {
+    document
+      .querySelectorAll("[data-reveal],[data-rule]")
+      .forEach((node) => node.classList.add("is-in"));
+  });
+  await page.waitForTimeout(900);
+}
 
 const pages = [
   "/",
@@ -22,6 +32,9 @@ test.describe("Accessibility (WCAG 2.2 AA)", () => {
     test(`axe: no serious/critical violations on ${path}`, async ({ page }) => {
       await page.goto(path, { waitUntil: "networkidle" });
       await page.waitForTimeout(SETTLE_MS);
+      // Scroll-reveal holds off-screen sections at opacity 0 and axe skips
+      // hidden nodes, so settle them before scanning the document.
+      await revealAll(page);
       const results = await new AxeBuilder({ page })
         .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
         .analyze();

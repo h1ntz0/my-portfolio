@@ -8,7 +8,10 @@ import { useLang } from "@/components/lang-provider";
 export function ContactSection() {
   const { t } = useLang();
   return (
-    <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+    <div
+      className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+      data-reveal
+    >
       <div className="measure">
         <h2 className="h2">{t("contact_title")}</h2>
         <p className="lead mt-4 text-muted-foreground">{t("contact_desc")}</p>

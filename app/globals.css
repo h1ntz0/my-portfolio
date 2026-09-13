@@ -179,16 +179,23 @@
     letter-spacing: -0.03em;
     font-weight: 500;
   }
+  /* Hero only. Sized to break out of the grid on wide screens. */
+  .hero-display {
+    font-size: clamp(2.6rem, 8vw, 6.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+  }
   .title {
-    font-size: clamp(2.1rem, 4.4vw, 3.2rem);
-    line-height: 1.06;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.25rem, 5.2vw, 3.75rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
     font-weight: 500;
   }
   .h2 {
-    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
-    line-height: 1.14;
-    letter-spacing: -0.02em;
+    font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
     font-weight: 500;
   }
   .h3 {
@@ -338,16 +345,93 @@
   animation: blink 1.4s steps(1) infinite;
 }
 
-/* Scroll-reveal */
-.reveal {
+/* Scroll-reveal. The hidden start state is gated on html.js, which the inline
+   script in app/layout.tsx sets before paint, so a no-JS visitor sees every
+   section instead of a blank page. */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+html.js [data-reveal].is-in {
   opacity: 1;
   transform: none;
 }
 
+/* A rule that draws itself in from the left when its section arrives. */
+html.js [data-rule] {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+html.js [data-rule].is-in {
+  transform: scaleX(1);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 44s linear infinite;
+}
+
+/* Registration crosshair, the mark a printer puts on a proof sheet. */
+.crosshair {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: var(--border);
+}
+.crosshair::before {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+.crosshair::after {
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+}
+
+/* Fine measuring grid, used behind the hero and the audit panel. */
+.grid-field {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 30%, transparent 78%);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  html.js [data-reveal],
+  html.js [data-rule] {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+  .marquee-track {
+    animation: none;
   }
   .cursor-blink {
     animation: none;

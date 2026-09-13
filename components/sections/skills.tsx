@@ -15,7 +15,7 @@ export function SkillGroups() {
   const learning = lang === "id" ? learningNextId : learningNext;
 
   return (
-    <div className="mt-10 border-t border-border">
+    <div className="mt-10 border-t border-border" data-reveal>
       {skillGroups.map((group) => (
         <div
           key={group.title}

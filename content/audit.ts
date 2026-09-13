@@ -11,7 +11,7 @@ export interface AuditCell {
 
 export const audit = {
   captured: "2026-09-13",
-  commit: "9e39f07",
+  commit: "da0c161",
   axeVersion: "4.13.0",
   standard: "WCAG 2.2 AA",
   routes: ["/","/about","/projects","/skills","/experience","/resume","/contact"],
